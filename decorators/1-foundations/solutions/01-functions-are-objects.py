@@ -1,14 +1,10 @@
 """
 Exercise 01 - Functions Are Objects
 
-The goal of this exercise is to understand that functions
-can be treated like other objects in Python.
+Functions in Python are first-class objects.
 
-They can be:
-
-- Assigned to variables
-- Passed around
-- Called through different references
+This means they can be assigned to variables,
+passed around, and called through different references.
 """
 
 
@@ -17,36 +13,8 @@ def say_hello():
     print("Hello!")
 
 
-# Assign the function object to another variable.
-#
-# Notice:
-# We DO NOT use parentheses here.
-#
-# Correct:
-#     greet = say_hello
-#
-# Incorrect:
-#     greet = say_hello()
-#
-# Using parentheses would execute the function immediately.
+# Assign the function to a new variable.
 greet = say_hello
 
-
-# Call the function using the new variable.
+# Call the function through the new variable.
 greet()
-
-
-# ------------------------------------------------------------------
-# Additional experiments
-# ------------------------------------------------------------------
-
-hello_again = say_hello
-
-print("\nCalling through another variable:")
-hello_again()
-
-print("\nDo both variables reference the same function?")
-print(greet is say_hello)
-
-print("\nFunction object:")
-print(say_hello)
