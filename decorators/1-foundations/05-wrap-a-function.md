@@ -16,18 +16,42 @@
 
 ## Goal
 
-Combine everything you have learned so far.
+Learn how to:
+
+```text
+Dynamically wrap a function.
+```
+
+By the end of this exercise you should understand:
+
+- A function can receive another function
+- A function can create and return a wrapper
+- Wrapping combines all the major concepts learned so far
+
+---
+
+## Why This Matters
 
 In the previous exercises, you learned that:
 
 - Functions are objects
 - Functions can be passed as arguments
-- Functions can be returned
+- Functions can be returned from other functions
 - Wrapper functions can execute other functions
 
-Now you will combine all of those concepts to dynamically wrap a function.
+This exercise combines all of those ideas into a single pattern.
 
-This is the first exercise that begins to resemble a real decorator.
+For the first time, you'll create a function that:
+
+```text
+Receives a function
+↓
+Creates a wrapper
+↓
+Returns the wrapper
+```
+
+This is the core pattern behind decorators.
 
 ---
 
@@ -44,48 +68,56 @@ Before attempting this exercise, you should understand:
 
 ## New Concept
 
-A function can:
+A function can create a wrapper around another function.
 
-1. Receive another function
-2. Create a wrapper around it
-3. Return the wrapper
-
-Example:
+For example:
 
 ```python
 def wrap(func):
     def wrapper():
-        func()
+        pass
 
     return wrapper
 ```
 
-This pattern is the foundation of decorators.
+The wrapper can access and execute the function that was originally passed in.
+
+This pattern is one of the key building blocks behind decorators.
 
 ---
 
 ## Challenge
 
-Create a function named:
+Create a function called:
 
 ```python
-wrap()
+say_hello
 ```
 
-that receives another function.
+that prints:
 
-Inside it:
+```text
+Hello!
+```
 
-1. Create a nested function named `wrapper`
-2. Have `wrapper()` execute the received function
-3. Return the `wrapper` function
+Then create a function called:
 
-Then:
+```python
+wrap
+```
 
-1. Create a function named `say_hello`
-2. Pass it into `wrap()`
-3. Store the returned wrapper in a variable
-4. Execute the returned wrapper
+The `wrap()` function should:
+
+1. Receive another function
+2. Create a nested function named `wrapper`
+3. Have the wrapper execute the received function
+4. Return the wrapper
+
+Finally:
+
+1. Pass `say_hello` into `wrap()`
+2. Store the returned wrapper in a variable
+3. Execute the returned wrapper
 
 ---
 
@@ -95,12 +127,20 @@ Your solution must:
 
 - Create a function named `say_hello`
 - Create a function named `wrap`
-- Receive a function as an argument
-- Create a nested wrapper function
+- Allow `wrap()` to receive a function
+- Create a nested function named `wrapper`
 - Execute the supplied function inside the wrapper
-- Return the wrapper
+- Return the wrapper function
+- Store the returned wrapper in a variable
 - Execute the returned wrapper
 - Produce the expected output
+
+Do not:
+
+- Call `say_hello()` directly after creating the wrapper
+- Return `wrapper()` instead of `wrapper`
+
+The goal is to execute the original function through the returned wrapper.
 
 ---
 
@@ -112,45 +152,28 @@ def say_hello():
 
 
 def wrap(func):
-    def wrapper():
-        pass
-
-    return
-
-
-wrapped_hello = wrap(say_hello)
-
-wrapped_hello()
+    pass
 ```
 
 ---
 
-## Expected Usage
+## Verify Your Solution
 
-```python
-def say_hello():
-    print("Hello!")
-
-
-def wrap(func):
-    def wrapper():
-        func()
-
-    return wrapper
-
-
-wrapped_hello = wrap(say_hello)
-
-wrapped_hello()
-```
-
----
-
-## Expected Output
+When your program runs successfully, you should see:
 
 ```text
 Hello!
 ```
+
+You should also be able to explain:
+
+```text
+How a function can receive another function,
+create a wrapper around it,
+and return that wrapper for later use.
+```
+
+Avoid looking at the solution until you can explain this flow yourself.
 
 ---
 
@@ -164,7 +187,7 @@ The parameter:
 func
 ```
 
-contains the function passed into `wrap()`.
+contains the function that was passed into `wrap()`.
 
 ---
 
@@ -176,47 +199,33 @@ The wrapper should execute:
 func()
 ```
 
+inside its body.
+
 ---
 
 ### Hint 3
 
-Return the wrapper itself.
-
-Correct:
+Remember the difference between:
 
 ```python
 return wrapper
 ```
 
-Incorrect:
+and
 
 ```python
 return wrapper()
 ```
 
----
+One returns a function.
 
-### Hint 4
-
-The flow should look like:
-
-```text
-say_hello
-↓
-wrap(say_hello)
-↓
-returns wrapper
-↓
-call wrapper
-↓
-wrapper calls say_hello
-```
+The other executes a function.
 
 ---
 
 ## Things to Try
 
-After completing the exercise, experiment with these variations.
+After completing the exercise, experiment further.
 
 ### Try 1
 
@@ -239,89 +248,79 @@ wrapped_hello
 wrapped_goodbye
 ```
 
-and execute both.
+Execute both.
 
 ---
 
 ### Try 3
 
-Print messages inside the wrapper.
-
-Example:
+Add a print statement inside the wrapper:
 
 ```python
-def wrapper():
-    print("Wrapper started")
-    func()
+print("Wrapper started")
 ```
 
----
-
-### Try 4
-
-Create a wrapper that calls the function twice.
-
-Example:
-
-```python
-func()
-func()
-```
+What happens when the wrapped function is executed?
 
 ---
 
 ## Reflection
 
-Answer the following questions.
+Answer these questions:
 
 1. Why does `wrap()` receive a function?
 2. Why does `wrap()` return a function?
-3. What role does `wrapper()` play?
-4. How does this exercise combine earlier concepts?
-5. Why is returning `wrapper` important?
+3. What role does the nested `wrapper()` function play?
+4. How does this exercise combine concepts from earlier exercises?
+
+The goal is to reinforce understanding.
 
 ---
 
 ## Stretch Goal
 
-Modify the wrapper so it prints:
+Modify the wrapper so that it prints:
 
 ```text
 Calling function...
 ```
 
-before executing the function.
+before executing the wrapped function.
 
-Example output:
+Expected output:
 
 ```text
 Calling function...
 Hello!
 ```
 
-You have now begun adding behavior around another function.
+You have now started adding behavior around an existing function.
 
 ---
 
 ## Real-World Connection
 
-This pattern is extremely common in Python.
-
-Many tools and frameworks use functions that:
-
-- Receive another function
-- Wrap it
-- Return a new function
+Many Python libraries and frameworks use this exact pattern.
 
 Examples include:
 
-- Logging systems
-- Authentication checks
+- Logging utilities
+- Authentication systems
+- Performance monitoring tools
 - Retry mechanisms
-- Performance monitoring
-- Caching
+- Caching systems
 
-Understanding this wrapping pattern makes decorators much easier to understand.
+All of these often work by:
+
+```text
+Receiving a function
+↓
+Creating a wrapper
+↓
+Returning the wrapper
+```
+
+Once you understand this pattern, decorators become much easier to understand.
 
 ---
 
@@ -332,9 +331,9 @@ You can consider this exercise complete when:
 - [ ] You can pass a function into another function
 - [ ] You can create a nested wrapper function
 - [ ] You can return a wrapper function
-- [ ] You understand how wrapping works
-- [ ] You can explain the flow of execution
-- [ ] You are ready to add behavior before function execution
+- [ ] You understand the flow of execution
+- [ ] You can explain how wrapping works
+- [ ] You are ready to add behavior before a function executes
 
 ---
 
