@@ -14,17 +14,37 @@
 
 ## Goal
 
-Learn that functions can return other functions.
+Learn how to:
 
-In the previous exercises, you learned that:
+```text
+Return a function from another function.
+```
+
+By the end of this exercise you should understand:
+
+- Functions can be created inside other functions
+- Functions can be returned as values
+- Returned functions can be stored and executed later
+
+---
+
+## Why This Matters
+
+So far you have learned that:
 
 - Functions are objects
-- Functions can be assigned to variables
+- Functions can be stored in variables
 - Functions can be passed as arguments
 
-In this exercise, you'll discover that functions can also return other functions.
+Now you'll learn the final foundational piece:
 
-This is one of the most important building blocks behind decorators.
+```text
+Functions can be returned from other functions.
+```
+
+Decorators rely heavily on this concept.
+
+Later in this topic you will create functions that receive a function and return a new function. Understanding this pattern is essential before building your first decorator.
 
 ---
 
@@ -41,52 +61,40 @@ Before attempting this exercise, you should understand:
 
 Functions can be created inside other functions and returned.
 
-Example:
+For example:
 
 ```python
 def outer():
     def inner():
-        print("Hello!")
+        pass
 
     return inner
-```
-
-The returned function can then be stored and executed later:
-
-```python
-greet = outer()
-
-greet()
-```
-
-Output:
-
-```text
-Hello!
 ```
 
 Notice that:
 
 ```python
-outer()
+return inner
 ```
 
-returns a function.
+returns the function itself.
+
+It does not execute the function.
 
 ---
 
 ## Challenge
 
-Create a function named:
+Create a function called:
 
 ```python
-create_greeter()
+create_greeter
 ```
 
-Inside it, create another function named:
+Inside it, create another function called:
 
 ```python
-greet()
+greet
 ```
 
 The `greet()` function should print:
@@ -95,12 +103,11 @@ The `greet()` function should print:
 Hello!
 ```
 
-Return `greet` from `create_greeter()`.
-
 Then:
 
-1. Store the returned function in a variable named `my_greeter`
-2. Execute the returned function
+1. Return `greet` from `create_greeter()`
+2. Store the returned function in a variable named `my_greeter`
+3. Execute the returned function
 
 ---
 
@@ -108,14 +115,17 @@ Then:
 
 Your solution must:
 
-- Create a function called `create_greeter`
-- Create a nested function called `greet`
+- Create a function named `create_greeter`
+- Create a nested function named `greet`
 - Return the nested function
 - Store the returned function in a variable
 - Execute the returned function
 - Produce the expected output
 
-Do **not** call `greet()` from inside `create_greeter()`.
+Do not:
+
+- Call `greet()` inside `create_greeter()`
+- Return the result of calling `greet()`
 
 The goal is to return the function itself.
 
@@ -138,28 +148,22 @@ my_greeter()
 
 ---
 
-## Expected Usage
+## Verify Your Solution
 
-```python
-def create_greeter():
-    def greet():
-        print("Hello!")
-
-    return greet
-
-
-my_greeter = create_greeter()
-
-my_greeter()
-```
-
----
-
-## Expected Output
+When your program runs successfully, you should see:
 
 ```text
 Hello!
 ```
+
+You should also be able to explain:
+
+```text
+Why create_greeter() returns a function
+instead of immediately running one.
+```
+
+Avoid looking at the solution until you can explain this concept yourself.
 
 ---
 
@@ -167,7 +171,7 @@ Hello!
 
 ### Hint 1
 
-Functions can be created inside other functions.
+Functions can be defined inside other functions.
 
 Example:
 
@@ -181,55 +185,49 @@ def outer():
 
 ### Hint 2
 
-Return the function itself.
-
-Correct:
+Think carefully about the difference between:
 
 ```python
 return greet
 ```
 
-Incorrect:
+and
 
 ```python
 return greet()
 ```
 
+One returns a function.
+
+The other executes a function.
+
 ---
 
 ### Hint 3
 
-Remember:
+After calling:
 
 ```python
-greet
+create_greeter()
 ```
 
-refers to the function.
-
-While:
-
-```python
-greet()
-```
-
-executes the function.
+the returned value should be a function that you can call later.
 
 ---
 
 ## Things to Try
 
-After completing the exercise, experiment with these variations.
+After completing the exercise, experiment further.
 
 ### Try 1
 
 Change the greeting:
 
-```python
+```text
 Welcome!
 ```
 
-Does it still work?
+Does everything still work?
 
 ---
 
@@ -243,11 +241,13 @@ my_greeter()
 my_greeter()
 ```
 
+What happens?
+
 ---
 
 ### Try 3
 
-Create another factory:
+Create another function:
 
 ```python
 create_farewell()
@@ -261,32 +261,22 @@ Goodbye!
 
 ---
 
-### Try 4
-
-Print the returned object before executing it:
-
-```python
-print(my_greeter)
-```
-
-What do you see?
-
----
-
 ## Reflection
 
-Answer the following questions.
+Answer these questions:
 
 1. What does `create_greeter()` return?
 2. Why does `return greet` work?
-3. What happens if you write `return greet()` instead?
+3. What happens if you use `return greet()` instead?
 4. Why might returning a function be useful?
+
+The goal is to reinforce understanding.
 
 ---
 
 ## Stretch Goal
 
-Create a function:
+Create a function named:
 
 ```python
 create_message_printer()
@@ -294,47 +284,41 @@ create_message_printer()
 
 that returns a nested function which prints a message.
 
-Example:
-
-```python
-printer = create_message_printer()
-
-printer()
-```
-
-Output:
+For example:
 
 ```text
 Learning decorators!
 ```
 
-Can you create multiple functions that each return different printing functions?
+Can you create multiple factory functions that each return different printing functions?
 
 ---
 
 ## Real-World Connection
 
-Decorators rely on returning functions.
+Returning functions is a common pattern in Python.
 
-A decorator often looks something like:
+Examples include:
+
+- Decorators
+- Factory functions
+- Configuration helpers
+- Testing utilities
+- Framework internals
+
+In a decorator, you'll often see code similar to:
 
 ```python
 def decorator(func):
     def wrapper():
-        func()
+        ...
 
     return wrapper
 ```
 
-Notice the final line:
+This works because functions can return other functions.
 
-```python
-return wrapper
-```
-
-This works because Python allows functions to return other functions.
-
-This exercise introduces that important concept before you build your first wrapper function.
+You are now learning one of the core building blocks behind that pattern.
 
 ---
 
@@ -346,7 +330,7 @@ You can consider this exercise complete when:
 - [ ] You can return a function from another function
 - [ ] You understand the difference between `greet` and `greet()`
 - [ ] You can store a returned function in a variable
-- [ ] You are ready to build wrapper functions
+- [ ] You are ready to build your first wrapper function
 
 ---
 
