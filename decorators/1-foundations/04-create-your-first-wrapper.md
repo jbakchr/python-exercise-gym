@@ -15,17 +15,33 @@
 
 ## Goal
 
-Learn how to create a wrapper function.
+Learn how to:
 
-In the previous exercises, you learned that:
+```text
+Create a wrapper function that calls another function.
+```
+
+By the end of this exercise you should understand:
+
+- What a wrapper function is
+- How one function can execute another function
+- Why wrappers are the foundation of decorators
+
+---
+
+## Why This Matters
+
+So far you have learned that:
 
 - Functions are objects
 - Functions can be passed as arguments
 - Functions can be returned from other functions
 
-Now you will combine those ideas to create a wrapper function.
+Now you'll combine those ideas to create your first wrapper.
 
-A wrapper function is the key building block behind decorators.
+Wrappers are one of the fundamental building blocks behind decorators.
+
+Later in this topic, you'll use wrappers to add behavior before and after a function executes.
 
 ---
 
@@ -41,32 +57,18 @@ Before attempting this exercise, you should understand:
 
 ## New Concept
 
-A wrapper function is a function that calls another function.
+A wrapper function is simply a function that calls another function.
 
 Example:
 
 ```python
-def greet():
-    print("Hello!")
-
-
 def wrapper():
-    greet()
+    another_function()
 ```
 
-Calling:
+The wrapper acts as a middleman.
 
-```python
-wrapper()
-```
-
-will execute:
-
-```python
-greet()
-```
-
-Wrappers allow us to add behavior around existing functions.
+Instead of calling the original function directly, you call the wrapper, which then calls the original function.
 
 ---
 
@@ -75,7 +77,7 @@ Wrappers allow us to add behavior around existing functions.
 Create a function called:
 
 ```python
-say_hello()
+say_hello
 ```
 
 that prints:
@@ -87,16 +89,12 @@ Hello!
 Then create a second function called:
 
 ```python
-wrapper()
+wrapper
 ```
 
-that calls:
+The `wrapper()` function should execute `say_hello()`.
 
-```python
-say_hello()
-```
-
-When `wrapper()` is executed, the original function should run.
+Finally, call `wrapper()` and verify that the original function runs.
 
 ---
 
@@ -106,13 +104,16 @@ Your solution must:
 
 - Create a function named `say_hello`
 - Create a function named `wrapper`
-- Have `wrapper()` execute `say_hello()`
+- Have `wrapper()` call `say_hello()`
 - Call `wrapper()`
 - Produce the expected output
 
-The goal is not to add extra behavior yet.
+Do not:
 
-Simply create a wrapper around another function.
+- Call `say_hello()` directly outside of `wrapper()`
+- Add extra behavior to the wrapper yet
+
+The goal is simply to create a wrapper around another function.
 
 ---
 
@@ -125,34 +126,26 @@ def say_hello():
 
 def wrapper():
     pass
-
-
-wrapper()
 ```
 
 ---
 
-## Expected Usage
+## Verify Your Solution
 
-```python
-def say_hello():
-    print("Hello!")
-
-
-def wrapper():
-    say_hello()
-
-
-wrapper()
-```
-
----
-
-## Expected Output
+When your program runs successfully, you should see:
 
 ```text
 Hello!
 ```
+
+You should also be able to explain:
+
+```text
+Why calling wrapper() causes say_hello()
+to execute.
+```
+
+Avoid looking at the solution until you can explain this concept yourself.
 
 ---
 
@@ -160,7 +153,7 @@ Hello!
 
 ### Hint 1
 
-Your wrapper should execute:
+The wrapper should execute:
 
 ```python
 say_hello()
@@ -174,29 +167,25 @@ inside its body.
 
 Think of the wrapper as a middleman.
 
-Instead of calling:
+Instead of:
 
 ```python
 say_hello()
 ```
 
-directly, you call:
+being called directly, you call:
 
 ```python
 wrapper()
 ```
 
-which then calls:
-
-```python
-say_hello()
-```
+which then calls the original function.
 
 ---
 
 ### Hint 3
 
-The wrapper does not return anything yet.
+The wrapper does not need to return anything.
 
 Its only responsibility is to execute another function.
 
@@ -204,14 +193,14 @@ Its only responsibility is to execute another function.
 
 ## Things to Try
 
-After completing the exercise, experiment with these variations.
+After completing the exercise, experiment further.
 
 ### Try 1
 
-Change the output:
+Change the output to:
 
-```python
-print("Welcome!")
+```text
+Welcome!
 ```
 
 Does the wrapper still work?
@@ -226,13 +215,19 @@ Create another function:
 say_goodbye()
 ```
 
-and update the wrapper to call it.
+That prints:
+
+```text
+Goodbye!
+```
+
+Update `wrapper()` to call it instead.
 
 ---
 
 ### Try 3
 
-Call the wrapped function multiple times:
+Make the wrapper call the function multiple times:
 
 ```python
 def wrapper():
@@ -244,27 +239,16 @@ What happens?
 
 ---
 
-### Try 4
-
-Create two separate wrappers:
-
-```python
-wrapper_one()
-wrapper_two()
-```
-
-that both call the same function.
-
----
-
 ## Reflection
 
-Answer the following questions.
+Answer these questions:
 
 1. What is the purpose of a wrapper function?
-2. Why might someone want to call a function indirectly through a wrapper?
+2. Why might someone call a function through a wrapper instead of directly?
 3. How could a wrapper be modified to add extra behavior?
-4. How does this exercise build on returning functions from Exercise 03?
+4. How does this exercise build on what you learned about returning functions?
+
+The goal is to reinforce understanding.
 
 ---
 
@@ -289,24 +273,25 @@ Starting...
 Hello!
 ```
 
-This small change hints at how decorators can extend behavior.
+This small change provides a glimpse of how decorators extend the behavior of existing functions.
 
 ---
 
 ## Real-World Connection
 
-Many Python tools and frameworks wrap existing functions.
+Wrapper functions appear throughout Python code.
 
-For example:
+Examples include:
 
-- Logging systems
-- Timing utilities
+- Logging utilities
+- Timing tools
 - Retry mechanisms
-- Authentication checks
+- Authentication systems
+- Web frameworks
 
-All of these often rely on wrapper functions.
+Many of these tools work by executing additional code before or after another function runs.
 
-Understanding wrappers is essential because decorators are essentially a way of automatically wrapping functions.
+Decorators are simply a structured way of creating and applying wrappers.
 
 ---
 
@@ -316,9 +301,9 @@ You can consider this exercise complete when:
 
 - [ ] You can create a wrapper function
 - [ ] You understand how one function can call another
-- [ ] You understand why wrappers are useful
-- [ ] You can modify a wrapper to perform additional work
-- [ ] You are ready to wrap functions dynamically
+- [ ] You understand the purpose of a wrapper
+- [ ] You can explain why wrappers are useful
+- [ ] You are ready to add behavior around another function
 
 ---
 
