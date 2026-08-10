@@ -13,13 +13,36 @@
 
 ## Goal
 
-Learn that functions can be passed as arguments to other functions.
+Learn how to:
 
-In the previous exercise, you learned that functions are objects and can be assigned to variables.
+```text
+Pass a function to another function.
+```
 
-In this exercise, you will take the next step and discover that functions can also be passed to other functions.
+By the end of this exercise you should understand:
 
-This is one of the most important ideas behind decorators.
+- Functions can be passed as arguments
+- A function can receive another function and execute it
+- Functions can be treated like other values in Python
+
+---
+
+## Why This Matters
+
+In the previous exercise, you learned that functions are objects.
+
+Now you'll take the next step and use that fact in a practical way.
+
+Decorators rely on receiving functions as arguments.
+
+Later in this topic you will write code that looks like:
+
+```python
+def decorator(func):
+    ...
+```
+
+To understand why that works, you first need to understand how functions can be passed between other functions.
 
 ---
 
@@ -33,70 +56,48 @@ Before attempting this exercise, you should understand:
 
 ## New Concept
 
-Functions can be passed as arguments.
+Functions can be passed to other functions as arguments.
 
 For example:
 
 ```python
-def greet():
-    print("Hello!")
-
-
-def run(action):
-    action()
-
-
-run(greet)
+run(my_function)
 ```
 
-Notice that:
+In this example, the function is being passed as a value.
 
-```python
-greet
-```
+Notice that the function name is used without parentheses.
 
-is passed into:
-
-```python
-run()
-```
-
-just like you could pass:
-
-```python
-42
-"hello"
-True
-```
+Adding parentheses would execute the function immediately instead of passing it.
 
 ---
 
 ## Challenge
 
-Create:
+Create a function called:
 
 ```python
-say_hello()
+say_hello
 ```
 
-and:
+that prints:
+
+```text
+Hello!
+```
+
+Then create another function called:
 
 ```python
-run()
+run
 ```
 
 The `run()` function should:
 
-1. Accept a function as an argument.
-2. Execute the function it receives.
+- Accept a function as an argument
+- Execute the function it receives
 
-Then call:
-
-```python
-run(say_hello)
-```
-
-and verify that the function is executed.
+Finally, pass `say_hello` into `run()` and verify that it executes correctly.
 
 ---
 
@@ -106,13 +107,16 @@ Your solution must:
 
 - Create a function named `say_hello`
 - Create a function named `run`
-- Allow `run()` to receive another function
+- Allow `run()` to receive a function as an argument
 - Execute the received function
 - Produce the expected output
 
-Do **not** call `say_hello()` directly outside of `run()`.
+Do not:
 
-The goal is for `run()` to execute it.
+- Call `say_hello()` directly outside of `run()`
+- Hardcode the output inside `run()`
+
+The goal is for `run()` to execute whichever function it receives.
 
 ---
 
@@ -132,27 +136,22 @@ run(say_hello)
 
 ---
 
-## Expected Usage
+## Verify Your Solution
 
-```python
-def say_hello():
-    print("Hello!")
-
-
-def run(action):
-    action()
-
-
-run(say_hello)
-```
-
----
-
-## Expected Output
+When your program runs successfully, you should see:
 
 ```text
 Hello!
 ```
+
+You should also be able to explain:
+
+```text
+Why run(say_hello) passes a function,
+while run(say_hello()) executes a function.
+```
+
+Avoid looking at the solution until you can explain this concept yourself.
 
 ---
 
@@ -182,27 +181,27 @@ action()
 
 ### Hint 3
 
-Remember the difference:
+Compare these carefully:
 
 ```python
 run(say_hello)
 ```
 
-passes the function.
-
-But:
+and
 
 ```python
 run(say_hello())
 ```
 
-executes the function immediately.
+One passes a function.
+
+The other executes a function before `run()` is called.
 
 ---
 
 ## Things to Try
 
-After completing the exercise, experiment with these variations.
+After completing the exercise, experiment further.
 
 ### Try 1
 
@@ -212,66 +211,44 @@ Create another function:
 say_goodbye()
 ```
 
-and pass it into:
+Pass it into `run()`.
 
-```python
-run()
-```
+What happens?
 
 ---
 
 ### Try 2
 
-Call:
+Call `run()` several times using different functions.
 
-```python
-run()
-```
-
-multiple times with different functions.
+Can the same `run()` function execute all of them?
 
 ---
 
 ### Try 3
 
-Create a function:
+Create a function that prints your name.
 
-```python
-say_name()
-```
-
-that prints your name.
-
-Can `run()` execute it without modification?
-
----
-
-### Try 4
-
-Modify `run()` so it prints:
-
-```text
-Running function...
-```
-
-before executing the function.
+Can `run()` execute it without any modifications?
 
 ---
 
 ## Reflection
 
-Answer the following questions.
+Answer these questions:
 
-1. What argument is being passed to `run()`?
-2. How is passing a function different from passing a string or number?
-3. Why does `action()` execute the passed function?
-4. Why is this concept important for decorators?
+1. What is being passed into `run()`?
+2. Why does `action()` execute the received function?
+3. What is the difference between `say_hello` and `say_hello()`?
+4. Why is it useful for one function to receive another function?
+
+The goal is to reinforce understanding.
 
 ---
 
 ## Stretch Goal
 
-Create a function:
+Create a function called:
 
 ```python
 run_twice(action)
@@ -279,13 +256,13 @@ run_twice(action)
 
 that executes the received function two times.
 
-Example:
+For example:
 
 ```python
 run_twice(say_hello)
 ```
 
-Expected output:
+should produce:
 
 ```text
 Hello!
@@ -296,18 +273,19 @@ Hello!
 
 ## Real-World Connection
 
-Decorators rely on receiving functions as arguments.
+Passing functions as arguments is common throughout Python.
 
-Later in this topic, you will create code similar to:
+Examples include:
 
-```python
-def decorator(func):
-    ...
-```
+- Decorators
+- Event handlers
+- Sorting functions
+- Callback functions
+- Testing frameworks
 
-The reason this works is because Python allows functions to be passed around just like other objects.
+Many powerful Python features are built on the idea that functions can be passed around like any other value.
 
-Understanding this concept is a critical step toward building your first decorator.
+Understanding this concept is an important step toward building your first decorator.
 
 ---
 
@@ -318,7 +296,7 @@ You can consider this exercise complete when:
 - [ ] You can pass a function to another function
 - [ ] You understand the difference between `say_hello` and `say_hello()`
 - [ ] You can execute a received function
-- [ ] You understand how higher-order functions work
+- [ ] You understand why functions can be used as arguments
 - [ ] You are ready to learn how functions can be returned from other functions
 
 ---
