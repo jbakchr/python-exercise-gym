@@ -1,4 +1,14 @@
 """
+Solution Guidelines
+
+- Solve only the stated exercise requirements.
+- Do not include stretch goals.
+- Do not include experimentation code.
+- Prefer the simplest correct implementation.
+- Prioritize readability over cleverness.
+"""
+
+"""
 Exercise XX - <Exercise Title>
 
 Briefly explain the core concept being practiced.
