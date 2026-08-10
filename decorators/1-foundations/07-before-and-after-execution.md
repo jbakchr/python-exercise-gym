@@ -18,13 +18,46 @@
 
 ## Goal
 
-Learn how a wrapper function can execute code both before and after the wrapped function runs.
+Learn how to:
 
-In the previous exercise, you learned how a wrapper can perform work before a function executes.
+```text
+Execute code both before and after a wrapped function runs.
+```
 
-In this exercise, you will extend the pattern by adding behavior both before and after execution.
+By the end of this exercise you should understand:
 
-This is one of the most common decorator patterns in real-world Python code.
+- A wrapper can perform work before a function executes
+- A wrapper can perform work after a function executes
+- Wrappers can add behavior around a function without modifying it
+
+---
+
+## Why This Matters
+
+In the previous exercise, you learned how a wrapper can execute code before a function runs.
+
+Now you'll take the next step.
+
+A wrapper can surround a function with additional behavior:
+
+```text
+Before
+↓
+Function execution
+↓
+After
+```
+
+This is one of the most common decorator patterns in real-world Python applications.
+
+Many decorators:
+
+- Log function activity
+- Measure execution time
+- Open and close resources
+- Track success and failure
+
+by executing code before and after the original function.
 
 ---
 
@@ -45,33 +78,29 @@ Before attempting this exercise, you should understand:
 
 A wrapper can execute code around another function.
 
-Example:
+For example:
 
 ```python
 def wrapper():
     print("Before")
-    func()
+
+    some_function()
+
     print("After")
 ```
 
-Output:
+The wrapper surrounds the original function with additional behavior.
 
-```text
-Before
-Hello!
-After
-```
-
-The wrapper surrounds the function execution.
+The original function remains unchanged.
 
 ---
 
 ## Challenge
 
-Create a function named:
+Create a function called:
 
 ```python
-say_hello()
+say_hello
 ```
 
 that prints:
@@ -80,32 +109,21 @@ that prints:
 Hello!
 ```
 
-Create a function named:
+Then create a function called:
 
 ```python
-wrap()
+wrap
 ```
 
-that:
+that receives another function and returns a wrapper.
 
-1. Receives another function
-2. Creates a wrapper
-3. Prints:
+The wrapper should:
 
-```text
-Before
-```
+1. Print a message before execution
+2. Execute the wrapped function
+3. Print a message after execution
 
-4. Executes the wrapped function
-5. Prints:
-
-```text
-After
-```
-
-6. Returns the wrapper
-
-Then:
+Finally:
 
 1. Wrap `say_hello`
 2. Store the returned wrapper
@@ -125,7 +143,14 @@ Your solution must:
 - Execute the wrapped function
 - Print `"After"`
 - Return the wrapper
-- Produce the expected output
+- Execute the returned wrapper
+
+Do not:
+
+- Modify the original `say_hello()` function
+- Print the messages outside the wrapper
+
+The wrapper should be responsible for the additional behavior.
 
 ---
 
@@ -141,39 +166,13 @@ def wrap(func):
         pass
 
     return wrapper
-
-
-wrapped_hello = wrap(say_hello)
-
-wrapped_hello()
 ```
 
 ---
 
-## Expected Usage
+## Verify Your Solution
 
-```python
-def say_hello():
-    print("Hello!")
-
-
-def wrap(func):
-    def wrapper():
-        print("Before")
-        func()
-        print("After")
-
-    return wrapper
-
-
-wrapped_hello = wrap(say_hello)
-
-wrapped_hello()
-```
-
----
-
-## Expected Output
+When your program runs successfully, you should see:
 
 ```text
 Before
@@ -181,13 +180,22 @@ Hello!
 After
 ```
 
+You should also be able to explain:
+
+```text
+How the wrapper adds behavior around
+the original function without modifying it.
+```
+
+Avoid looking at the solution until you can explain this concept yourself.
+
 ---
 
 ## Hints
 
 ### Hint 1
 
-The wrapped function should still be executed:
+The wrapped function should still be executed using:
 
 ```python
 func()
@@ -197,65 +205,43 @@ func()
 
 ### Hint 2
 
-Anything before:
+Code written before:
 
 ```python
 func()
 ```
 
-runs before the wrapped function.
+runs first.
 
-Anything after:
+Code written after:
 
 ```python
 func()
 ```
 
-runs after the wrapped function.
+runs afterwards.
 
 ---
 
 ### Hint 3
 
-The order matters.
+Think carefully about execution order.
 
-This:
+The wrapper should:
 
-```python
-print("Before")
-func()
-print("After")
-```
-
-produces a different result than:
-
-```python
-func()
-print("Before")
-print("After")
-```
-
----
-
-### Hint 4
-
-Remember to return:
-
-```python
-wrapper
-```
-
-not:
-
-```python
-wrapper()
+```text
+Print message
+↓
+Execute function
+↓
+Print message
 ```
 
 ---
 
 ## Things to Try
 
-After completing the exercise, experiment with these variations.
+After completing the exercise, experiment further.
 
 ### Try 1
 
@@ -266,17 +252,19 @@ Starting...
 Finished.
 ```
 
+Does the behavior remain the same?
+
 ---
 
 ### Try 2
 
-Wrap a second function:
+Create another function:
 
 ```python
 say_goodbye()
 ```
 
-and verify that the messages appear around it as well.
+Wrap it and observe the output.
 
 ---
 
@@ -284,41 +272,36 @@ and verify that the messages appear around it as well.
 
 Add additional messages:
 
-```python
-print("Preparing...")
-print("Before")
-func()
-print("After")
-print("Cleaning up...")
+```text
+Preparing...
+Before
+Hello!
+After
+Cleaning up...
 ```
 
----
-
-### Try 4
-
-Create a wrapper that counts how many functions have been executed.
-
-(You don't need to store the count yet, just print a message.)
+How does this change the execution flow?
 
 ---
 
 ## Reflection
 
-Answer the following questions.
+Answer these questions:
 
 1. Why does the wrapper execute code before and after the function?
-2. How does the wrapper change behavior without modifying the original function?
-3. Why is this pattern useful?
-4. What kinds of tasks might be performed before execution?
-5. What kinds of tasks might be performed after execution?
+2. How does the wrapper change behavior without changing the original function?
+3. Why is execution order important?
+4. What kinds of tasks might be performed before execution? After execution?
+
+The goal is to reinforce understanding.
 
 ---
 
 ## Stretch Goal
 
-Modify the wrapper so it prints the function name in both messages.
+Modify the wrapper so that it includes the function name in its messages.
 
-Expected output:
+Example output:
 
 ```text
 Starting say_hello...
@@ -338,28 +321,27 @@ may be useful.
 
 ## Real-World Connection
 
-Many production decorators use this exact pattern.
+Many production decorators follow this exact pattern.
 
 Examples include:
 
 - Logging when a function starts and ends
 - Measuring execution time
-- Opening and closing resources
-- Creating audit trails
-- Tracking success or failure of operations
+- Opening and closing database connections
+- Creating audit logs
+- Tracking successful and failed operations
 
-The general pattern is:
+A common pattern looks like:
 
-```python
-def wrapper():
-    do_something_before()
-
-    func()
-
-    do_something_after()
+```text
+Do something before
+↓
+Execute function
+↓
+Do something after
 ```
 
-This is the core behavior behind many useful decorators.
+You are now working with one of the most widely used decorator patterns in Python.
 
 ---
 
@@ -367,11 +349,11 @@ This is the core behavior behind many useful decorators.
 
 You can consider this exercise complete when:
 
-- [ ] You can create a wrapper that executes code before a function
-- [ ] You can create a wrapper that executes code after a function
+- [ ] You can execute code before a wrapped function
+- [ ] You can execute code after a wrapped function
 - [ ] You understand execution order
-- [ ] You can explain why the wrapped function is unchanged
-- [ ] You understand how wrappers can add behavior around existing functions
+- [ ] You can explain why the original function remains unchanged
+- [ ] You understand how wrappers can surround existing behavior
 - [ ] You are ready to learn how Python's `@` syntax works
 
 ---
