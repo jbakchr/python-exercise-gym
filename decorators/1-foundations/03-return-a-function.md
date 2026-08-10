@@ -139,11 +139,6 @@ def create_greeter():
         pass
 
     return
-
-
-my_greeter = create_greeter()
-
-my_greeter()
 ```
 
 ---
