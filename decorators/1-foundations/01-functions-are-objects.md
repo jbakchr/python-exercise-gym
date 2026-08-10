@@ -13,22 +13,39 @@
 
 ## Goal
 
-Learn that functions in Python are objects.
+Learn how to:
 
-This means they can:
+```text
+Treat functions like values.
+```
 
-- Be assigned to variables
-- Be passed around
-- Be stored and referenced
-- Be used just like other values
+By the end of this exercise you should understand:
 
-Understanding this concept is the first step toward understanding decorators.
+- Functions can be assigned to variables
+- Multiple variables can refer to the same function
+- A function can be called through any variable that references it
+
+---
+
+## Why This Matters
+
+Decorators rely on the fact that functions are objects.
+
+Later in this topic you will see functions being:
+
+- Passed to other functions
+- Returned from functions
+- Wrapped inside other functions
+
+Before any of that makes sense, you need to understand that a function can be treated just like any other value in Python.
 
 ---
 
 ## Prerequisites
 
+```text
 None.
+```
 
 This is the first exercise in the Decorators topic.
 
@@ -36,22 +53,22 @@ This is the first exercise in the Decorators topic.
 
 ## New Concept
 
-Functions are first-class objects.
+Functions in Python are first-class objects.
 
-Just like:
+This means they can be stored in variables just like strings, integers, or lists.
+
+For example:
 
 ```python
 name = "Jonas"
 age = 42
 ```
 
-you can also do:
+Functions can be stored in variables too.
 
-```python
-greet = say_hello
-```
+The variable does not store the result of calling the function.
 
-where `greet` now refers to the same function as `say_hello`.
+It stores a reference to the function itself.
 
 ---
 
@@ -71,9 +88,9 @@ Hello!
 
 Then:
 
-1. Assign the function to a new variable called `greet`
+1. Assign the function to a variable called `greet`
 2. Call the function using `greet`
-3. Verify that the output is still produced
+3. Verify that the function still works
 
 ---
 
@@ -86,15 +103,12 @@ Your solution must:
 - Call the function using `greet`
 - Produce the expected output
 
-Do **not** call:
+Do not:
 
-```python
-say_hello()
-```
+- Call `say_hello()` after creating `greet`
+- Create a second copy of the function
 
-after creating `greet`.
-
-The goal is to call the function through the new variable.
+The goal is to call the function through the variable.
 
 ---
 
@@ -112,25 +126,22 @@ def say_hello():
 
 ---
 
-## Expected Usage
+## Verify Your Solution
 
-```python
-def say_hello():
-    print("Hello!")
-
-
-greet = say_hello
-
-greet()
-```
-
----
-
-## Expected Output
+When your program runs successfully, you should see:
 
 ```text
 Hello!
 ```
+
+You should also be able to explain:
+
+```text
+Why greet can be used to call the function even though
+the function's name is say_hello.
+```
+
+Avoid looking at the solution until you can explain this concept yourself.
 
 ---
 
@@ -138,57 +149,57 @@ Hello!
 
 ### Hint 1
 
-Functions can be assigned to variables.
+Variables can store references to many different kinds of objects.
 
-Example:
-
-```python
-my_variable = 42
-```
-
-The same idea works for functions.
+Functions are objects too.
 
 ---
 
 ### Hint 2
 
-Do not use parentheses when assigning the function.
-
-Correct:
+Think about the difference between:
 
 ```python
 greet = say_hello
 ```
 
-Incorrect:
+and
 
 ```python
 greet = say_hello()
 ```
 
+One stores a function.
+
+The other executes a function.
+
 ---
 
 ### Hint 3
 
-Adding `()` executes a function.
+To call the function through the new variable, use:
 
-Without `()`, you are referring to the function itself.
+```python
+variable_name()
+```
+
+where `variable_name` refers to a function.
 
 ---
 
 ## Things to Try
 
-After completing the exercise, experiment with the following.
+After completing the exercise, experiment further.
 
 ### Try 1
 
-Add another variable:
+Create another variable:
 
 ```python
 hello_again = say_hello
 ```
 
-Can both variables call the function?
+Can you call the function through both variables?
 
 ---
 
@@ -200,30 +211,32 @@ Print the function itself:
 print(say_hello)
 ```
 
-What do you see?
+What gets displayed?
 
 ---
 
 ### Try 3
 
-Check whether two variables reference the same function:
+Check whether both variables refer to the same function:
 
 ```python
 print(greet is say_hello)
 ```
 
-What is the result?
+What result do you get?
 
 ---
 
 ## Reflection
 
-Answer the following questions.
+Answer these questions:
 
-1. What is being stored in the variable `greet`?
+1. What is stored in the variable `greet`?
 2. Why is `greet = say_hello` different from `greet = say_hello()`?
 3. What happens when you call `greet()`?
 4. Why might it be useful to store a function in a variable?
+
+The goal is to reinforce understanding.
 
 ---
 
@@ -236,23 +249,17 @@ say_hello
 say_goodbye
 ```
 
-Assign one of them to a variable named:
+Assign one of them to:
 
 ```python
 current_action
 ```
 
-and call it.
+Call it.
 
-Then change:
+Then change `current_action` to reference the other function and call it again.
 
-```python
-current_action
-```
-
-to reference the other function and call it again.
-
-Example output:
+Expected output:
 
 ```text
 Hello!
@@ -263,18 +270,17 @@ Goodbye!
 
 ## Real-World Connection
 
-Decorators depend on the fact that functions are objects.
+Many Python features rely on functions being objects.
 
-Later in this topic you will see code like:
+Examples include:
 
-```python
-def decorator(func):
-    ...
-```
+- Decorators
+- Event handlers
+- Callback functions
+- Testing frameworks
+- Web frameworks
 
-The reason this works is that a function can receive another function as an argument.
-
-This exercise is the first step toward understanding that pattern.
+In the next exercises, you'll start passing functions to other functions. That only works because functions can be treated like values.
 
 ---
 
@@ -284,7 +290,7 @@ You can consider this exercise complete when:
 
 - [ ] You can assign a function to a variable
 - [ ] You understand why parentheses matter
-- [ ] You can call a function through another variable
+- [ ] You can call a function through a different variable
 - [ ] You understand that functions are objects
 - [ ] You are ready to pass functions to other functions
 
