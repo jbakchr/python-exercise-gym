@@ -19,25 +19,43 @@
 
 ## Goal
 
-Learn how a single decorator can be reused across multiple functions.
+Learn how to:
+
+```text
+Reuse the same decorator across multiple functions.
+```
+
+By the end of this exercise you should understand:
+
+- A single decorator can be applied to many different functions
+- Decorators promote code reuse
+- Changes made to a decorator automatically affect all decorated functions
+
+---
+
+## Why This Matters
 
 In the previous exercise, you learned that:
 
 ```python
-@wrap
+@decorator
 ```
 
 is simply shorthand for:
 
 ```python
-function = wrap(function)
+function = decorator(function)
 ```
 
-In this exercise, you will discover one of the biggest benefits of decorators:
+Now you'll explore one of the biggest benefits of decorators:
 
-> Reusability.
+```text
+Reusability
+```
 
-Instead of manually adding the same behavior to every function, a single decorator can be applied to many functions.
+Instead of adding the same behavior to every function manually, you can create one decorator and apply it to many functions.
+
+This is one of the reasons decorators are widely used in Python projects and frameworks.
 
 ---
 
@@ -58,22 +76,23 @@ Before attempting this exercise, you should understand:
 
 ## New Concept
 
-A decorator can be applied to many different functions.
+A single decorator can be reused across multiple functions.
 
-Example:
+For example:
 
 ```python
-@wrap
-def greet():
-    print("Hello!")
+@announce
+def first():
+    ...
 
-
-@wrap
-def goodbye():
-    print("Goodbye!")
+@announce
+def second():
+    ...
 ```
 
-Both functions gain the decorator's behavior.
+The decorator only needs to be written once.
+
+Every decorated function automatically gains its behavior.
 
 ---
 
@@ -85,23 +104,28 @@ Create a decorator named:
 announce
 ```
 
-that:
+The `announce()` decorator should:
 
-1. Prints:
+1. Receive another function as an argument
+2. Create a nested function named `wrapper`
+3. Print:
 
 ```text
 Before
 ```
 
-2. Executes the wrapped function
-
-3. Prints:
+4. Execute the wrapped function
+5. Print:
 
 ```text
 After
 ```
 
-Then create three decorated functions:
+6. Return the wrapper function
+
+---
+
+Create the following decorated functions:
 
 ```python
 say_hello()
@@ -109,9 +133,21 @@ say_goodbye()
 say_welcome()
 ```
 
-Each function should print a unique message.
+Decorate all three functions using:
 
-Call all three functions and verify that the decorator behavior appears around each one.
+```python
+@announce
+```
+
+Each function should print a different message:
+
+```text
+Hello!
+Goodbye!
+Welcome!
+```
+
+Finally, execute all three functions.
 
 ---
 
@@ -120,10 +156,24 @@ Call all three functions and verify that the decorator behavior appears around e
 Your solution must:
 
 - Create a decorator named `announce`
-- Use `@announce`
-- Create three decorated functions
+- Allow `announce()` to receive another function
+- Create a nested function named `wrapper`
+- Print `"Before"` before the wrapped function executes
+- Execute the wrapped function
+- Print `"After"` after the wrapped function executes
+- Return the wrapper function
+- Create `say_hello()`
+- Create `say_goodbye()`
+- Create `say_welcome()`
+- Decorate all three functions using `@announce`
 - Execute all three functions
-- Display the decorator's behavior around each function call
+
+Do not:
+
+- Duplicate the decorator logic inside each function
+- Create separate decorators for each function
+
+The goal is to reuse the same decorator across multiple functions.
 
 ---
 
@@ -150,36 +200,16 @@ def say_goodbye():
 @announce
 def say_welcome():
     pass
+
+
+# Execute all three functions
 ```
 
 ---
 
-## Expected Usage
+## Verify Your Solution
 
-```python
-@announce
-def say_hello():
-    print("Hello!")
-
-
-@announce
-def say_goodbye():
-    print("Goodbye!")
-
-
-@announce
-def say_welcome():
-    print("Welcome!")
-
-
-say_hello()
-say_goodbye()
-say_welcome()
-```
-
----
-
-## Expected Output
+When your program runs successfully, you should see:
 
 ```text
 Before
@@ -195,6 +225,15 @@ Welcome!
 After
 ```
 
+You should also be able to explain:
+
+```text
+How one decorator can add the same
+behavior to many different functions.
+```
+
+Avoid looking at the solution until you can explain this concept yourself.
+
 ---
 
 ## Hints
@@ -209,19 +248,15 @@ Focus on applying it to multiple functions.
 
 ### Hint 2
 
-The same decorator can be reused many times.
-
-Example:
+The same decorator can be reused:
 
 ```python
 @announce
-def function_one():
+def first():
     ...
-```
 
-```python
 @announce
-def function_two():
+def second():
     ...
 ```
 
@@ -231,31 +266,23 @@ def function_two():
 
 The decorator should not care what the function does.
 
-It should simply execute:
+Its job is simply to:
 
 ```python
 func()
 ```
 
----
-
-### Hint 4
-
-Only the decorated function changes.
-
-The decorator remains exactly the same.
+and add behavior around it.
 
 ---
 
 ## Things to Try
 
-After completing the exercise, experiment with these variations.
+After completing the exercise, experiment further.
 
 ### Try 1
 
-Add a fourth decorated function.
-
-Example:
+Add another decorated function:
 
 ```python
 @announce
@@ -267,52 +294,43 @@ def say_thanks():
 
 ### Try 2
 
-Change the decorator messages.
-
-Example:
+Change the decorator messages:
 
 ```text
 Starting...
 Finished...
 ```
 
-Notice that all decorated functions automatically inherit the new behavior.
+How many functions inherit the change?
 
 ---
 
 ### Try 3
 
-Create one function that is decorated and one that is not.
+Create one decorated function and one undecorated function.
 
 Compare the output.
 
 ---
 
-### Try 4
-
-Add several print statements inside one of the decorated functions.
-
-Does the decorator still work?
-
----
-
 ## Reflection
 
-Answer the following questions.
+Answer these questions:
 
 1. Why is reusability one of the biggest advantages of decorators?
 2. How many functions can use the same decorator?
-3. How would you add the same behavior without decorators?
+3. How would you add the same behavior without a decorator?
 4. What happens if you change the decorator implementation?
-5. Why is this useful in large projects?
+
+The goal is to reinforce understanding.
 
 ---
 
 ## Stretch Goal
 
-Modify the decorator so it prints the function name.
+Modify the decorator so that it prints the function name.
 
-Expected output:
+Example output:
 
 ```text
 Before calling say_hello
@@ -332,28 +350,26 @@ may be useful.
 
 ## Real-World Connection
 
-The primary benefit of decorators is code reuse.
+The biggest benefit of decorators is code reuse.
 
-Imagine you have 50 functions that all need:
+Imagine you have dozens of functions that all need:
 
 - Logging
 - Timing
 - Validation
 - Authentication
 
-Without decorators, you would repeat the same code in all 50 functions.
+Without decorators, you would repeat the same code in every function.
 
-With decorators:
+With decorators, you can write the behavior once and reuse it everywhere.
 
-```python
-@logger
-@timer
-@validator
-```
+This is why decorators are common in:
 
-you can reuse the same behavior everywhere.
-
-This is why decorators are widely used in Python frameworks and libraries.
+- Web frameworks
+- Testing frameworks
+- Logging systems
+- Caching libraries
+- Authentication systems
 
 ---
 
@@ -363,9 +379,9 @@ You can consider this exercise complete when:
 
 - [ ] You can apply the same decorator to multiple functions
 - [ ] You understand the reusability benefit of decorators
-- [ ] You can modify a decorator and affect multiple functions
+- [ ] You can modify one decorator and affect many functions
 - [ ] You understand how decorators reduce repetition
-- [ ] You are ready to build your first reusable decorator utility
+- [ ] You are ready to build a reusable decorator utility
 
 ---
 
