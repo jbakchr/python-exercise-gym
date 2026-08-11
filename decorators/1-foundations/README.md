@@ -2,11 +2,27 @@
 
 ## Overview
 
-The goal of Foundations is to understand the mechanics that make decorators possible.
+The purpose of the Foundations stage is to understand the core ideas that make decorators possible.
 
-Before creating decorators, you must first understand how functions behave as objects, how they can be passed around, and how wrapper functions work.
+Decorators are often introduced as a special Python feature.
 
-This stage focuses on those core building blocks.
+They are not.
+
+Decorators are built from a small set of ideas:
+
+```text
+Functions are objects
+↓
+Functions can be passed around
+↓
+Functions can be returned
+↓
+Functions can wrap other functions
+↓
+Decorator syntax becomes obvious
+```
+
+This stage focuses on building those ideas one step at a time.
 
 ---
 
@@ -14,39 +30,69 @@ This stage focuses on those core building blocks.
 
 By the end of this stage you should be able to:
 
-- Understand functions as objects
-- Pass functions as arguments
+- Understand functions as first-class objects
+- Pass functions to other functions
 - Return functions from other functions
 - Create wrapper functions
 - Build simple decorators
-- Understand the `@decorator` syntax
+- Use Python's `@decorator` syntax
+- Explain how decorators work internally
+
+More importantly, decorators should no longer feel like magic.
 
 ---
 
-## What You Will Practice
+## How This Stage Is Structured
 
-Topics covered in this stage:
+The exercises are intentionally progressive.
 
-- Functions as objects
-- Function references
-- Higher-order functions
-- Wrapper functions
-- Basic decorators
-- Decorator syntax
+Each exercise introduces one new idea and builds upon previous exercises.
+
+The goal is not to memorize decorator syntax.
+
+The goal is to understand the mechanics behind decorators.
+
+Progression:
+
+```text
+01 Functions Are Objects
+↓
+02 Pass Function as Argument
+↓
+03 Return a Function
+↓
+04 Create Your First Wrapper
+↓
+05 Wrap a Function
+↓
+06 Before Execution
+↓
+07 Before and After Execution
+↓
+08 Understanding @ Syntax
+↓
+09 Multiple Decorated Functions
+↓
+10 Build a Simple Announcer
+```
+
+Think of the exercises as a skill ladder rather than a checklist.
 
 ---
 
 ## Recommended Approach
 
-For every exercise:
+For each exercise:
 
 1. Read the challenge carefully.
-2. Attempt a solution without looking at hints.
-3. Experiment with your own variations.
-4. Refactor and improve your solution.
-5. Compare against the provided solution.
-6. Reflect on what you learned.
+2. Attempt a solution before viewing hints.
+3. Use hints only when necessary.
+4. Experiment with the "Things to Try" section.
+5. Compare your work with the solution.
+6. Complete the reflection questions.
 7. Move on only when the concept feels comfortable.
+
+The goal is understanding, not speed.
 
 ---
 
@@ -54,90 +100,100 @@ For every exercise:
 
 ### 01 Functions Are Objects
 
-Learn that functions can be assigned to variables.
-
----
+Learn that functions can be stored in variables just like other values.
 
 ### 02 Pass Function as Argument
 
-Learn how functions can be passed to other functions.
-
----
+Learn that functions can be passed to other functions.
 
 ### 03 Return a Function
 
-Learn how functions can return other functions.
-
----
+Learn that functions can be returned from other functions.
 
 ### 04 Create Your First Wrapper
 
-Create a simple wrapper function.
-
----
+Create a function that executes another function.
 
 ### 05 Wrap a Function
 
-Combine earlier concepts into a working wrapper.
-
----
+Combine previous concepts to dynamically wrap a function.
 
 ### 06 Before Execution
 
-Execute code before the wrapped function.
-
----
+Use a wrapper to execute code before another function runs.
 
 ### 07 Before and After Execution
 
-Execute code before and after the wrapped function.
-
----
+Use a wrapper to execute code around another function.
 
 ### 08 Understanding @ Syntax
 
-Convert manual decoration into decorator syntax.
-
----
+Learn how Python's decorator syntax relates to manual wrapping.
 
 ### 09 Multiple Decorated Functions
 
-Use the same decorator with multiple functions.
-
----
+Apply the same decorator to multiple functions.
 
 ### 10 Build a Simple Announcer
 
-Create a reusable decorator that announces function execution.
+Combine everything learned to build a reusable decorator.
 
 ---
 
 ## Success Criteria
 
-You are ready to continue to the next stage when:
+You are ready to continue to the Exploration stage when:
 
 - [ ] All exercises are complete
 - [ ] You understand how decorators work internally
-- [ ] You can create a basic decorator from memory
-- [ ] You understand wrapper functions
-- [ ] You understand why decorators require functions as first-class objects
+- [ ] You can explain wrapper functions
+- [ ] You can manually create a decorator
+- [ ] You understand what `@decorator` does
+- [ ] You can apply the same decorator to multiple functions
+- [ ] Decorators no longer feel like magic
 
 ---
 
 ## What Comes Next?
 
-After completing this stage, move on to:
+Next:
 
 ```text
 2-exploration
 ```
 
-In the next stage you will learn how decorators handle arguments, keyword arguments, return values, and different function signatures.
+In the Exploration stage you will investigate how decorators behave with:
+
+- Function arguments
+- Keyword arguments
+- Return values
+- Function metadata
+- More realistic use cases
+
+The focus shifts from:
+
+```text
+How decorators work
+```
+
+to:
+
+```text
+How decorators behave
+```
 
 ---
 
 ## Remember
 
-Decorators are not magic.
+```text
+Reading creates familiarity.
+Practice creates skill.
+Repetition creates mastery.
+```
 
-Decorators are simply functions that work with other functions.
+The goal of this stage is not to memorize decorator syntax.
+
+The goal is to build an intuition for why decorators work.
+
+Once the underlying ideas feel natural, decorators become much easier to use and understand.
