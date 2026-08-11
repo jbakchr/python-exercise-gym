@@ -19,20 +19,41 @@
 
 ## Goal
 
-Build your first reusable decorator.
+Learn how to:
 
-This exercise acts as the capstone exercise for the Foundations stage.
+```text
+Combine everything you've learned to build a reusable decorator.
+```
 
-Rather than focusing on a single new concept, this exercise combines everything you have learned so far:
+By the end of this exercise you should understand:
 
-- Functions are objects
-- Functions can be passed as arguments
-- Functions can be returned
-- Wrapper functions
-- Decorator syntax
-- Reusable decorators
+- How decorators are built from smaller concepts
+- How a decorator can be reused across multiple functions
+- How wrapper functions can add behavior before and after execution
 
-By the end of this exercise, you will have built a decorator that can be applied to multiple functions to announce when those functions are executed.
+---
+
+## Why This Matters
+
+The previous nine exercises introduced the building blocks of decorators:
+
+```text
+Functions are objects
+↓
+Functions can be passed as arguments
+↓
+Functions can be returned
+↓
+Functions can wrap other functions
+↓
+Decorator syntax
+```
+
+This exercise brings everything together.
+
+Instead of learning a new idea, you'll use everything you've already learned to build a simple but useful decorator.
+
+This serves as the capstone exercise for the Foundations stage.
 
 ---
 
@@ -52,21 +73,19 @@ Before attempting this exercise, you should understand:
 
 ---
 
-## New Concept
+## Combining Previous Concepts
 
 This exercise does not introduce a major new concept.
 
-Instead, it focuses on combining previously learned concepts into a reusable solution.
+Instead, it combines concepts you've already learned:
 
-This is an important transition:
+- Wrapper functions
+- Decorators
+- Function references
+- Reusable behavior
+- Decorator syntax
 
-```text
-Learning concepts
-↓
-Combining concepts
-↓
-Building something useful
-```
+The goal is to move from understanding individual pieces to building something useful.
 
 ---
 
@@ -78,29 +97,43 @@ Create a decorator named:
 announce
 ```
 
-that:
+The `announce()` decorator should:
 
-1. Prints a message before a function executes
-2. Prints a message after a function executes
-3. Includes the function name in both messages
+1. Receive another function as an argument
+2. Create a nested function named `wrapper`
+3. Display a start message before the function executes
+4. Execute the wrapped function
+5. Display a finish message after the function executes
+6. Include the wrapped function's name in both messages
+7. Return the wrapper function
 
-The decorator should produce output similar to:
+---
 
-```text
-Starting say_hello...
-Hello!
-Finished say_hello.
-```
-
-Apply the decorator to at least three different functions.
-
-For example:
+Create the following decorated functions:
 
 ```python
 say_hello()
 say_goodbye()
 say_welcome()
 ```
+
+Each function should print a unique message.
+
+For example:
+
+```text
+Hello!
+Goodbye!
+Welcome!
+```
+
+Decorate all three functions using:
+
+```python
+@announce
+```
+
+Then execute all three functions.
 
 ---
 
@@ -109,12 +142,22 @@ say_welcome()
 Your solution must:
 
 - Create a decorator named `announce`
+- Allow `announce()` to receive another function
+- Create a nested `wrapper()` function
+- Display a start message before execution
+- Display a finish message after execution
+- Include the wrapped function name in both messages
+- Return the wrapper function
+- Decorate at least three functions
 - Use `@announce`
-- Display the wrapped function's name before execution
-- Display the wrapped function's name after execution
-- Decorate at least three different functions
-- Produce readable output
-- Avoid duplicating code within the decorated functions
+- Execute all decorated functions
+
+Do not:
+
+- Duplicate announcement logic inside the decorated functions
+- Create a separate decorator for each function
+
+The goal is to create one reusable decorator.
 
 ---
 
@@ -122,10 +165,7 @@ Your solution must:
 
 ```python
 def announce(func):
-    def wrapper():
-        pass
-
-    return wrapper
+    pass
 
 
 @announce
@@ -145,30 +185,9 @@ def say_welcome():
 
 ---
 
-## Expected Usage
+## Verify Your Solution
 
-```python
-@announce
-def say_hello():
-    print("Hello!")
-
-
-say_hello()
-```
-
----
-
-## Expected Output
-
-```text
-Starting say_hello...
-Hello!
-Finished say_hello.
-```
-
----
-
-## Example Output
+Your output should resemble:
 
 ```text
 Starting say_hello...
@@ -184,13 +203,22 @@ Welcome!
 Finished say_welcome.
 ```
 
+You should also be able to explain:
+
+```text
+How the decorator combines everything learned
+throughout the Foundations stage.
+```
+
+Avoid looking at the solution until you understand how all the pieces fit together.
+
 ---
 
 ## Hints
 
 ### Hint 1
 
-You already created wrappers that execute code before and after a function.
+You've already created wrappers that execute code before and after a function.
 
 ---
 
@@ -208,7 +236,7 @@ inside the decorator.
 
 ### Hint 3
 
-The function name can be accessed with:
+The function name can be accessed using:
 
 ```python
 func.__name__
@@ -216,32 +244,19 @@ func.__name__
 
 ---
 
-### Hint 4
-
-Your wrapper's general structure will resemble:
-
-```python
-def wrapper():
-    print(...)
-    func()
-    print(...)
-```
-
----
-
 ## Things to Try
 
-After completing the exercise, experiment with these variations.
+After completing the exercise, experiment further.
 
 ### Try 1
 
-Decorate five functions instead of three.
+Decorate five different functions.
 
 ---
 
 ### Try 2
 
-Customize the start and finish messages.
+Customize the messages.
 
 Example:
 
@@ -254,38 +269,20 @@ Completed.
 
 ### Try 3
 
-Add separators.
-
-Example:
-
-```text
-----------------------------------------
-Starting say_hello...
-Hello!
-Finished say_hello.
-----------------------------------------
-```
-
----
-
-### Try 4
-
-Create functions with multiple print statements.
-
-Does the decorator still work?
+Add separators around each execution.
 
 ---
 
 ## Reflection
 
-Answer the following questions.
+Answer these questions:
 
-1. Which concepts from earlier exercises did you use?
+1. Which earlier exercises helped you complete this challenge?
 2. Why is the decorator reusable?
-3. What benefits does the decorator provide?
-4. How would the code look if the decorator didn't exist?
-5. What parts of decorators feel comfortable now?
-6. What parts still feel confusing?
+3. What benefits does this decorator provide?
+4. How would the code look without the decorator?
+
+The goal is to reinforce understanding.
 
 ---
 
@@ -296,7 +293,7 @@ Add a timestamp before execution.
 Example:
 
 ```text
-[2026-08-09 10:15:42]
+[2026-08-11 10:15:42]
 Starting say_hello...
 Hello!
 Finished say_hello.
@@ -314,40 +311,39 @@ may be useful.
 
 ## Real-World Connection
 
-Many real-world decorators perform actions very similar to this exercise.
+Many real-world decorators perform similar tasks.
 
 Examples include:
 
 - Logging function calls
-- Recording execution times
-- Tracing application behavior
-- Monitoring API endpoints
-- Auditing user actions
+- Monitoring applications
+- Measuring execution time
+- Recording audit information
+- Tracing program behavior
 
-The pattern is almost always:
+The common pattern is:
 
-```python
-Before
+```text
+Do something before
 ↓
-Run function
+Execute function
 ↓
-After
+Do something after
 ```
 
-The difference is simply what work happens before and after execution.
+This exercise uses the same structure.
 
 ---
 
 ## Success Criteria
 
-You can consider the Foundations stage complete when:
+You can consider this exercise complete when:
 
-- [ ] All 10 exercises are complete
-- [ ] You understand how decorators work internally
-- [ ] You understand what `@decorator` actually does
-- [ ] You can build a simple decorator from memory
-- [ ] You can explain wrapper functions to another developer
-- [ ] You understand why functions being objects makes decorators possible
+- [ ] You can build a reusable decorator
+- [ ] You can decorate multiple functions
+- [ ] You understand how wrapper functions work
+- [ ] You understand what `@decorator` does
+- [ ] You can explain how decorators work internally
 - [ ] Decorators no longer feel like magic
 
 ---
@@ -360,15 +356,13 @@ Next:
 2-exploration
 ```
 
-In the Exploration stage, you will learn how decorators work with:
+In the Exploration stage, you'll investigate how decorators work with:
 
-- Positional arguments
+- Function arguments
 - Keyword arguments
 - Return values
-- State
 - Function metadata
-
-The concepts become more realistic and more powerful.
+- More realistic use cases
 
 ---
 
@@ -379,25 +373,3 @@ See:
 ```text
 solutions/10-build-a-simple-announcer.py
 ```
-
----
-
-## Remember
-
-The goal of Foundations was never to memorize decorator syntax.
-
-The goal was to understand the ideas that make decorators possible:
-
-```text
-Functions are objects
-↓
-Functions can be passed around
-↓
-Functions can be returned
-↓
-Functions can wrap other functions
-↓
-Decorators become obvious
-```
-
-If you've reached that understanding, you've successfully completed the Foundations stage.
