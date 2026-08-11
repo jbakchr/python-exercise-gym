@@ -4,37 +4,35 @@
 
 ### 🧠 What This Project Is
 
-python-exercise-gym is a GitHub repository dedicated to learning Python through deliberate practice.
+python-exercise-gym is a repository for learning Python through deliberate practice.
 
-The goal is NOT to be:
+The goal is not to teach Python through tutorials.
 
-- Another Python tutorial
-- Another documentation site
-- Another roadmap
-- A collection of random coding challenges
+The goal is to build mastery through repetition and progressive exercises.
 
-The goal is:
+Learners should be able to choose a topic, start with Exercise 01, and progress through a carefully designed skill ladder.
 
-👉 Provide structured, progressive exercises that help learners deeply understand specific Python topics.
-
-The repository is designed so a learner can choose a topic and immediately begin working through exercises that become progressively more challenging.
-
-For example:
+Example:
 
 ```text
 decorators/
 pathlib/
-shutil/
-generators/
+typing/
+logging/
+sqlite/
 ```
 
-A learner should be able to think:
+The focus is:
 
 ```text
-Today I want to practice decorators.
+Practice
+↓
+Repetition
+↓
+Application
+↓
+Mastery
 ```
-
-and immediately know where to start.
 
 ---
 
@@ -48,31 +46,23 @@ Practice creates skill.
 Repetition creates mastery.
 ```
 
-Learning does not happen by reading documentation alone.
-
-Learning happens through:
+This repository exists to help learners move from:
 
 ```text
-Concept
-↓
-Exercise
-↓
-Exercise
-↓
-Exercise
-↓
-Application
-↓
-Mastery
+"I understand the concept."
 ```
 
-Each topic should encourage deep practice rather than broad exposure.
+to:
+
+```text
+"I can use the concept naturally."
+```
 
 ---
 
 ## 🧭 Repository Philosophy
 
-The repository complements two existing projects:
+This repository complements two related projects.
 
 ### easier-python-docs
 
@@ -82,8 +72,6 @@ Purpose:
 Understand concepts.
 ```
 
----
-
 ### python-mastery-path
 
 Purpose:
@@ -91,8 +79,6 @@ Purpose:
 ```text
 Know what to learn next.
 ```
-
----
 
 ### python-exercise-gym
 
@@ -102,49 +88,11 @@ Purpose:
 Practice until mastery.
 ```
 
-Each repository has a distinct role.
+Each project serves a different learning need.
 
 ---
 
 ## 🏗 Repository Structure
-
-Topics are organized by Python concept.
-
-Examples:
-
-```text
-python-exercise-gym/
-│
-├── pathlib/
-├── shutil/
-├── exceptions/
-├── logging/
-├── dataclasses/
-├── typing/
-├── decorators/
-├── generators/
-├── iterators/
-├── context-managers/
-├── testing/
-├── sqlite/
-├── packaging/
-├── concurrency/
-└── async/
-```
-
-The primary design principle is:
-
-```text
-One topic
-↓
-Progressive exercises
-↓
-Mastery
-```
-
----
-
-## 📚 Topic Structure
 
 Every topic follows the same structure:
 
@@ -159,110 +107,131 @@ topic/
 └── README.md
 ```
 
-This structure should be reused for all topics.
-
 ---
 
 ## 📖 Learning Stages
 
-### 1. Foundations
+### Foundations
 
 Goal:
 
 ```text
-Understand the building blocks.
+Learn
 ```
 
-Examples:
+Focus:
 
-- Syntax
 - Core concepts
-- Basic usage
+- Basic syntax
+- Building blocks
+
+Question:
+
+```text
+What is this?
+```
 
 ---
 
-### 2. Exploration
+### Exploration
 
 Goal:
 
 ```text
-Explore variations and behaviors.
+Investigate
 ```
 
-Examples:
+Focus:
 
-- Different inputs
-- Different patterns
-- Common use cases
+- Variations
+- Behaviors
+- Common patterns
+
+Question:
+
+```text
+What else can it do?
+```
 
 ---
 
-### 3. Manipulation
+### Manipulation
 
 Goal:
 
 ```text
-Use the concept to solve practical problems.
+Build
 ```
 
-Examples:
+Focus:
 
-- Utilities
-- Helpers
-- Small tools
+- Small utilities
+- Practical usage
+- Reusable tools
+
+Question:
+
+```text
+How can I use it?
+```
 
 ---
 
-### 4. Problem Solving
+### Problem Solving
 
 Goal:
 
 ```text
-Apply the concept to realistic scenarios.
+Apply
 ```
 
-Examples:
+Focus:
 
+- Realistic scenarios
+- Design decisions
 - Edge cases
-- Production-style problems
-- More complex exercises
+
+Question:
+
+```text
+How do I solve problems with it?
+```
 
 ---
 
-### 5. Mini Project
+### Mini Project
 
 Goal:
 
 ```text
-Combine everything learned.
+Create
 ```
 
-The mini project acts as proof of understanding.
+Focus:
+
+- Combining concepts
+- End-to-end usage
+- Proof of understanding
+
+Question:
+
+```text
+Can I build something with it?
+```
 
 ---
 
-## 📝 Documentation Templates
+## 📝 Repository Templates
 
-The repository currently uses reusable templates.
-
-### Topic Template
+### Topic Templates
 
 ```text
 templates/topic-readme-template.md
 ```
 
-Used for:
-
-```text
-decorators/README.md
-pathlib/README.md
-generators/README.md
-...
-```
-
 ---
 
-### Stage Template
+### Stage Templates
 
 ```text
 templates/stage-readme-template.md
@@ -280,13 +249,14 @@ Used for:
 
 ---
 
-### Exercise Template
+### Exercise Templates
 
 ```text
-templates/exercise-template.md
+templates/exercise-foundations-template.md
+templates/exercise-exploration-template.md
+templates/exercise-manipulation-template.md
+templates/exercise-problem-solving-template.md
 ```
-
-Used for all exercises.
 
 ---
 
@@ -296,7 +266,33 @@ Used for all exercises.
 templates/mini-project-template.md
 ```
 
-Used for final projects within each topic.
+---
+
+### Solution Template
+
+```text
+templates/solution-template.py
+```
+
+Rule:
+
+```text
+Exercise file
+=
+Learning experience
+
+Solution file
+=
+Minimal correct implementation
+```
+
+Solutions should:
+
+- Solve only the exercise requirements
+- Exclude experiments
+- Exclude stretch goals
+- Prefer simple solutions
+- Prioritize readability over cleverness
 
 ---
 
@@ -322,47 +318,31 @@ Knowledge should accumulate.
 
 Nothing should feel disconnected.
 
-The learner should feel like they are climbing a skill ladder.
-
----
-
-## 🎮 Desired Learning Experience
-
-Exercises should feel more like:
+Exercises should feel like:
 
 ```text
-A skill tree
+A skill ladder
 ```
 
-than:
+not:
 
 ```text
 A checklist
 ```
 
-Every exercise should answer:
-
-```text
-What new thing am I learning?
-
-Why does it matter?
-
-How does it build on previous exercises?
-```
-
 ---
 
-## ✅ Current Topic Progress
+## ✅ Current Progress
 
 ### Decorators
 
 Status:
 
 ```text
-1-foundations complete
+FOUNDATIONS COMPLETE ✅
 ```
 
-Completed exercises:
+Completed:
 
 ```text
 01 Functions Are Objects
@@ -377,20 +357,20 @@ Completed exercises:
 10 Build a Simple Announcer
 ```
 
-Each exercise includes:
-
-- Exercise markdown
-- Python solution file
-
-Structure:
+Also completed:
 
 ```text
-1-foundations/
-├── solutions/
-├── 01-*.md
-├── 02-*.md
-...
-└── 10-*.md
+Foundations README
+Exercise rewrites
+Solution rewrites
+Stage templates
+Solution template
+```
+
+Next:
+
+```text
+Decorators → Exploration
 ```
 
 ---
@@ -401,13 +381,9 @@ Every topic should eventually contain:
 
 ```text
 10 Foundations Exercises
-
 10 Exploration Exercises
-
 10 Manipulation Exercises
-
 10 Problem Solving Exercises
-
 1 Mini Project
 ```
 
@@ -417,22 +393,19 @@ Total:
 41 learning units per topic
 ```
 
-This provides enough repetition for genuine mastery.
-
 ---
 
 ## 🚫 Non-Goals
 
-This repository is NOT:
+This repository is not:
 
 - LeetCode
 - Advent of Code
-- Competitive programming
 - Interview preparation
 - Documentation
 - A Python encyclopedia
 
-The focus is:
+The focus remains:
 
 ```text
 Deep understanding
@@ -442,55 +415,44 @@ deliberate practice
 
 ---
 
-## 💡 Important Design Decisions
-
-When creating exercises:
+## 💡 Important Design Rules
 
 Prefer:
 
-- Small exercises
-- One new concept at a time
+- One new idea at a time
 - Progressive difficulty
+- Small exercises
 - Practical examples
 - Reflection questions
 - Stretch goals
 
 Avoid:
 
-- Massive jumps in difficulty
-- Multi-topic exercises too early
-- Teaching five concepts at once
-- Premature complexity
+- Massive difficulty jumps
+- Teaching multiple concepts simultaneously
+- Premature abstraction
+- Overengineering
+- Huge projects too early
 
 ---
 
-## 🚀 What I Want Help With In A New Chat
+## 🚀 What To Work On Next
 
-Help me:
+Current focus:
 
-- Design new topic structures
-- Create progression paths
-- Design exercises
-- Create solution files
-- Review exercise quality
-- Improve learning flow
-- Expand topics consistently
-- Maintain consistency across the repository
+```text
+Decorators
+↓
+2-exploration
+```
 
-Avoid:
-
-- Overengineering
-- Turning exercises into tutorials
-- Unnecessary abstractions
-- Huge projects before concepts are learned
+When returning to this project, start there.
 
 ---
 
 ## 🔑 Most Important Rule
 
 Always optimize for learning.
-
-When creating exercises:
 
 ```text
 Simple
@@ -502,8 +464,8 @@ Practical
 Reusable
 ```
 
-The goal is not to complete exercises.
+The goal is not exercise completion.
 
-The goal is to build intuition.
+The goal is intuition.
 
-A learner should eventually reach the point where a concept feels natural and can be applied without needing to look it up.
+A learner should eventually reach the point where the concept feels natural and no longer requires looking things up.
