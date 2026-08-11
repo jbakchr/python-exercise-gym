@@ -1,51 +1,106 @@
-# Exploration
+# Decorators – Exploration
 
 ## Overview
 
-The goal of the Exploration stage is to understand how decorators behave in more realistic situations.
+You now know the building blocks of decorators.
 
-In Foundations, you learned that decorators are simply functions that wrap other functions.
+You have:
 
-In this stage, you will explore how decorators interact with:
+- Passed functions as arguments
+- Returned functions from functions
+- Wrapped functions
+- Used the `@` syntax
+- Built simple decorators
 
-- Function arguments
-- Keyword arguments
-- Return values
-- Multiple function signatures
-- Function metadata
-- Internal state
+The next step is not learning new syntax.
 
-By the end of this stage, decorators should start feeling less like a special language feature and more like a natural extension of Python's function system.
+The next step is understanding how decorators behave in real situations.
+
+This stage focuses on exploration.
+
+You will experiment with decorators, observe their behavior, and discover common patterns used in everyday Python development.
+
+The goal is to move from:
+
+```text
+"I know how decorators work."
+```
+
+to:
+
+```text
+"I understand how decorators behave."
+```
 
 ---
 
-## Learning Goals
+## Learning Goal
 
-By the end of this stage you should be able to:
+By the end of this stage you should be comfortable with:
 
-- Decorate functions that accept arguments
-- Decorate functions that accept keyword arguments
-- Create decorators that work with any function signature
-- Preserve return values correctly
-- Understand how arguments flow through wrappers
-- Store state inside decorators
-- Preserve function metadata using `functools.wraps`
-- Build more flexible and reusable decorators
+- Decorating functions that accept arguments
+- Decorating functions with keyword arguments
+- Handling return values correctly
+- Writing flexible wrappers
+- Understanding function metadata
+- Preserving metadata with `functools.wraps`
+- Combining multiple decorators
+- Recognizing common decorator patterns
 
 ---
 
-## What You Will Practice
+## What Makes Exploration Different?
 
-Topics covered in this stage:
+Foundations focused on building decorators.
 
-- Positional arguments
-- Keyword arguments
-- `*args`
-- `**kwargs`
-- Return values
-- Function metadata
-- State inside decorators
-- Reusable decorator patterns
+Exploration focuses on investigating them.
+
+You will intentionally ask questions like:
+
+```text
+What happens if the function takes arguments?
+```
+
+```text
+What happens if the function returns a value?
+```
+
+```text
+What information gets lost when a function is decorated?
+```
+
+```text
+What happens when decorators are stacked?
+```
+
+```text
+How can one decorator work with many different functions?
+```
+
+The goal is to develop intuition through experimentation.
+
+---
+
+## Stage Progression
+
+The exercises in this stage build on each other.
+
+Pattern:
+
+```text
+01 → Functions with arguments
+02 → Multiple arguments
+03 → Keyword arguments
+04 → Flexible wrappers
+05 → Return values
+06 → Reusable decorators
+07 → Metadata inspection
+08 → Preserving metadata
+09 → Stacked decorators
+10 → Putting it all together
+```
+
+Each exercise introduces one new idea while reinforcing previous concepts.
 
 ---
 
@@ -53,108 +108,87 @@ Topics covered in this stage:
 
 For every exercise:
 
-1. Read the challenge carefully.
-2. Attempt a solution without looking at hints.
-3. Experiment with your own variations.
-4. Refactor and improve your solution.
-5. Compare against the provided solution.
-6. Reflect on what you learned.
-7. Move on only when the concept feels comfortable.
+1. Read the requirements carefully.
+2. Predict what the code should do.
+3. Implement a solution.
+4. Run experiments.
+5. Try the stretch goals.
+6. Compare with the provided solution.
+7. Complete the reflection questions.
+
+Do not rush through the exercises.
+
+The value comes from observing behavior and testing ideas.
 
 ---
 
-## Exercises
+## Common Questions You Should Be Asking
 
-### 11 Handle Positional Arguments
+Throughout this stage, regularly stop and ask:
 
-Learn how a decorator can wrap functions that accept positional arguments.
+```text
+What is the wrapper actually receiving?
+```
 
----
+```text
+What does the wrapper return?
+```
 
-### 12 Handle Keyword Arguments
+```text
+What information belongs to the original function?
+```
 
-Learn how decorators interact with keyword arguments.
+```text
+What information belongs to the wrapper?
+```
 
----
+```text
+What changes when another decorator is added?
+```
 
-### 13 Handle Any Arguments
-
-Create a decorator that works with both positional and keyword arguments using `*args` and `**kwargs`.
-
----
-
-### 14 Preserve Return Values
-
-Learn how decorators should correctly return values from wrapped functions.
-
----
-
-### 15 Forward Arguments
-
-Practice passing all received arguments to the wrapped function without modification.
-
----
-
-### 16 Decorating Different Functions
-
-Use the same decorator with multiple functions that have different signatures.
-
----
-
-### 17 Decorator That Counts Calls
-
-Create a decorator that tracks how many times a function has been called.
-
----
-
-### 18 Decorator With State
-
-Learn how decorators can maintain information between function calls.
-
----
-
-### 19 Preserve Function Metadata
-
-Use `functools.wraps` to preserve a function's name, docstring, and metadata.
-
----
-
-### 20 Build a Function Profiler
-
-Create a reusable decorator that gathers information about function execution.
-
-This exercise acts as the capstone for the Exploration stage.
+Curiosity is more important than speed.
 
 ---
 
 ## Success Criteria
 
-You are ready to continue to the next stage when:
+By the end of the Exploration stage you should be able to:
 
-- [ ] All exercises are complete
-- [ ] You can create decorators that work with any function signature
-- [ ] You understand the purpose of `*args` and `**kwargs`
-- [ ] You can correctly preserve return values
-- [ ] You understand how decorators can maintain state
-- [ ] You understand why `functools.wraps` is important
-- [ ] You can create reusable decorators without relying on examples
+- Write decorators that work with arbitrary arguments
+- Return values correctly from decorated functions
+- Preserve function metadata
+- Explain what `functools.wraps` does
+- Predict the order of execution in stacked decorators
+- Adapt a decorator to different kinds of functions
 
----
-
-## What Comes Next?
-
-After completing this stage, move on to:
-
-```text
-3-manipulation
-```
-
-In the next stage you will begin using decorators to solve practical problems such as timing, logging, debugging, validation, and execution tracking.
+Most importantly, decorators should start feeling predictable rather than magical.
 
 ---
 
 ## Remember
 
-Understanding decorators is one thing.
+Decorators are just functions.
 
-Understanding how decorators handle *real functions with real inputs and outputs* is what makes them useful.
+Everything in this stage builds on the same idea:
+
+```text
+Function
+↓
+Wrapped by another function
+↓
+Called through the wrapper
+```
+
+The more situations you observe, the stronger your intuition becomes.
+
+```text
+Read
+↓
+Experiment
+↓
+Observe
+↓
+Understand
+↓
+Master
+```
