@@ -36,4 +36,3 @@ def greet():
 
 
 print(greet.__name__)
-print(greet.__name__)
