@@ -88,16 +88,16 @@ The exercises in this stage build on each other.
 Pattern:
 
 ```text
-01 → Functions with arguments
-02 → Multiple arguments
-03 → Keyword arguments
-04 → Flexible wrappers
-05 → Return values
-06 → Reusable decorators
-07 → Metadata inspection
-08 → Preserving metadata
-09 → Stacked decorators
-10 → Putting it all together
+11 → Functions with arguments
+12 → Multiple arguments
+13 → Keyword arguments
+14 → Flexible wrappers
+15 → Return values
+16 → Reusable decorators
+17 → Metadata inspection
+18 → Preserving metadata
+19 → Stacked decorators
+20 → Putting it all together
 ```
 
 Each exercise introduces one new idea while reinforcing previous concepts.
