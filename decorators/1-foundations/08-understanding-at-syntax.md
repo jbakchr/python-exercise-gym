@@ -19,21 +19,39 @@
 
 ## Goal
 
-Learn what Python's `@decorator` syntax actually does.
+Learn how to:
 
-Up until now, you have manually wrapped functions using code like:
-
-```python
-wrapped_hello = wrap(say_hello)
+```text
+Use Python's @ decorator syntax.
 ```
 
-In this exercise, you'll discover that the `@` syntax is simply a shortcut for the same process.
+By the end of this exercise you should understand:
 
-One of the biggest misconceptions about decorators is that the `@` syntax is some special magic.
+- What `@decorator` syntax does
+- How decorator syntax relates to manual wrapping
+- Why the `@` syntax is simply a shortcut
 
-It isn't.
+---
 
-This exercise will help remove that mystery.
+## Why This Matters
+
+In the previous exercises, you manually wrapped functions using code like:
+
+```python
+say_hello = wrap(say_hello)
+```
+
+Python provides a more convenient way of writing the same thing:
+
+```python
+@wrap
+def say_hello():
+    ...
+```
+
+Many developers first encounter decorators through the `@` syntax.
+
+Understanding that the syntax is simply a shortcut makes decorators much easier to learn and reason about.
 
 ---
 
@@ -53,27 +71,23 @@ Before attempting this exercise, you should understand:
 
 ## New Concept
 
-These two examples are equivalent:
+Decorator syntax is shorthand for wrapping a function.
 
-### Manual Wrapping
+These two patterns are equivalent:
 
 ```python
-def say_hello():
-    print("Hello!")
-
-
 say_hello = wrap(say_hello)
 ```
 
-### Decorator Syntax
+and:
 
 ```python
 @wrap
 def say_hello():
-    print("Hello!")
+    ...
 ```
 
-Python automatically performs the assignment for you.
+Python performs the wrapping automatically.
 
 ---
 
@@ -82,46 +96,73 @@ Python automatically performs the assignment for you.
 Create a function named:
 
 ```python
-wrap()
+wrap
 ```
 
-that:
+The `wrap()` function should:
 
-1. Prints:
+1. Receive another function as an argument
+2. Create a nested function named `wrapper`
+3. Print:
 
 ```text
 Before
 ```
 
-2. Executes the wrapped function
-
-3. Prints:
+4. Execute the received function
+5. Print:
 
 ```text
 After
 ```
 
-Then:
+6. Return the `wrapper` function
 
-### Part 1
+---
 
-Use manual wrapping:
+Create a function named:
+
+```python
+say_hello
+```
+
+that prints:
+
+```text
+Hello!
+```
+
+---
+
+### Part 1 - Manual Wrapping
+
+Wrap the function manually using:
 
 ```python
 say_hello = wrap(say_hello)
 ```
 
-and verify that it works.
+Then execute the wrapped function.
 
-### Part 2
+---
 
-Replace the manual wrapping with:
+### Part 2 - Decorator Syntax
+
+Create another function that prints:
+
+```text
+Hello!
+```
+
+Use:
 
 ```python
 @wrap
 ```
 
-and verify that the output remains identical.
+to decorate it.
+
+Then execute the decorated function.
 
 ---
 
@@ -130,11 +171,23 @@ and verify that the output remains identical.
 Your solution must:
 
 - Create a function named `wrap`
+- Allow `wrap()` to receive another function
+- Create a nested function named `wrapper`
+- Print `"Before"` inside the wrapper
+- Execute the wrapped function
+- Print `"After"` inside the wrapper
+- Return the wrapper function
 - Create a function named `say_hello`
 - Demonstrate manual wrapping
-- Demonstrate `@wrap`
-- Produce identical output in both cases
-- Explain what the `@` syntax does
+- Demonstrate decorator syntax
+- Produce identical output for both approaches
+
+Do not:
+
+- Create separate wrapper implementations
+- Change the behavior between Part 1 and Part 2
+
+The goal is to demonstrate that both approaches perform the same operation.
 
 ---
 
@@ -142,52 +195,26 @@ Your solution must:
 
 ```python
 def wrap(func):
-    def wrapper():
-        pass
-
-    return wrapper
+    pass
 
 
 def say_hello():
     print("Hello!")
 
 
+# Part 1
 # Manual wrapping
 
 
-# Decorator syntax version
+# Part 2
+# Decorator syntax
 ```
 
 ---
 
-## Expected Usage
+## Verify Your Solution
 
-### Manual Wrapping
-
-```python
-def say_hello():
-    print("Hello!")
-
-
-say_hello = wrap(say_hello)
-
-say_hello()
-```
-
-### Decorator Syntax
-
-```python
-@wrap
-def say_hello():
-    print("Hello!")
-
-
-say_hello()
-```
-
----
-
-## Expected Output
+For both Part 1 and Part 2, you should see:
 
 ```text
 Before
@@ -195,15 +222,27 @@ Hello!
 After
 ```
 
+You should also be able to explain:
+
+```text
+How Python transforms:
+
+@wrap
+
+into:
+
+function = wrap(function)
+```
+
+Avoid looking at the solution until you can explain this relationship yourself.
+
 ---
 
 ## Hints
 
 ### Hint 1
 
-Start by making your existing wrapper work.
-
-You already built one in Exercise 07.
+You already built a wrapper with identical behavior in Exercise 07.
 
 ---
 
@@ -215,117 +254,77 @@ Remember:
 say_hello = wrap(say_hello)
 ```
 
-returns a new function and assigns it back to:
-
-```python
-say_hello
-```
+returns a new function.
 
 ---
 
 ### Hint 3
 
-Python automatically performs the assignment when you write:
+When Python sees:
 
 ```python
 @wrap
 ```
 
-above a function definition.
-
----
-
-### Hint 4
-
-The following are equivalent:
-
-```python
-@wrap
-def greet():
-    ...
-```
-
-and:
-
-```python
-def greet():
-    ...
-
-greet = wrap(greet)
-```
+it automatically performs the wrapping during function definition.
 
 ---
 
 ## Things to Try
 
-After completing the exercise, experiment with these variations.
+After completing the exercise, experiment further.
 
 ### Try 1
 
-Create another function:
+Create:
 
 ```python
 say_goodbye()
 ```
 
-and decorate it using `@wrap`.
+and decorate it using:
+
+```python
+@wrap
+```
 
 ---
 
 ### Try 2
 
-Decorate multiple functions with the same wrapper.
+Decorate multiple functions using the same wrapper.
 
 ---
 
 ### Try 3
 
-Change the messages:
+Change the wrapper messages to:
 
 ```text
 Starting...
 Finished...
 ```
 
-and verify that all decorated functions inherit the change.
-
----
-
-### Try 4
-
-Compare the readability of:
-
-```python
-function = wrap(function)
-```
-
-versus:
-
-```python
-@wrap
-```
-
-Which do you prefer?
-
-Why?
+Do all decorated functions inherit the new behavior?
 
 ---
 
 ## Reflection
 
-Answer the following questions.
+Answer these questions:
 
 1. What does `@wrap` actually do?
-2. Why does Python provide decorator syntax?
-3. Which version is easier to read?
-4. Is the `@` syntax required for decorators?
-5. Why might some people mistakenly think decorators are magical?
+2. Why is it equivalent to `say_hello = wrap(say_hello)`?
+3. Why might the decorator version be easier to read?
+4. Why does the `@` syntax sometimes seem magical to new Python developers?
+
+The goal is to reinforce understanding.
 
 ---
 
 ## Stretch Goal
 
-Create two versions of the same program:
+Create two complete examples:
 
 ### Version 1
 
@@ -343,35 +342,22 @@ Uses:
 @wrap
 ```
 
-Verify that both produce identical output.
+Verify that they produce identical output.
 
-Then explain in your own words why this happens.
+Then explain in your own words why they behave the same way.
 
 ---
 
 ## Real-World Connection
 
-Most decorator code you encounter in Python projects uses:
+Decorator syntax appears throughout the Python ecosystem.
 
-```python
-@decorator_name
-```
-
-Examples:
+Examples include:
 
 ```python
 @app.route("/")
-```
-
-```python
 @dataclass
-```
-
-```python
 @cache
-```
-
-```python
 @property
 ```
 
@@ -387,7 +373,7 @@ is simply shorthand for:
 function = decorator(function)
 ```
 
-makes these patterns much easier to understand.
+makes these patterns much easier to understand and use.
 
 ---
 
@@ -398,9 +384,9 @@ You can consider this exercise complete when:
 - [ ] You understand what `@decorator` does
 - [ ] You can manually wrap a function
 - [ ] You can use decorator syntax
-- [ ] You understand that both approaches produce the same result
-- [ ] The `@` syntax no longer feels magical
-- [ ] You are ready to apply the same decorator to multiple functions
+- [ ] You understand that both approaches are equivalent
+- [ ] The `@` syntax no longer feels mysterious
+- [ ] You are ready to decorate multiple functions
 
 ---
 
