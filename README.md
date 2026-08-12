@@ -27,7 +27,7 @@ Each topic is designed as a complete learning journey where every exercise build
 
 ---
 
-# Philosophy
+## Philosophy
 
 Learning Python is not about reading more documentation.
 
@@ -53,7 +53,7 @@ to:
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 Each top-level directory represents a Python topic.
 
@@ -95,7 +95,7 @@ And so on.
 
 ---
 
-# Topic Structure
+## Topic Structure
 
 Every topic follows the same structure:
 
@@ -114,9 +114,9 @@ Each stage represents a different type of learning.
 
 ---
 
-# Learning Stages
+## Learning Stages
 
-## 1. Foundations
+### 1. Foundations
 
 Goal:
 
@@ -140,7 +140,7 @@ Focus:
 
 ---
 
-## 2. Exploration
+### 2. Exploration
 
 Goal:
 
@@ -164,7 +164,7 @@ Focus:
 
 ---
 
-## 3. Manipulation
+### 3. Manipulation
 
 Goal:
 
@@ -187,7 +187,7 @@ Focus:
 
 ---
 
-## 4. Problem Solving
+### 4. Problem Solving
 
 Goal:
 
@@ -210,7 +210,7 @@ Focus:
 
 ---
 
-## 5. Mini Project
+### 5. Mini Project
 
 Goal:
 
@@ -233,7 +233,7 @@ Focus:
 
 ---
 
-# Exercise Design
+## Exercise Design
 
 Exercises are intentionally progressive.
 
@@ -257,7 +257,7 @@ The learner should feel like they are climbing a skill ladder.
 
 ---
 
-# Exercise Templates
+## Exercise Templates
 
 Different learning stages use different exercise templates.
 
@@ -286,7 +286,7 @@ Each stage therefore uses its own template structure.
 
 ---
 
-# Recommended Workflow
+## Recommended Workflow
 
 When working through a topic:
 
@@ -305,9 +305,9 @@ The goal is to build intuition.
 
 ---
 
-# Topics
+## Topics
 
-Current topics include:
+Current topics will _eventually_ include:
 
 - pathlib
 - shutil
@@ -329,13 +329,13 @@ Additional topics may be added over time.
 
 ---
 
-# Who Is This For?
+## Who Is This For?
 
 This repository is intended for Python developers who already know the basics and want to strengthen their understanding of Python's standard library and advanced language features through focused, deliberate practice.
 
 ---
 
-# Remember
+## Remember
 
 ```text
 Simple
