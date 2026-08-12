@@ -59,14 +59,14 @@ print()
 print(greet("Jonas"))
 print()
 
+print(add(2, 3))
+print()
+
 print(greet("Jonas"))
 print()
 
 
 # Example 2
-
-print(add(2, 3))
-print()
 
 print(add(10, 20))
 print()
