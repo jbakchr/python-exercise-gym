@@ -2,13 +2,9 @@
 
 The purpose of this roadmap is simple:
 
-```text
-Track progress.
-Track what is next.
-Avoid losing momentum.
-```
-
-This is not a detailed planning document.
+- Track progress
+- Track what is next
+- Avoid losing momentum
 
 For project philosophy and structure, see:
 
@@ -19,110 +15,127 @@ PROJECT_CONTEXT.md
 
 ---
 
-# Current Status
+## Completed
 
-## Decorators
+### Decorators
 
-### Foundations
+#### Foundations ✅
 
-- [x] Stage README
-- [x] Exercise 01 - Functions Are Objects
-- [x] Exercise 02 - Pass Function as Argument
-- [x] Exercise 03 - Return a Function
-- [x] Exercise 04 - Create Your First Wrapper
-- [x] Exercise 05 - Wrap a Function
-- [x] Exercise 06 - Before Execution
-- [x] Exercise 07 - Before and After Execution
-- [x] Exercise 08 - Understanding @ Syntax
-- [x] Exercise 09 - Multiple Decorated Functions
-- [x] Exercise 10 - Build a Simple Announcer
-- [x] Solution files
-- [x] Foundations README review
-
-Status:
+Exercises:
 
 ```text
-FOUNDATIONS COMPLETE ✅
+01-10
+```
+
+Completed:
+
+- Foundations README
+- Exercise files
+- Solution files
+
+---
+
+#### Exploration ✅
+
+Exercises:
+
+```text
+11-20
+```
+
+Completed:
+
+- Exploration README
+- Exercise files
+- Solution files
+
+Topics explored:
+
+```text
+Functions With Arguments
+Multiple Arguments
+Keyword Arguments
+Flexible Wrappers
+Return Values
+Reusable Decorators
+Function Metadata
+Preserving Metadata
+Stacking Decorators
+Build a Call Logger
 ```
 
 ---
 
-# Next Up
+## Current Focus
 
-## Decorators
+### Decorators
 
-### Exploration
+#### Manipulation
 
 Status:
 
 ```text
-NOT STARTED
+NEXT
 ```
 
 Goal:
 
 ```text
-Learn how decorators behave in more realistic situations.
+Move from understanding decorators
+to building useful decorators.
 ```
-
-Planned topics:
-
-- Functions with arguments
-- Functions with keyword arguments
-- Functions with return values
-- Multiple arguments
-- Wrapper flexibility
-- Function metadata
-- Common decorator patterns
 
 Target:
 
 ```text
-10 Exploration Exercises
+Exercises 21-30
 ```
 
 ---
 
-# Future Work
+## Upcoming
 
-## Decorators
+### Decorators
 
 Remaining stages:
 
-- [ ] Exploration
-- [ ] Manipulation
-- [ ] Problem Solving
-- [ ] Mini Project
+```text
+Manipulation
+Problem Solving
+Mini Project
+```
 
 ---
 
-# Future Topics
+## Future Topics
 
-Potential topics:
-
-- [ ] pathlib
-- [ ] shutil
-- [ ] exceptions
-- [ ] logging
-- [ ] dataclasses
-- [ ] typing
-- [ ] generators
-- [ ] iterators
-- [ ] context-managers
-- [ ] testing
-- [ ] sqlite
-- [ ] packaging
-- [ ] concurrency
-- [ ] async
+```text
+pathlib
+shutil
+exceptions
+logging
+dataclasses
+typing
+generators
+iterators
+context-managers
+testing
+sqlite
+packaging
+concurrency
+async
+```
 
 ---
 
-# Current Focus
+## Current Focus
 
 ```text
 Decorators
 ↓
-Exploration Stage
+Manipulation Stage
+↓
+Exercises 21-30
 ```
 
 When returning to this project, start here.
