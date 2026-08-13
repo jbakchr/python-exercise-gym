@@ -334,14 +334,15 @@ Status:
 ✅ Foundations Complete
 ✅ Exploration Complete
 ✅ Manipulation Complete
-⬜ Problem Solving
-⬜ Mini Project
+✅ Problem Solving Complete
+✅ Mini Project Complete
+✅ Topic Complete
 ```
 
 Progress:
 
 ```text
-30 / 50 Exercises Complete
+41 / 41 Learning Units Complete
 ```
 
 ---
@@ -369,12 +370,6 @@ Multiple Decorated Functions
 Build a Simple Announcer
 ```
 
-Completed:
-
-- Foundations README
-- Exercise files
-- Solution files
-
 ---
 
 ### Exploration Completed
@@ -399,12 +394,6 @@ Preserving Metadata
 Stacking Decorators
 Build a Call Logger
 ```
-
-Completed:
-
-- Exploration README
-- Exercise files
-- Solution files
 
 ---
 
@@ -431,86 +420,21 @@ Utilities Built:
 30. Decorator Toolbox
 ```
 
-Concepts Practiced:
-
-```text
-Decorator Factories
-Flexible Wrappers
-State Management
-Caching
-Validation
-Access Control
-Logging
-Timing
-Composition
-Reusable Utilities
-```
-
-Completed:
-
-- Manipulation README
-- Exercise files
-- Solution files
-
 ---
 
-## 🎯 Current Focus
+### Problem Solving Completed
 
-### Decorators
-
-#### Problem Solving
-
-Status:
+Exercises:
 
 ```text
-NEXT
+31-40
 ```
 
-Goal:
-
-```text
-Move from building decorators
-to solving realistic problems
-with decorators.
-```
-
-Target:
-
-```text
-Exercises 31-40
-```
-
-Focus:
-
-```text
-Scenario First
-
-Problem First
-
-Decorator Choice Second
-```
-
-The learner should increasingly answer:
-
-```text
-What problem am I solving?
-```
-
-before asking:
-
-```text
-Which decorator should I build?
-```
-
----
-
-## 📋 Planned Problem Solving Exercises
-
-Proposed exercises:
+Scenarios Solved:
 
 ```text
 31. Slow API Calls
-32. Rate Limiting
+32. Rate Limited Service
 33. Expensive Calculations
 34. Audit Trail System
 35. Production Debugging
@@ -521,42 +445,121 @@ Proposed exercises:
 40. Decorator Design Challenge
 ```
 
-Goal:
+Problem-Solving Skills Practiced:
 
 ```text
-Use existing decorator knowledge
-to solve realistic problems.
+Performance Monitoring
+Rate Limiting
+Caching
+Auditing
+Debugging
+Usage Tracking
+Validation
+Authorization
+Decorator Composition
+Architectural Decision Making
 ```
 
 ---
 
-## 🚀 Planned Mini Project
+### Mini Project Completed
+
+Project:
+
+```text
+Decorator Monitoring Toolkit
+```
+
+Concepts Combined:
+
+```text
+Timing
+Logging
+Validation
+Authorization
+Caching
+Usage Tracking
+Decorator Factories
+State Management
+Decorator Composition
+Reusable Design
+```
+
+Outcome:
+
+```text
+Built a reusable decorator toolkit
+that demonstrates practical real-world
+uses of decorators.
+```
+
+---
+
+## 🏆 Reference Topic
+
+Decorators now serve as the reference implementation for future topics.
+
+The decorators topic demonstrates:
+
+```text
+Topic README
+
+Stage READMEs
+
+40 Progressive Exercises
+
+1 Mini Project
+
+Exercise Files
+
+Solution Files
+
+Reflection Questions
+
+Stretch Goals
+
+Problem Solving Scenarios
+
+Capstone Project
+```
+
+Future topics should follow this structure and level of quality.
+
+---
+
+## 🎯 Current Focus
+
+### Next Topic
 
 Status:
 
 ```text
-Future
+NEXT
 ```
 
-Possible project ideas:
+Topic:
 
 ```text
-Task Runner
-
-Decorator Utility Library
-
-Monitoring Toolkit
-
-Audit System
-
-Tiny Web Framework
+pathlib
 ```
 
-Goal:
+Reason:
 
 ```text
-Combine everything learned
-throughout the decorators topic.
+Pathlib is one of the most useful
+modules in everyday Python development.
+
+It introduces practical file and
+directory management while remaining
+accessible to intermediate learners.
+
+It is commonly used in:
+
+- Automation scripts
+- CLI tools
+- Data processing
+- Configuration management
+- Real-world applications
 ```
 
 ---
@@ -661,11 +664,11 @@ execution models and architectures.
 Current focus:
 
 ```text
-Decorators
+pathlib
 ↓
-4-problem-solving
+1-foundations
 ↓
-Exercises 31-40
+Exercises 01-10
 ```
 
 When returning to this project, start there.
