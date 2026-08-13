@@ -6,8 +6,12 @@ The goal of this repository is simple:
 
 ```text
 Pick a Python topic.
+
 Start with Exercise 01.
-Progressively work through increasingly challenging exercises.
+
+Progressively work through increasingly
+challenging exercises.
+
 Develop real intuition and confidence.
 ```
 
@@ -35,7 +39,9 @@ Learning Python is about using the same concept repeatedly in increasingly chall
 
 ```text
 Reading creates familiarity.
+
 Practice creates skill.
+
 Repetition creates mastery.
 ```
 
@@ -233,6 +239,64 @@ Focus:
 
 ---
 
+## Learning Journey
+
+Every topic follows the same progression:
+
+```text
+Foundations
+↓
+Exploration
+↓
+Manipulation
+↓
+Problem Solving
+↓
+Mini Project
+```
+
+The goal is to gradually move from:
+
+```text
+"I understand the concept."
+```
+
+to:
+
+```text
+"I can apply the concept."
+```
+
+and ultimately:
+
+```text
+"I can build something useful with it."
+```
+
+Each stage builds on the previous stage.
+
+```text
+Learn
+↓
+Investigate
+↓
+Build
+↓
+Apply
+↓
+Create
+```
+
+Knowledge accumulates.
+
+Confidence accumulates.
+
+Experience accumulates.
+
+The learner should feel like they are advancing from understanding a concept to using it naturally in real projects.
+
+---
+
 ## Exercise Design
 
 Exercises are intentionally progressive.
@@ -290,14 +354,14 @@ Each stage therefore uses its own template structure.
 
 When working through a topic:
 
-1. Start at Exercise 01.
-2. Complete exercises in order.
-3. Attempt solutions before using hints.
-4. Experiment with the provided variations.
-5. Compare against the solution.
-6. Complete the reflection questions.
-7. Finish the mini project.
-8. Apply the topic in your own projects.
+- Start at Exercise 01.
+- Complete exercises in order.
+- Attempt solutions before using hints.
+- Experiment with the provided variations.
+- Compare against the solution.
+- Complete the reflection questions.
+- Finish the mini project.
+- Apply the topic in your own projects.
 
 The goal is not to finish quickly.
 
@@ -307,7 +371,7 @@ The goal is to build intuition.
 
 ## Topics
 
-Current topics will _eventually_ include:
+Current topics will eventually include:
 
 - pathlib
 - shutil
