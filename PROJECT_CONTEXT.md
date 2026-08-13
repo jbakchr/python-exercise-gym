@@ -16,8 +16,8 @@ Example:
 
 ```text
 decorators/
-pathlib/
 typing/
+pathlib/
 logging/
 sqlite/
 ```
@@ -347,7 +347,28 @@ Progress:
 
 ---
 
-### Foundations Completed
+### Typing
+
+Status:
+
+```text
+✅ Foundations Complete
+⬜ Exploration Not Started
+⬜ Manipulation Not Started
+⬜ Problem Solving Not Started
+⬜ Mini Project Not Started
+🚧 Topic In Progress
+```
+
+Progress:
+
+```text
+10 / 41 Learning Units Complete
+```
+
+---
+
+## ✅ Typing Foundations Completed
 
 Exercises:
 
@@ -355,149 +376,71 @@ Exercises:
 01-10
 ```
 
-Topics:
+Topics Covered:
 
 ```text
-Functions Are Objects
-Pass Function as Argument
-Return a Function
-Create Your First Wrapper
-Wrap a Function
-Before Execution
-Before and After Execution
-Understanding @ Syntax
-Multiple Decorated Functions
-Build a Simple Announcer
+01. Basic Parameter Types
+02. Return Types
+03. Multiple Parameters
+04. Optional Values
+05. Union Types
+06. Lists and Collections
+07. Dictionaries and Nested Structures
+08. Type Aliases
+09. Annotating Real Functions
+10. Build a Typed Utility
 ```
 
----
-
-### Exploration Completed
-
-Exercises:
+Skills Practiced:
 
 ```text
-11-20
+Parameter Annotations
+Return Annotations
+Optional Values
+Union Types
+Collection Types
+Dictionary Types
+Nested Structures
+Type Aliases
+Typed Function Signatures
+Typed Utility Design
 ```
 
-Topics:
+Core Concepts Introduced:
 
 ```text
-Functions With Arguments
-Multiple Arguments
-Keyword Arguments
-Flexible Wrappers
-Return Values
-Reusable Decorators
-Function Metadata
-Preserving Metadata
-Stacking Decorators
-Build a Call Logger
-```
+str
+int
+float
+bool
 
----
+Optional
 
-### Manipulation Completed
+Union
 
-Exercises:
+list
+set
+tuple
 
-```text
-21-30
-```
+dict
 
-Utilities Built:
-
-```text
-21. Timing Decorator
-22. Repeat Decorator
-23. Retry Decorator
-24. Debug Decorator
-25. Access Counter
-26. Cache Decorator
-27. Permission Decorator
-28. Validation Decorator
-29. Logging Decorator
-30. Decorator Toolbox
-```
-
----
-
-### Problem Solving Completed
-
-Exercises:
-
-```text
-31-40
-```
-
-Scenarios Solved:
-
-```text
-31. Slow API Calls
-32. Rate Limited Service
-33. Expensive Calculations
-34. Audit Trail System
-35. Production Debugging
-36. Function Monitoring
-37. Data Validation Pipeline
-38. Secure Operations
-39. Background Task Tracking
-40. Decorator Design Challenge
-```
-
-Problem-Solving Skills Practiced:
-
-```text
-Performance Monitoring
-Rate Limiting
-Caching
-Auditing
-Debugging
-Usage Tracking
-Validation
-Authorization
-Decorator Composition
-Architectural Decision Making
-```
-
----
-
-### Mini Project Completed
-
-Project:
-
-```text
-Decorator Monitoring Toolkit
-```
-
-Concepts Combined:
-
-```text
-Timing
-Logging
-Validation
-Authorization
-Caching
-Usage Tracking
-Decorator Factories
-State Management
-Decorator Composition
-Reusable Design
+Type Aliases
 ```
 
 Outcome:
 
 ```text
-Built a reusable decorator toolkit
-that demonstrates practical real-world
-uses of decorators.
+Built a practical foundation
+for understanding and using
+Python type annotations in
+real-world code.
 ```
 
 ---
 
 ## 🏆 Reference Topic
 
-Decorators now serve as the reference implementation for future topics.
+Decorators currently serve as the reference implementation for future topics.
 
 The decorators topic demonstrates:
 
@@ -525,41 +468,75 @@ Capstone Project
 
 Future topics should follow this structure and level of quality.
 
+Typing Foundations now serves as the reference implementation for introducing typing concepts through deliberate practice.
+
 ---
 
 ## 🎯 Current Focus
 
-### Next Topic
+### Active Topic
 
 Status:
 
 ```text
-NEXT
+ACTIVE
 ```
 
 Topic:
 
 ```text
-pathlib
+typing
+```
+
+Current Stage:
+
+```text
+2-exploration
 ```
 
 Reason:
 
 ```text
-Pathlib is one of the most useful
-modules in everyday Python development.
+The Foundations stage is complete.
 
-It introduces practical file and
-directory management while remaining
-accessible to intermediate learners.
+The next step is to explore
+more advanced typing constructs
+commonly used in professional
+Python projects while continuing
+the skill-ladder approach.
+```
 
-It is commonly used in:
+---
 
-- Automation scripts
-- CLI tools
-- Data processing
-- Configuration management
-- Real-world applications
+## 📋 Planned Typing Exploration Topics
+
+Exercises:
+
+```text
+11-20
+```
+
+Planned Concepts:
+
+```text
+TypedDict
+Literal
+Callable
+Any
+NewType
+Type Inference
+Type Narrowing
+NamedTuple
+Self
+Advanced Annotation Patterns
+```
+
+Goal:
+
+```text
+Move beyond basic annotations
+and begin modeling data and
+behavior more effectively.
 ```
 
 ---
@@ -630,11 +607,11 @@ Avoid:
 Recommended order:
 
 ```text
+typing
 pathlib
 exceptions
 logging
 dataclasses
-typing
 shutil
 
 generators
@@ -652,9 +629,13 @@ async
 Reason:
 
 ```text
-Strengthen everyday Python skills
-before moving into more advanced
-execution models and architectures.
+Typing acts as a force multiplier.
+
+The concepts learned in the
+typing topic can be reused and
+reinforced throughout almost
+every future topic in the
+curriculum.
 ```
 
 ---
@@ -664,11 +645,29 @@ execution models and architectures.
 Current focus:
 
 ```text
-pathlib
+typing
 ↓
-1-foundations
+2-exploration
 ↓
-Exercises 01-10
+Exercise 11
+```
+
+Recommended starting exercise:
+
+```text
+11. TypedDict
+```
+
+Reason:
+
+```text
+TypedDict builds naturally on:
+
+- Dictionary Types
+- Nested Structures
+- Type Aliases
+
+introduced during Foundations.
 ```
 
 When returning to this project, start there.
@@ -694,3 +693,5 @@ The goal is not exercise completion.
 The goal is intuition.
 
 A learner should eventually reach the point where the concept feels natural and no longer requires looking things up.
+
+Every exercise, solution, stage, and project should support that outcome.
