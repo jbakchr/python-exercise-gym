@@ -17,9 +17,13 @@ PROJECT_CONTEXT.md
 
 ## Completed
 
-### Decorators
+### Decorators ✅
 
-#### Foundations ✅
+The Decorators topic is now complete.
+
+---
+
+### Foundations ✅
 
 Exercises:
 
@@ -33,9 +37,24 @@ Completed:
 - Exercise files
 - Solution files
 
+Topics covered:
+
+```text
+Functions Are Objects
+Pass Function as Argument
+Return a Function
+Create Your First Wrapper
+Wrap a Function
+Before Execution
+Before and After Execution
+Understanding @ Syntax
+Multiple Decorated Functions
+Build a Simple Announcer
+```
+
 ---
 
-#### Exploration ✅
+### Exploration ✅
 
 Exercises:
 
@@ -66,7 +85,7 @@ Build a Call Logger
 
 ---
 
-#### Manipulation ✅
+### Manipulation ✅
 
 Exercises:
 
@@ -112,45 +131,25 @@ Reusable Utilities
 
 ---
 
-## Current Focus
+### Problem Solving ✅
 
-### Decorators
-
-#### Problem Solving
-
-Status:
+Exercises:
 
 ```text
-NEXT
+31-40
 ```
 
-Goal:
+Completed:
 
-```text
-Move from building decorators
-to solving realistic problems
-with decorators.
-```
+- Problem Solving README
+- Exercise files
+- Solution files
 
-Target:
-
-```text
-Exercises 31-40
-```
-
----
-
-## Planned Problem Solving Exercises
-
-### Decorators
-
-#### Problem Solving
-
-Proposed exercises:
+Scenarios solved:
 
 ```text
 31. Slow API Calls
-32. Rate Limiting
+32. Rate Limited Service
 33. Expensive Calculations
 34. Audit Trail System
 35. Production Debugging
@@ -161,123 +160,220 @@ Proposed exercises:
 40. Decorator Design Challenge
 ```
 
-Focus:
+Skills practiced:
 
 ```text
-Real-world scenarios
-
-Trade-offs
-
-Design decisions
-
-Combining multiple decorators
-
-Choosing the right decorator
-for a given problem
+Problem Analysis
+Solution Selection
+Decorator Composition
+Performance Monitoring
+Rate Limiting
+Caching Strategies
+Auditing
+Debugging
+Validation Pipelines
+Authorization
+System Monitoring
+Architectural Thinking
 ```
 
 ---
 
-## Upcoming
+### Mini Project ✅
+
+Project:
+
+```text
+Decorator Monitoring Toolkit
+```
+
+Completed:
+
+- Mini Project README
+- Project exercise file
+- Example solution
+
+Concepts combined:
+
+```text
+Timing
+Logging
+Validation
+Authorization
+Caching
+Usage Tracking
+Decorator Factories
+State Management
+Decorator Composition
+Reusable Design
+```
+
+Project outcome:
+
+```text
+Built a reusable decorator toolkit
+capable of solving common
+application concerns while
+keeping business logic clean.
+```
+
+---
+
+## Current Progress
 
 ### Decorators
 
-Remaining stages:
-
 ```text
-Problem Solving
-Mini Project
-```
-
----
-
-### Mini Project Ideas
-
-Possible capstone projects:
-
-```text
-Task Runner
-
-Tiny Web Framework
-
-Audit System
-
-Monitoring Toolkit
-
-Decorator Utility Library
-```
-
-Goal:
-
-```text
-Combine everything learned
-throughout the topic.
-```
-
----
-
-## Future Topics
-
-Recommended order:
-
-```text
-pathlib
-exceptions
-logging
-dataclasses
-typing
-shutil
-
-generators
-iterators
-context-managers
-
-testing
-sqlite
-packaging
-
-concurrency
-async
-```
-
-Reason:
-
-```text
-Build stronger everyday Python skills
-before moving into advanced execution
-models such as concurrency and async.
-```
-
----
-
-## Progress Overview
-
-```text
-Decorators
-
 ✅ Foundations
 ✅ Exploration
 ✅ Manipulation
-⬜ Problem Solving
-⬜ Mini Project
+✅ Problem Solving
+✅ Mini Project
 ```
 
 Overall progress:
 
 ```text
-30 / 50 Exercises Complete
+41 / 41 Learning Units Complete
+```
+
+Status:
+
+```text
+✅ Topic Complete
 ```
 
 ---
 
 ## Current Focus
 
+### Next Topic
+
 ```text
-Decorators
-↓
-Problem Solving Stage
-↓
-Exercises 31-40
+pathlib
 ```
 
-When returning to this project, start here.
+Reason:
+
+```text
+Pathlib is one of the most useful
+standard library modules for
+everyday Python development.
+
+It is frequently used in:
+
+- Automation scripts
+- CLI tools
+- Data processing
+- Configuration management
+- File handling
+- Real-world applications
+
+It provides an excellent transition
+from language features to practical
+Python development.
+```
+
+---
+
+## Recommended Next Development Order
+
+```text
+1. pathlib
+2. exceptions
+3. logging
+4. dataclasses
+5. typing
+6. shutil
+
+7. generators
+8. iterators
+9. context-managers
+
+10. testing
+11. sqlite
+12. packaging
+
+13. concurrency
+14. async
+```
+
+---
+
+## Future Topic Goals
+
+Every topic should eventually contain:
+
+```text
+10 Foundations Exercises
+
+10 Exploration Exercises
+
+10 Manipulation Exercises
+
+10 Problem Solving Exercises
+
+1 Mini Project
+```
+
+Total:
+
+```text
+41 Learning Units Per Topic
+```
+
+---
+
+## Long-Term Repository Goal
+
+Build a complete deliberate-practice curriculum covering the most important areas of modern Python development.
+
+Desired outcome:
+
+```text
+Learn
+↓
+Explore
+↓
+Build
+↓
+Apply
+↓
+Create
+```
+
+for every major Python topic.
+
+The repository should help learners move from:
+
+```text
+"I understand the concept."
+```
+
+to:
+
+```text
+"I can use the concept naturally."
+```
+
+and ultimately:
+
+```text
+"I can solve problems with it."
+```
+
+---
+
+## What To Work On Next
+
+Current recommendation:
+
+```text
+pathlib
+↓
+1-foundations
+↓
+Exercises 01-10
+```
+
+When returning to this project, start there.
