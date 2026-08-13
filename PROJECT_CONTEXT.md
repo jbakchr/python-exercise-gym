@@ -229,8 +229,6 @@ Can I build something with it?
 templates/topic-readme-template.md
 ```
 
----
-
 ### Stage Templates
 
 ```text
@@ -247,8 +245,6 @@ Used for:
 5-mini-project/README.md
 ```
 
----
-
 ### Exercise Templates
 
 ```text
@@ -258,15 +254,11 @@ templates/exercise-manipulation-template.md
 templates/exercise-problem-solving-template.md
 ```
 
----
-
 ### Mini Project Template
 
 ```text
 templates/mini-project-template.md
 ```
-
----
 
 ### Solution Template
 
@@ -277,13 +269,13 @@ templates/solution-template.py
 Rule:
 
 ```text
-Exercise file
+Exercise File
 =
-Learning experience
+Learning Experience
 
-Solution file
+Solution File
 =
-Minimal correct implementation
+Minimal Correct Implementation
 ```
 
 Solutions should:
@@ -321,13 +313,13 @@ Nothing should feel disconnected.
 Exercises should feel like:
 
 ```text
-A skill ladder
+A Skill Ladder
 ```
 
 not:
 
 ```text
-A checklist
+A Checklist
 ```
 
 ---
@@ -339,38 +331,232 @@ A checklist
 Status:
 
 ```text
-FOUNDATIONS COMPLETE ✅
+✅ Foundations Complete
+✅ Exploration Complete
+✅ Manipulation Complete
+⬜ Problem Solving
+⬜ Mini Project
+```
+
+Progress:
+
+```text
+30 / 50 Exercises Complete
+```
+
+---
+
+### Foundations Completed
+
+Exercises:
+
+```text
+01-10
+```
+
+Topics:
+
+```text
+Functions Are Objects
+Pass Function as Argument
+Return a Function
+Create Your First Wrapper
+Wrap a Function
+Before Execution
+Before and After Execution
+Understanding @ Syntax
+Multiple Decorated Functions
+Build a Simple Announcer
 ```
 
 Completed:
 
+- Foundations README
+- Exercise files
+- Solution files
+
+---
+
+### Exploration Completed
+
+Exercises:
+
 ```text
-01 Functions Are Objects
-02 Pass Function as Argument
-03 Return a Function
-04 Create Your First Wrapper
-05 Wrap a Function
-06 Before Execution
-07 Before and After Execution
-08 Understanding @ Syntax
-09 Multiple Decorated Functions
-10 Build a Simple Announcer
+11-20
 ```
 
-Also completed:
+Topics:
 
 ```text
-Foundations README
-Exercise rewrites
-Solution rewrites
-Stage templates
-Solution template
+Functions With Arguments
+Multiple Arguments
+Keyword Arguments
+Flexible Wrappers
+Return Values
+Reusable Decorators
+Function Metadata
+Preserving Metadata
+Stacking Decorators
+Build a Call Logger
 ```
 
-Next:
+Completed:
+
+- Exploration README
+- Exercise files
+- Solution files
+
+---
+
+### Manipulation Completed
+
+Exercises:
 
 ```text
-Decorators → Exploration
+21-30
+```
+
+Utilities Built:
+
+```text
+21. Timing Decorator
+22. Repeat Decorator
+23. Retry Decorator
+24. Debug Decorator
+25. Access Counter
+26. Cache Decorator
+27. Permission Decorator
+28. Validation Decorator
+29. Logging Decorator
+30. Decorator Toolbox
+```
+
+Concepts Practiced:
+
+```text
+Decorator Factories
+Flexible Wrappers
+State Management
+Caching
+Validation
+Access Control
+Logging
+Timing
+Composition
+Reusable Utilities
+```
+
+Completed:
+
+- Manipulation README
+- Exercise files
+- Solution files
+
+---
+
+## 🎯 Current Focus
+
+### Decorators
+
+#### Problem Solving
+
+Status:
+
+```text
+NEXT
+```
+
+Goal:
+
+```text
+Move from building decorators
+to solving realistic problems
+with decorators.
+```
+
+Target:
+
+```text
+Exercises 31-40
+```
+
+Focus:
+
+```text
+Scenario First
+
+Problem First
+
+Decorator Choice Second
+```
+
+The learner should increasingly answer:
+
+```text
+What problem am I solving?
+```
+
+before asking:
+
+```text
+Which decorator should I build?
+```
+
+---
+
+## 📋 Planned Problem Solving Exercises
+
+Proposed exercises:
+
+```text
+31. Slow API Calls
+32. Rate Limiting
+33. Expensive Calculations
+34. Audit Trail System
+35. Production Debugging
+36. Function Monitoring
+37. Data Validation Pipeline
+38. Secure Operations
+39. Background Task Tracking
+40. Decorator Design Challenge
+```
+
+Goal:
+
+```text
+Use existing decorator knowledge
+to solve realistic problems.
+```
+
+---
+
+## 🚀 Planned Mini Project
+
+Status:
+
+```text
+Future
+```
+
+Possible project ideas:
+
+```text
+Task Runner
+
+Decorator Utility Library
+
+Monitoring Toolkit
+
+Audit System
+
+Tiny Web Framework
+```
+
+Goal:
+
+```text
+Combine everything learned
+throughout the decorators topic.
 ```
 
 ---
@@ -390,7 +576,7 @@ Every topic should eventually contain:
 Total:
 
 ```text
-41 learning units per topic
+41 Learning Units Per Topic
 ```
 
 ---
@@ -408,9 +594,9 @@ This repository is not:
 The focus remains:
 
 ```text
-Deep understanding
+Deep Understanding
 through
-deliberate practice
+Deliberate Practice
 ```
 
 ---
@@ -436,6 +622,40 @@ Avoid:
 
 ---
 
+## 🔮 Future Topics
+
+Recommended order:
+
+```text
+pathlib
+exceptions
+logging
+dataclasses
+typing
+shutil
+
+generators
+iterators
+context-managers
+
+testing
+sqlite
+packaging
+
+concurrency
+async
+```
+
+Reason:
+
+```text
+Strengthen everyday Python skills
+before moving into more advanced
+execution models and architectures.
+```
+
+---
+
 ## 🚀 What To Work On Next
 
 Current focus:
@@ -443,7 +663,9 @@ Current focus:
 ```text
 Decorators
 ↓
-2-exploration
+4-problem-solving
+↓
+Exercises 31-40
 ```
 
 When returning to this project, start there.
