@@ -1,329 +1,258 @@
-# Mini Project
+## Mini Project - Decorator Monitoring Toolkit
 
-## Overview
+### Topic
 
-The Mini Project stage is the final challenge of the Decorators topic.
+Decorators
 
-Everything you have learned throughout:
+### Project Overview
 
-- Foundations
-- Exploration
-- Manipulation
-- Problem Solving
+In this mini project, you will build:
 
-comes together here.
+A reusable decorator monitoring toolkit that can be applied to functions throughout an application.
 
-Unlike the previous exercises, the goal is no longer to learn a specific decorator concept.
+The toolkit should provide capabilities such as logging, timing, validation, access control, caching, and usage tracking through decorators.
 
-The goal is to demonstrate that you can apply decorator knowledge independently to build something useful.
+This project combines concepts from the entire topic and serves as proof of understanding.
 
-This project should feel closer to a real software development task than a guided exercise.
+### Learning Goals
 
-There is no single correct solution.
+By completing this project you will practice:
 
-Focus on creating a solution that is:
+- Creating reusable decorators
+- Building decorator factories
+- Working with function arguments and return values
+- Managing decorator state
+- Combining multiple decorators
+- Applying decorators to realistic problems
+- Designing maintainable solutions
 
-- Readable
-- Reusable
-- Well-structured
-- Easy to extend
+You should rely primarily on techniques learned throughout this topic.
 
----
+### Background
 
-## Learning Goals
+Modern applications often need functionality such as:
 
-By completing this mini project, you should be able to:
+- Logging
+- Monitoring
+- Validation
+- Authorization
+- Performance measurement
+- Caching
 
-- Design multiple decorators from scratch
-- Combine decorators effectively
-- Create reusable solutions
-- Apply decorators to real-world scenarios
-- Structure decorator-based code cleanly
-- Understand decorator trade-offs
-- Confidently use decorators in future projects
+Without decorators, developers frequently duplicate this logic across many functions.
 
----
+A reusable toolkit allows these concerns to be handled consistently while keeping business logic clean and focused.
 
-## What You Will Practice
+Rather than scattering monitoring code throughout an application, the team wants a collection of decorators that can be easily applied wherever needed.
 
-Topics covered in this stage:
+### Project Requirements
 
-- Decorator design
-- Wrapper functions
-- `*args` and `**kwargs`
-- Return value handling
-- Function metadata preservation
-- State management
-- Configurable decorators
-- Decorator composition
-- Real-world use cases
+Your project must:
 
----
+- Provide multiple reusable decorators
+- Support monitoring function execution
+- Support input validation
+- Support access control
+- Support performance measurement
+- Demonstrate decorator composition
+- Preserve original function behavior
 
-## Recommended Approach
+Your project should:
 
-As with earlier exercises:
+- Be easy to extend
+- Minimize duplicated code
 
-1. Start simple.
-2. Build one feature at a time.
-3. Test frequently.
-4. Refactor often.
-5. Focus on readability.
-6. Prefer simple solutions over clever solutions.
+Your project must not:
 
-Remember:
+- Mix monitoring logic directly into business functions
+- Require manual tracking of monitoring information
 
-```text
-The goal is not to build the perfect project.
+### Example Usage
 
-The goal is to prove that you understand decorators.
+The completed project should support behavior similar to:
+
+```python
+@validate_not_empty
+def create_user(name):
+    ...
+
+
+@measure_time
+@cache
+def generate_report(customer_id):
+    ...
+
+
+@requires_role("admin")
+def delete_user(user_role):
+    ...
 ```
 
----
+Example usage:
 
-## Mini Project
+```python
+create_user("Alice")
 
-### 41 Decorator Toolkit
+generate_report("customer-123")
+generate_report("customer-123")
 
-Build a reusable toolkit of practical decorators.
+delete_user("admin")
+delete_user("guest")
+```
 
-Your toolkit should provide functionality that could realistically be reused across multiple projects.
+Show the intended outcome.
+
+Do not reveal the implementation.
+
+### Expected Behaviour
+
+When the project is working correctly:
+
+- Functions can be monitored without modifying their implementation
+- Expensive operations can be cached
+- Invalid data can be rejected automatically
+- Sensitive operations can be protected
+- Function execution times can be displayed
+- Multiple decorators can work together
+- Original function results remain unchanged
+
+The toolkit should feel like something that could realistically be reused across several applications.
+
+### Suggested Milestones
+
+Break the project into manageable pieces.
+
+#### Milestone 1
+
+Build the basic decorators.
+
+Examples:
+
+- Logging
+- Timing
+- Validation
+
+#### Milestone 2
+
+Add stateful decorators.
+
+Examples:
+
+- Caching
+- Usage tracking
+- Rate limiting
+
+#### Milestone 3
+
+Add authorization support.
+
+Examples:
+
+- Permission checks
+- Role-based access
+
+#### Milestone 4
+
+Build a demonstration application that uses multiple decorators together.
+
+#### Milestone 5
+
+Refactor and organize the toolkit so it is easy to maintain and extend.
+
+These milestones are suggestions, not requirements.
+
+### Design Considerations
+
+Before writing code, think about:
+
+- Which decorators belong in the toolkit?
+- How should the project be organized?
+- Which decorators should be configurable?
+- How should state be managed?
+- When should decorators be combined?
+- How can the solution remain simple and readable?
+
+There is rarely a single correct solution.
+
+### Testing Your Project
+
+Verify that:
+
+- Logging decorators produce the expected output
+- Timing decorators measure execution time
+- Validation decorators reject invalid input
+- Permission decorators deny unauthorized access
+- Cache decorators reuse previous results
+- Multiple decorators work correctly when stacked
+- Function return values are preserved
+
+Create your own additional tests wherever appropriate.
+
+### Optional Extensions
+
+Once the core project is complete, consider adding:
+
+- Retry decorators
+- Audit logging
+- Configurable monitoring levels
+- Cache statistics
+- Request throttling
+- File-based logging
+- Decorator registration system
+
+These should enhance the project rather than replace it.
+
+### Reflection
+
+After completing the project, answer the following questions.
+
+- Which concepts from this topic were most useful?
+- Which part of the project was most challenging?
+- What trade-offs did you make?
+- How would you improve the project in the future?
+- Which decorators would you actually use in your own applications?
+- Do you feel comfortable using decorators in real projects?
+
+### Real-World Connection
+
+Projects like this appear in:
+
+- Real applications
+- Internal tools
+- Automation scripts
+- Open source projects
+
+Many Python frameworks and libraries use decorators extensively.
 
 Examples include:
 
-```python
-@timer
-@debug
-@retry
-@cache
-@validate
-@count_calls
-```
+- FastAPI route definitions
+- Flask route registration
+- Authentication systems
+- Logging solutions
+- Monitoring platforms
+- Caching layers
 
-You do not need to implement every possible decorator.
+Understanding how to design and apply decorators is an important skill for building maintainable Python applications.
 
-The goal is to combine concepts learned throughout this topic and create something useful.
+### Success Criteria
 
----
+You can consider this mini project complete when:
 
-## Suggested Features
+- [ ] All required features are implemented
+- [ ] The project behaves as expected
+- [ ] Multiple decorators can be applied together
+- [ ] The code is understandable and maintainable
+- [ ] You can explain your design decisions
+- [ ] You can extend the project without major rewrites
+- [ ] You feel confident using decorators independently
 
-Consider implementing some or all of the following:
+### Example Solution
 
-### Timer
-
-Measure execution time.
-
-Example:
-
-```python
-@timer
-def process_data():
-    ...
-```
-
----
-
-### Debug
-
-Display function calls and arguments.
-
-Example:
-
-```python
-@debug
-def greet(name):
-    ...
-```
-
----
-
-### Retry
-
-Retry failed operations.
-
-Example:
-
-```python
-@retry(max_attempts=3)
-def fetch_data():
-    ...
-```
-
----
-
-### Cache
-
-Store previous function results.
-
-Example:
-
-```python
-@cache
-def expensive_calculation():
-    ...
-```
-
----
-
-### Validation
-
-Validate incoming arguments.
-
-Example:
-
-```python
-@positive_numbers_only
-def divide(a, b):
-    ...
-```
-
----
-
-### Call Counter
-
-Track how many times a function is executed.
-
-Example:
-
-```python
-@count_calls
-def save_file():
-    ...
-```
-
----
-
-## Suggested Project Structure
+See:
 
 ```text
-decorator-toolkit/
-│
-├── decorators.py
-├── examples.py
-├── tests.py
-└── README.md
+solutions/decorator-monitoring-toolkit.py
 ```
 
-Feel free to create a different structure if it better suits your solution.
-
----
-
-## Stretch Goals
-
-If you want an additional challenge:
-
-### Stretch Goal 1
-
-Allow decorators to be configured with arguments.
-
-Example:
-
-```python
-@retry(max_attempts=5)
-```
-
----
-
-### Stretch Goal 2
-
-Combine multiple decorators on the same function.
-
-Example:
-
-```python
-@debug
-@timer
-@retry(max_attempts=3)
-def process_data():
-    ...
-```
-
----
-
-### Stretch Goal 3
-
-Use `functools.wraps()` everywhere appropriate.
-
----
-
-### Stretch Goal 4
-
-Create documentation for your toolkit.
-
----
-
-### Stretch Goal 5
-
-Add automated tests.
-
----
-
-## Reflection
-
-After completing this project, answer the following questions:
-
-1. Which decorator was easiest to implement?
-2. Which decorator was most difficult?
-3. What concepts do decorators rely on internally?
-4. How did combining multiple decorators affect execution?
-5. What would you improve if starting over?
-6. Which decorators would be genuinely useful in your own projects?
-7. Could you explain decorators to another developer without using notes?
-
----
-
-## Success Criteria
-
-You can consider the Decorators topic complete when:
-
-- [ ] The toolkit functions correctly
-- [ ] Multiple decorators have been implemented
-- [ ] Decorators can handle arguments correctly
-- [ ] Return values are preserved correctly
-- [ ] Function metadata is preserved where appropriate
-- [ ] The code is readable and maintainable
-- [ ] You understand every line of code
-- [ ] You can create a new decorator without consulting earlier exercises
-
----
-
-## What Comes Next?
-
-After completing Decorators, consider exploring:
-
-```text
-context-managers
-```
-
-to learn another powerful Python mechanism for controlling behavior around blocks of code.
-
-or
-
-```text
-generators
-```
-
-to learn how Python handles lazy and efficient data processing.
-
-or
-
-```text
-typing
-```
-
-to improve code clarity, tooling support, and maintainability.
-
-Each of these topics builds naturally on the skills developed while working with decorators.
-
----
-
-## Final Thought
-
-The purpose of this project is not to memorize patterns.
-
-The purpose is to reach the point where decorators feel like a natural tool in your Python toolbox.
-
-When you notice repeated behavior across multiple functions, your instinct should be:
-
-> "This might be a decorator."
+Study the solution only after attempting the project yourself.
