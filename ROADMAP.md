@@ -1,4 +1,4 @@
-# ROADMAP
+## ROADMAP
 
 The purpose of this roadmap is simple:
 
@@ -15,13 +15,11 @@ PROJECT_CONTEXT.md
 
 ---
 
-## Completed
+# Completed
 
-### Decorators ✅
+## Decorators ✅
 
 The Decorators topic is now complete.
-
----
 
 ### Foundations ✅
 
@@ -52,8 +50,6 @@ Multiple Decorated Functions
 Build a Simple Announcer
 ```
 
----
-
 ### Exploration ✅
 
 Exercises:
@@ -82,8 +78,6 @@ Preserving Metadata
 Stacking Decorators
 Build a Call Logger
 ```
-
----
 
 ### Manipulation ✅
 
@@ -128,8 +122,6 @@ Timing
 Composition
 Reusable Utilities
 ```
-
----
 
 ### Problem Solving ✅
 
@@ -177,8 +169,6 @@ System Monitoring
 Architectural Thinking
 ```
 
----
-
 ### Mini Project ✅
 
 Project:
@@ -219,9 +209,196 @@ keeping business logic clean.
 
 ---
 
-## Current Progress
+# In Progress
 
-### Decorators
+## Typing 🚧
+
+The Typing topic is now underway.
+
+### Foundations ✅
+
+Exercises:
+
+```text
+01-10
+```
+
+Completed:
+
+- Foundations README
+- Exercise files
+- Solution files
+
+Topics covered:
+
+```text
+01. Basic Parameter Types
+02. Return Types
+03. Multiple Parameters
+04. Optional Values
+05. Union Types
+06. Lists and Collections
+07. Dictionaries and Nested Structures
+08. Type Aliases
+09. Annotating Real Functions
+10. Build a Typed Utility
+```
+
+Skills practiced:
+
+```text
+Parameter Annotations
+Return Annotations
+Optional Values
+Union Types
+Collection Types
+Dictionary Types
+Nested Structures
+Type Aliases
+Function Signatures
+Typed Utility Design
+```
+
+Concepts introduced:
+
+```text
+str
+int
+float
+bool
+
+Optional
+
+Union
+
+list
+set
+tuple
+
+dict
+
+Type Aliases
+```
+
+Outcome:
+
+```text
+Established a solid foundation
+for reading, writing, and
+understanding modern Python
+type annotations.
+```
+
+### Exploration ⬜
+
+Exercises:
+
+```text
+11-20
+```
+
+Planned topics:
+
+```text
+TypedDict
+NewType
+Literal
+Callable
+Any
+Type Inference
+Type Narrowing
+Self
+NamedTuple
+Advanced Annotation Patterns
+```
+
+Status:
+
+```text
+Not Started
+```
+
+### Manipulation ⬜
+
+Exercises:
+
+```text
+21-30
+```
+
+Planned focus:
+
+```text
+Typed Configuration Data
+Typed API Responses
+Generic Containers
+Validation Helpers
+Reusable Type Utilities
+Type-Safe Data Processing
+```
+
+Status:
+
+```text
+Not Started
+```
+
+### Problem Solving ⬜
+
+Exercises:
+
+```text
+31-40
+```
+
+Planned focus:
+
+```text
+Refactoring Legacy Code
+Removing Any
+Type-Safe APIs
+Protocols
+Plugin Architectures
+Generic Solutions
+```
+
+Status:
+
+```text
+Not Started
+```
+
+### Mini Project ⬜
+
+Planned project:
+
+```text
+Type-Safe Configuration Framework
+```
+
+Possible concepts:
+
+```text
+Optional
+Union
+Collections
+Type Aliases
+TypedDict
+Validation
+Reusable Models
+```
+
+Status:
+
+```text
+Not Started
+```
+
+---
+
+# Current Progress
+
+## Decorators
 
 ```text
 ✅ Foundations
@@ -231,7 +408,7 @@ keeping business logic clean.
 ✅ Mini Project
 ```
 
-Overall progress:
+Progress:
 
 ```text
 41 / 41 Learning Units Complete
@@ -245,74 +422,98 @@ Status:
 
 ---
 
-## Current Focus
-
-### Next Topic
+## Typing
 
 ```text
-pathlib
+✅ Foundations
+⬜ Exploration
+⬜ Manipulation
+⬜ Problem Solving
+⬜ Mini Project
+```
+
+Progress:
+
+```text
+10 / 41 Learning Units Complete
+```
+
+Status:
+
+```text
+🚧 In Progress
+```
+
+---
+
+# Current Focus
+
+## Next Stage
+
+```text
+typing
+↓
+2-exploration
+↓
+Exercises 11-20
 ```
 
 Reason:
 
 ```text
-Pathlib is one of the most useful
-standard library modules for
-everyday Python development.
+The Foundations stage established
+the core building blocks of Python's
+typing system.
 
-It is frequently used in:
-
-- Automation scripts
-- CLI tools
-- Data processing
-- Configuration management
-- File handling
-- Real-world applications
-
-It provides an excellent transition
-from language features to practical
-Python development.
+The Exploration stage will introduce
+more sophisticated typing concepts
+commonly used in professional
+Python codebases while continuing
+the deliberate-practice approach.
 ```
 
 ---
 
-## Recommended Next Development Order
+# Recommended Next Development Order
 
 ```text
-1. pathlib
-2. exceptions
-3. logging
-4. dataclasses
-5. typing
+1. Complete Typing
+2. pathlib
+3. exceptions
+4. logging
+5. dataclasses
 6. shutil
-
 7. generators
 8. iterators
 9. context-managers
-
 10. testing
 11. sqlite
 12. packaging
-
 13. concurrency
 14. async
 ```
 
+Reason:
+
+```text
+Typing acts as a force multiplier.
+
+The skills learned in the Typing topic
+can be reinforced throughout nearly
+every future topic in the curriculum.
+```
+
 ---
 
-## Future Topic Goals
+# Future Topic Goals
 
 Every topic should eventually contain:
 
 ```text
 10 Foundations Exercises
-
 10 Exploration Exercises
-
 10 Manipulation Exercises
-
 10 Problem Solving Exercises
-
 1 Mini Project
 ```
 
@@ -324,7 +525,7 @@ Total:
 
 ---
 
-## Long-Term Repository Goal
+# Long-Term Repository Goal
 
 Build a complete deliberate-practice curriculum covering the most important areas of modern Python development.
 
@@ -364,16 +565,32 @@ and ultimately:
 
 ---
 
-## What To Work On Next
+# What To Work On Next
 
 Current recommendation:
 
 ```text
-pathlib
+typing
 ↓
-1-foundations
+2-exploration
 ↓
-Exercises 01-10
+Exercises 11-20
 ```
+
+Suggested starting point:
+
+```text
+11 TypedDict
+```
+
+because it naturally builds upon:
+
+```text
+Dictionary Types
+Nested Structures
+Type Aliases
+```
+
+introduced during Foundations.
 
 When returning to this project, start there.
