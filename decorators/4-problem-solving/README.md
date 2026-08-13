@@ -1,221 +1,340 @@
 # Problem Solving
 
-## Overview
-
-The goal of the Problem Solving stage is to use decorators to solve real software engineering problems.
-
-In the previous stages, you learned:
-
-- How decorators work
-- How decorators interact with functions
-- How decorators handle arguments and return values
-- How to build reusable utility decorators
-
-In this stage, the focus shifts from:
+Welcome to the fourth stage of the decorators learning journey.
 
 ```text
-Understanding decorators
+Foundations
+↓
+Exploration
+↓
+Manipulation
+↓
+Problem Solving
+```
+
+By this point, you already know how decorators work.
+
+You have:
+
+- Created decorators
+- Wrapped functions
+- Used decorator factories
+- Worked with arguments and return values
+- Preserved metadata
+- Built reusable utilities
+- Implemented logging, validation, caching, timing, and more
+
+The goal of this stage is no longer to learn new decorator mechanics.
+
+The goal is to learn when and why decorators are useful.
+
+---
+
+## Stage Goal
+
+Move from:
+
+```text
+How do I build a decorator?
 ```
 
 to:
 
 ```text
-Using decorators as a tool to solve problems
+How can decorators help solve this problem?
 ```
 
-The exercises are inspired by challenges that developers commonly encounter in production systems, APIs, automation tools, and Python applications.
+In real projects, developers are rarely asked to create a decorator simply because they want a decorator.
 
-By the end of this stage, decorators should feel like a practical tool you can reach for when building your own projects.
+Instead, they encounter problems such as:
 
----
+- Slow operations
+- Repeated validation
+- Access control
+- Monitoring
+- Debugging
+- Auditing
+- Performance issues
 
-## Learning Goals
+Decorators provide a clean way to address many of these concerns.
 
-By the end of this stage you should be able to:
-
-- Retry failed operations automatically
-- Cache expensive computations
-- Validate function inputs
-- Handle exceptions consistently
-- Restrict or control function execution
-- Build configurable decorators
-- Combine multiple decorators effectively
-- Apply decorators to realistic software problems
+This stage focuses on recognizing those situations and choosing an appropriate solution.
 
 ---
 
-## What You Will Practice
+## Learning Focus
 
-Topics covered in this stage:
+You will practice:
 
-- Retry logic
-- Caching
-- Rate limiting
-- Input validation
-- Exception handling
-- Authentication-style checks
-- Configurable decorators
-- Decorator composition
+- Analyzing requirements
+- Identifying duplicated logic
+- Selecting appropriate decorator patterns
+- Combining multiple decorators
+- Making design decisions
+- Considering trade-offs
+- Handling edge cases
+
+The emphasis is on applying previously learned skills rather than introducing entirely new concepts.
 
 ---
 
-## Recommended Approach
+## Problem Solving Mindset
 
-For every exercise:
-
-1. Read the challenge carefully.
-2. Attempt a solution without looking at hints.
-3. Consider potential edge cases.
-4. Refactor your solution for readability.
-5. Compare against the provided solution.
-6. Reflect on why a decorator was chosen as the solution.
-7. Think about where you might use the pattern in a real project.
-
-Remember:
+Earlier stages often started with a concept:
 
 ```text
-A working solution solves the problem.
-
-A good solution remains understandable and reusable.
+Build a cache decorator.
 ```
+
+This stage starts with a problem:
+
+```text
+The application performs the same expensive calculation repeatedly.
+```
+
+Your task is to determine:
+
+```text
+What is the problem?
+
+What solution would improve the code?
+
+Can a decorator help?
+```
+
+The decorator is a tool.
+
+The problem comes first.
 
 ---
 
 ## Exercises
 
-### 31 Retry on Failure
+### 31. Slow API Calls
 
-Create a decorator that retries a function when an exception occurs.
+Investigate performance issues and identify slow functions.
 
-Learn how decorators can improve the reliability of unstable operations.
+Focus:
 
----
-
-### 32 Limit Number of Calls
-
-Create a decorator that prevents a function from being executed more than a specified number of times.
+- Timing
+- Logging
+- Visibility
 
 ---
 
-### 33 Cache Results
+### 32. Rate Limited Service
 
-Create a decorator that stores previously calculated results and returns them when the same arguments are supplied again.
+Prevent excessive requests to a restricted external service.
 
----
+Focus:
 
-### 34 Require Positive Numbers
-
-Create a decorator that validates function arguments before execution.
-
-Reject invalid values using clear error messages.
+- State management
+- Counters
+- Decorator factories
 
 ---
 
-### 35 Require Authentication
+### 33. Expensive Calculations
 
-Simulate access control by allowing a function to execute only when authentication requirements are met.
+Reduce unnecessary work by reusing previously calculated results.
 
----
+Focus:
 
-### 36 Measure Performance
-
-Create a decorator that tracks execution statistics across multiple function calls.
-
----
-
-### 37 Handle Exceptions
-
-Create a decorator that catches exceptions and produces consistent error handling behavior.
+- Caching
+- Arguments
+- Performance optimization
 
 ---
 
-### 38 Stack Multiple Decorators
+### 34. Audit Trail System
 
-Combine several decorators and explore how execution order affects the result.
+Record important operations for accountability and tracing.
 
----
+Focus:
 
-### 39 Build a Configurable Decorator
-
-Create a decorator that accepts its own arguments and changes behavior based on configuration.
-
-For example:
-
-```python
-@retry(max_attempts=5)
-```
+- Logging
+- Metadata
+- Function monitoring
 
 ---
 
-### 40 Build a Production-Style Decorator
+### 35. Production Debugging
 
-Create a reusable decorator that combines several techniques learned throughout this topic.
+Improve diagnostics when issues occur in a running application.
 
-Examples might include:
+Focus:
+
+- Debugging
+- Logging
+- Exception visibility
+
+---
+
+### 36. Function Monitoring
+
+Track how frequently important application features are used.
+
+Focus:
+
+- Instrumentation
+- Counters
+- Usage tracking
+
+---
+
+### 37. Data Validation Pipeline
+
+Reduce duplicated validation logic across multiple functions.
+
+Focus:
+
+- Validation
+- Reusability
+- Consistency
+
+---
+
+### 38. Secure Operations
+
+Protect sensitive functionality from unauthorized access.
+
+Focus:
+
+- Permissions
+- Authorization
+- Access control
+
+---
+
+### 39. Background Task Tracking
+
+Monitor long-running operations from start to finish.
+
+Focus:
 
 - Logging
 - Timing
-- Exception handling
-- Validation
+- Decorator composition
 
-This exercise acts as the capstone for the Problem Solving stage.
+---
+
+### 40. Decorator Design Challenge
+
+Design a complete solution using the techniques learned throughout the decorators topic.
+
+Focus:
+
+- Architecture
+- Trade-offs
+- Combining multiple decorators
+- Design reasoning
+
+---
+
+## Expectations
+
+Unlike earlier stages, some exercises may have multiple valid solutions.
+
+You should not focus solely on making the code work.
+
+You should also consider:
+
+- Readability
+- Maintainability
+- Reusability
+- Flexibility
+- Simplicity
+
+Good solutions often involve balancing competing concerns.
+
+---
+
+## Design Decisions Matter
+
+As you work through these exercises, ask yourself:
+
+```text
+Why did I choose this approach?
+
+Could the problem be solved differently?
+
+Is a decorator actually the best tool?
+
+What trade-offs does my solution introduce?
+```
+
+Professional software development often involves these questions.
+
+This stage is designed to help you practice answering them.
+
+---
+
+## Recommended Workflow
+
+For each exercise:
+
+1. Read the scenario carefully.
+2. Identify the real problem.
+3. Think about possible solutions.
+4. Decide whether a decorator is appropriate.
+5. Implement the solution.
+6. Review the edge cases.
+7. Answer the reflection questions.
+8. Compare with the provided solution.
+
+Avoid jumping straight into coding.
+
+Problem understanding should come before implementation.
 
 ---
 
 ## Success Criteria
 
-You are ready to continue to the Mini Project when:
+By the end of this stage, you should be able to:
 
-- [ ] All exercises are complete
-- [ ] You can identify when a decorator is an appropriate solution
-- [ ] You can build configurable decorators from scratch
-- [ ] You understand how decorators can improve code reuse
-- [ ] You can combine multiple decorators confidently
-- [ ] You can handle common edge cases involving decorators
-- [ ] You can create practical decorators without relying on examples
+- Recognize problems that decorators solve well
+- Apply decorators in realistic scenarios
+- Combine multiple decorators effectively
+- Reduce duplication through abstraction
+- Evaluate alternative solutions
+- Make reasonable design decisions
+
+Most importantly, you should begin thinking less about:
+
+```text
+How do I create a decorator?
+```
+
+and more about:
+
+```text
+How can I use decorators to improve software?
+```
 
 ---
 
-## What Comes Next?
+## Next Step
 
-After completing this stage, move on to:
+After completing this stage, continue to:
 
 ```text
 5-mini-project
 ```
 
-The mini project serves as the final proof of understanding for this topic.
+The mini project combines everything learned throughout:
 
-You will combine everything learned throughout:
+```text
+Foundations
+↓
+Exploration
+↓
+Manipulation
+↓
+Problem Solving
+```
 
-- Foundations
-- Exploration
-- Manipulation
-- Problem Solving
+into a complete, practical application.
 
-to build a larger and more realistic solution.
+The goal is no longer to practice decorators in isolation.
 
----
-
-## Skills You Should Now Possess
-
-By this point, you should be comfortable with:
-
-- Writing decorators
-- Wrapping functions
-- Handling arguments
-- Forwarding return values
-- Maintaining state
-- Using metadata preservation
-- Adding reusable behavior
-- Solving practical programming problems
-
-These are the same foundational skills used when working with decorators in frameworks, libraries, APIs, automation tools, and production Python applications.
-
----
-
-## Remember
-
-Decorators are most valuable when they eliminate repetition.
-
-If you find yourself writing the same behavior around many functions, a decorator may be the cleanest solution.
+The goal is to use decorators naturally while building something useful.
