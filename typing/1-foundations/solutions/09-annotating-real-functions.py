@@ -43,7 +43,7 @@ def count_users(users: UserList) -> int:
     return len(users)
 
 
-def get_user_names(users: UserList) -> list[str]:
+def get_user_names(users: UserList) -> list[UserName]:
     names = []
 
     for user in users:
