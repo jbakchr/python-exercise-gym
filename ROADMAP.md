@@ -209,19 +209,15 @@ keeping business logic clean.
 
 ---
 
-# In Progress
+## In Progress
 
-## Typing 🚧
+### Typing 🚧
 
-The Typing topic is now well underway.
+The Typing topic is now more than halfway complete.
 
-### Foundations ✅
+#### Foundations ✅
 
-Exercises:
-
-```text
-01-10
-```
+Exercises: 01-10
 
 Completed:
 
@@ -231,7 +227,6 @@ Completed:
 
 Topics covered:
 
-```text
 01. Basic Parameter Types
 02. Return Types
 03. Multiple Parameters
@@ -242,11 +237,9 @@ Topics covered:
 08. Type Aliases
 09. Annotating Real Functions
 10. Build a Typed Utility
-```
 
 Skills practiced:
 
-```text
 Parameter Annotations
 Return Annotations
 Optional Values
@@ -257,11 +250,9 @@ Nested Structures
 Type Aliases
 Function Signatures
 Typed Utility Design
-```
 
 Concepts introduced:
 
-```text
 str
 int
 float
@@ -273,28 +264,22 @@ Union
 list
 set
 tuple
-
 dict
 
 Type Aliases
-```
 
 Outcome:
 
-```text
 Established a solid foundation
 for reading, writing, and
 understanding modern Python
 type annotations.
-```
 
-### Exploration ✅
+---
 
-Exercises:
+#### Exploration ✅
 
-```text
-11-20
-```
+Exercises: 11-20
 
 Completed:
 
@@ -304,7 +289,6 @@ Completed:
 
 Topics explored:
 
-```text
 11. TypedDict
 12. Literal
 13. Callable
@@ -315,11 +299,9 @@ Topics explored:
 18. Type Narrowing
 19. Self
 20. Advanced Annotation Patterns
-```
 
 Skills practiced:
 
-```text
 Structured Data Modelling
 Restricted Values
 Callable Signatures
@@ -330,11 +312,9 @@ Type Inference
 Type Narrowing
 Class-Aware Annotations
 Annotation Composition
-```
 
 Concepts introduced:
 
-```text
 TypedDict
 Literal
 Callable
@@ -342,165 +322,195 @@ Any
 NewType
 NamedTuple
 Self
-
 Type Inference
 Type Narrowing
-
 Advanced Annotation Patterns
-```
 
 Outcome:
 
-```text
 Expanded understanding of
 Python's typing system beyond
 basic annotations and into
 real-world modelling of data,
 behavior, and application design.
-```
-
-### Manipulation ⬜
-
-Exercises:
-
-```text
-21-30
-```
-
-Planned focus:
-
-```text
-Typed Configuration Data
-Typed API Responses
-Generic Containers
-Validation Helpers
-Reusable Type Utilities
-Type-Safe Data Processing
-```
-
-Possible progression:
-
-```text
-21. Typed Configuration
-22. Typed Environment Settings
-23. Typed API Response Models
-24. Generic Data Containers
-25. Typed Validation Helpers
-26. Reusable Type Utilities
-27. Type-Safe Record Processing
-28. Typed Service Interfaces
-29. Data Transformation Pipeline
-30. Typing Utility Toolbox
-```
-
-Status:
-
-```text
-Not Started
-```
-
-### Problem Solving ⬜
-
-Exercises:
-
-```text
-31-40
-```
-
-Planned focus:
-
-```text
-Refactoring Legacy Code
-Removing Any
-Type-Safe APIs
-Protocols
-Plugin Architectures
-Generic Solutions
-```
-
-Status:
-
-```text
-Not Started
-```
-
-### Mini Project ⬜
-
-Planned project:
-
-```text
-Type-Safe Configuration Framework
-```
-
-Possible concepts:
-
-```text
-Optional
-Union
-Collections
-Type Aliases
-TypedDict
-Literal
-NewType
-Validation
-Reusable Models
-```
-
-Status:
-
-```text
-Not Started
-```
 
 ---
 
-# Current Progress
+#### Manipulation ✅
 
-## Decorators
+Exercises: 21-30
 
-```text
+Completed:
+
+- Manipulation README
+- Exercise files
+- Solution files
+
+Utilities built:
+
+21. Typed Configuration Data
+22. Typed Environment Settings
+23. Typed API Responses
+24. Generic Container
+25. Typed Validation Helpers
+26. Type Utility Functions
+27. Typed Data Processor
+28. Service Interface Design
+29. Data Transformation Pipeline
+30. Typing Utility Toolbox
+
+Skills practiced:
+
+Typed Data Modelling
+Configuration Design
+API Modelling
+Generic Classes
+Generic Functions
+Callable Utilities
+Validation Helpers
+Data Processing
+Protocol Design
+Transformation Pipelines
+Reusable Utility Design
+
+Concepts reinforced:
+
+TypedDict
+Literal
+Callable
+Optional
+TypeVar
+Generic
+Protocol
+Type Aliases
+Reusable Components
+
+Outcome:
+
+Moved beyond understanding
+typing constructs and learned
+how to use them to build
+practical, reusable, type-safe
+application utilities.
+
+---
+
+#### Problem Solving ⬜
+
+Exercises: 31-40
+
+Planned Focus:
+
+Applying typing techniques to
+real-world codebases and design
+problems.
+
+Proposed progression:
+
+31. Refactoring Untyped Configuration
+32. Replacing Any with Explicit Types
+33. Type-Safe API Integration
+34. Typed Validation System
+35. Generic Repository Pattern
+36. Plugin Interface Design
+37. Typed Event Processing Pipeline
+38. Service Layer Refactoring
+39. Designing a Type-Safe Architecture
+40. Typing Design Challenge
+
+Skills to practice:
+
+Problem Analysis
+Refactoring
+Architecture
+Protocols
+Generic Design
+Type-Safe APIs
+Service Contracts
+Validation Systems
+Pipeline Design
+Application Modelling
+
+Goal:
+
+Move from building typed
+utilities to solving realistic
+software design problems
+using Python's typing system.
+
+Status:
+
+Not Started
+
+---
+
+#### Mini Project ⬜
+
+Planned Project:
+
+Type-Safe Configuration Framework
+
+Possible Concepts:
+
+TypedDict
+Literal
+Optional
+NewType
+Validation
+Protocols
+Generics
+Service Interfaces
+Data Processing Pipelines
+
+Project Goal:
+
+Build a reusable framework for
+loading, validating, processing,
+and accessing application
+configuration using modern
+Python typing techniques.
+
+Status:
+
+Not Started
+
+---
+
+## Current Progress
+
+### Decorators
+
 ✅ Foundations
 ✅ Exploration
 ✅ Manipulation
 ✅ Problem Solving
 ✅ Mini Project
-```
 
 Progress:
 
-```text
 41 / 41 Learning Units Complete
-```
 
 Status:
 
-```text
 ✅ Topic Complete
-```
 
 ---
 
-## Typing
+### Typing
 
-```text
 ✅ Foundations
 ✅ Exploration
-⬜ Manipulation
+✅ Manipulation
 ⬜ Problem Solving
 ⬜ Mini Project
-```
 
 Progress:
 
-```text
-20 / 41 Learning Units Complete
-```
+30 / 41 Learning Units Complete
 
 Status:
 
-```text
 🚧 In Progress
-```
 
 ---
 
