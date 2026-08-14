@@ -1,4 +1,4 @@
-## ROADMAP
+# ROADMAP
 
 The purpose of this roadmap is simple:
 
@@ -213,7 +213,7 @@ keeping business logic clean.
 
 ## Typing 🚧
 
-The Typing topic is now underway.
+The Typing topic is now well underway.
 
 ### Foundations ✅
 
@@ -268,7 +268,6 @@ float
 bool
 
 Optional
-
 Union
 
 list
@@ -289,7 +288,7 @@ understanding modern Python
 type annotations.
 ```
 
-### Exploration ⬜
+### Exploration ✅
 
 Exercises:
 
@@ -297,25 +296,67 @@ Exercises:
 11-20
 ```
 
-Planned topics:
+Completed:
+
+- Exploration README
+- Exercise files
+- Solution files
+
+Topics explored:
+
+```text
+11. TypedDict
+12. Literal
+13. Callable
+14. Any
+15. NewType
+16. NamedTuple
+17. Type Inference
+18. Type Narrowing
+19. Self
+20. Advanced Annotation Patterns
+```
+
+Skills practiced:
+
+```text
+Structured Data Modelling
+Restricted Values
+Callable Signatures
+Flexible Typing
+Domain-Specific Types
+Immutable Data Models
+Type Inference
+Type Narrowing
+Class-Aware Annotations
+Annotation Composition
+```
+
+Concepts introduced:
 
 ```text
 TypedDict
-NewType
 Literal
 Callable
 Any
+NewType
+NamedTuple
+Self
+
 Type Inference
 Type Narrowing
-Self
-NamedTuple
+
 Advanced Annotation Patterns
 ```
 
-Status:
+Outcome:
 
 ```text
-Not Started
+Expanded understanding of
+Python's typing system beyond
+basic annotations and into
+real-world modelling of data,
+behavior, and application design.
 ```
 
 ### Manipulation ⬜
@@ -335,6 +376,21 @@ Generic Containers
 Validation Helpers
 Reusable Type Utilities
 Type-Safe Data Processing
+```
+
+Possible progression:
+
+```text
+21. Typed Configuration
+22. Typed Environment Settings
+23. Typed API Response Models
+24. Generic Data Containers
+25. Typed Validation Helpers
+26. Reusable Type Utilities
+27. Type-Safe Record Processing
+28. Typed Service Interfaces
+29. Data Transformation Pipeline
+30. Typing Utility Toolbox
 ```
 
 Status:
@@ -384,6 +440,8 @@ Union
 Collections
 Type Aliases
 TypedDict
+Literal
+NewType
 Validation
 Reusable Models
 ```
@@ -426,7 +484,7 @@ Status:
 
 ```text
 ✅ Foundations
-⬜ Exploration
+✅ Exploration
 ⬜ Manipulation
 ⬜ Problem Solving
 ⬜ Mini Project
@@ -435,7 +493,7 @@ Status:
 Progress:
 
 ```text
-10 / 41 Learning Units Complete
+20 / 41 Learning Units Complete
 ```
 
 Status:
@@ -453,23 +511,26 @@ Status:
 ```text
 typing
 ↓
-2-exploration
+3-manipulation
 ↓
-Exercises 11-20
+Exercises 21-30
 ```
 
 Reason:
 
 ```text
 The Foundations stage established
-the core building blocks of Python's
-typing system.
+the core building blocks of type
+annotations.
 
-The Exploration stage will introduce
-more sophisticated typing concepts
-commonly used in professional
-Python codebases while continuing
-the deliberate-practice approach.
+The Exploration stage introduced
+the major typing constructs used
+in professional Python projects.
+
+The next step is applying these
+concepts to build practical,
+reusable, type-safe utilities and
+data models.
 ```
 
 ---
@@ -498,9 +559,10 @@ Reason:
 ```text
 Typing acts as a force multiplier.
 
-The skills learned in the Typing topic
-can be reinforced throughout nearly
-every future topic in the curriculum.
+The skills learned in the Typing
+topic can be reinforced throughout
+nearly every future topic in the
+curriculum.
 ```
 
 ---
@@ -572,25 +634,27 @@ Current recommendation:
 ```text
 typing
 ↓
-2-exploration
+3-manipulation
 ↓
-Exercises 11-20
+Exercise 21
 ```
 
 Suggested starting point:
 
 ```text
-11 TypedDict
+21. Typed Configuration Data
 ```
 
 because it naturally builds upon:
 
 ```text
-Dictionary Types
-Nested Structures
+TypedDict
+Literal
+Optional
 Type Aliases
+Advanced Annotation Patterns
 ```
 
-introduced during Foundations.
+introduced during the Foundations and Exploration stages.
 
 When returning to this project, start there.
