@@ -488,183 +488,164 @@ Not Started
 
 Progress:
 
+```text
 41 / 41 Learning Units Complete
+```
 
 Status:
 
+```text
 ✅ Topic Complete
-
----
+```
 
 ### Typing
 
 ✅ Foundations
 ✅ Exploration
 ✅ Manipulation
-⬜ Problem Solving
-⬜ Mini Project
+✅ Problem Solving
+✅ Mini Project
 
 Progress:
 
-30 / 41 Learning Units Complete
+```text
+41 / 41 Learning Units Complete
+```
 
 Status:
 
-🚧 In Progress
+```text
+✅ Topic Complete
+```
 
----
+#### Completed Problem Solving Exercises
 
-# Current Focus
+Exercises:
 
-## Next Stage
+- Refactoring Untyped Configuration
+- Replacing Any with Explicit Types
+- Type-Safe API Integration
+- Typed Validation System
+- Generic Repository Pattern
+- Plugin Interface Design
+- Typed Event Processing Pipeline
+- Service Layer Refactoring
+- Designing a Type-Safe Architecture
+- Typing Design Challenge
+
+Skills Practiced:
+
+- Refactoring Legacy Code
+- Explicit Type Modelling
+- API Data Modelling
+- Validation Design
+- Generic Components
+- Protocol-Based Interfaces
+- Event Processing
+- Service Layer Design
+- Architectural Thinking
+- Type-Safe Application Design
+
+#### Completed Mini Project
+
+Project:
 
 ```text
-typing
-↓
-3-manipulation
-↓
-Exercises 21-30
+Type-Safe Configuration Framework
+```
+
+Concepts Combined:
+
+- TypedDict
+- Literal
+- Optional
+- NewType
+- Validation
+- Protocols
+- TypeVar
+- Generics
+- Service Interfaces
+- Data Processing Pipelines
+
+Project Outcome:
+
+```text
+Built a reusable configuration framework
+that demonstrates practical use of modern
+Python typing features in a realistic
+application design.
+```
+
+### Current Focus
+
+#### Next Topic
+
+```text
+dataclasses
 ```
 
 Reason:
 
 ```text
-The Foundations stage established
-the core building blocks of type
-annotations.
+Typing is now complete.
 
-The Exploration stage introduced
-the major typing constructs used
-in professional Python projects.
-
-The next step is applying these
-concepts to build practical,
-reusable, type-safe utilities and
-data models.
+Dataclasses naturally build on many of the
+skills learned in the Typing topic and
+provide a practical next step toward
+modelling structured application data.
 ```
 
----
+### Recommended Next Development Order
 
-# Recommended Next Development Order
-
-```text
-1. Complete Typing
+1. dataclasses
 2. pathlib
 3. exceptions
 4. logging
-5. dataclasses
-6. shutil
-7. generators
-8. iterators
-9. context-managers
-10. testing
-11. sqlite
-12. packaging
-13. concurrency
-14. async
-```
+5. shutil
+6. generators
+7. iterators
+8. context-managers
+9. testing
+10. sqlite
+11. packaging
+12. concurrency
+13. async
 
 Reason:
 
 ```text
-Typing acts as a force multiplier.
+Dataclasses is the strongest next topic
+because it reinforces many of the concepts
+introduced in Typing.
 
-The skills learned in the Typing
-topic can be reinforced throughout
-nearly every future topic in the
-curriculum.
+Learners can continue practicing type
+annotations while learning structured
+data modelling, defaults, immutability,
+object design, and real application models.
+
+Typing and Dataclasses together form a
+powerful foundation for modern Python
+development.
 ```
 
----
-
-# Future Topic Goals
-
-Every topic should eventually contain:
-
-```text
-10 Foundations Exercises
-10 Exploration Exercises
-10 Manipulation Exercises
-10 Problem Solving Exercises
-1 Mini Project
-```
-
-Total:
-
-```text
-41 Learning Units Per Topic
-```
-
----
-
-# Long-Term Repository Goal
-
-Build a complete deliberate-practice curriculum covering the most important areas of modern Python development.
-
-Desired outcome:
-
-```text
-Learn
-↓
-Explore
-↓
-Build
-↓
-Apply
-↓
-Create
-```
-
-for every major Python topic.
-
-The repository should help learners move from:
-
-```text
-"I understand the concept."
-```
-
-to:
-
-```text
-"I can use the concept naturally."
-```
-
-and ultimately:
-
-```text
-"I can solve problems with it."
-```
-
----
-
-# What To Work On Next
+## What To Work On Next
 
 Current recommendation:
 
 ```text
-typing
+dataclasses
 ↓
-3-manipulation
+1-foundations
 ↓
-Exercise 21
+Exercise 01
 ```
 
 Suggested starting point:
 
 ```text
-21. Typed Configuration Data
+01. Creating Your First Dataclass
 ```
 
-because it naturally builds upon:
-
-```text
-TypedDict
-Literal
-Optional
-Type Aliases
-Advanced Annotation Patterns
-```
-
-introduced during the Foundations and Exploration stages.
-
-When returning to this project, start there.
+because it provides the simplest transition
+from typed dictionaries and structured data
+toward class-based data modelling.
