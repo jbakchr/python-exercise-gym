@@ -327,9 +327,9 @@ Nothing should feel disconnected.
 
 ---
 
-# ✅ Current Progress
+## ✅ Current Progress
 
-## Decorators ✅
+### Decorators ✅
 
 Status:
 
@@ -352,7 +352,7 @@ Decorators is the complete reference implementation.
 
 ---
 
-## Typing 🚧
+### Typing ✅
 
 Status:
 
@@ -360,21 +360,22 @@ Status:
 ✅ Foundations Complete
 ✅ Exploration Complete
 ✅ Manipulation Complete
-⬜ Problem Solving
-⬜ Mini Project
+✅ Problem Solving Complete
+✅ Mini Project Complete
+✅ Topic Complete
 ```
 
 Progress:
 
 ```text
-30 / 41 Learning Units Complete
+41 / 41 Learning Units Complete
 ```
 
-Typing is currently the active topic.
+Typing is now complete and serves as the second fully implemented topic.
 
 ---
 
-# ✅ Typing Foundations Complete
+## ✅ Typing Foundations Complete
 
 Exercises:
 
@@ -402,7 +403,7 @@ Understand modern type annotations.
 
 ---
 
-# ✅ Typing Exploration Complete
+## ✅ Typing Exploration Complete
 
 Exercises:
 
@@ -433,7 +434,7 @@ Model real-world data and behavior.
 
 ---
 
-# ✅ Typing Manipulation Complete
+## ✅ Typing Manipulation Complete
 
 Exercises:
 
@@ -479,58 +480,9 @@ application utilities.
 
 ---
 
-# 🎯 Current Focus
-
-## ACTIVE
-
-Topic:
-
-```text
-typing
-```
-
-Current Stage:
-
-```text
-4-problem-solving
-```
-
-Next Exercise:
-
-```text
-31. Refactoring Untyped Configuration
-```
-
-Reason:
-
-```text
-The learner now understands:
-
-TypedDict
-Literal
-Callable
-TypeVar
-Protocol
-Generics
-
-and has built practical utilities.
-
-The next step is solving
-real-world software engineering
-problems using typing.
-```
-
----
-
-# 📋 Planned Typing Problem Solving Exercises
+## ✅ Typing Problem Solving Complete
 
 Exercises:
-
-```text
-31-40
-```
-
-Planned Progression:
 
 ```text
 31. Refactoring Untyped Configuration
@@ -545,17 +497,35 @@ Planned Progression:
 40. Typing Design Challenge
 ```
 
-Goal:
+Skills Practiced:
 
 ```text
-Move from utility creation
-to solving realistic design
-and refactoring challenges.
+Refactoring
+Explicit Type Design
+API Modelling
+Validation Design
+Generic Architecture
+Protocol Design
+Service Layer Design
+Event Processing
+Application Modelling
+Architectural Thinking
+```
+
+Outcome:
+
+```text
+Learned to use typing as a
+software design tool rather than
+simply a documentation tool.
+
+Applied typing concepts to realistic
+refactoring and architecture problems.
 ```
 
 ---
 
-# 📋 Planned Typing Mini Project
+## ✅ Typing Mini Project Complete
 
 Project:
 
@@ -563,7 +533,7 @@ Project:
 Type-Safe Configuration Framework
 ```
 
-Possible Concepts:
+Concepts Combined:
 
 ```text
 TypedDict
@@ -574,15 +544,105 @@ Validation
 Protocols
 TypeVar
 Generics
-Pipelines
 Service Interfaces
+Data Processing Pipelines
 ```
 
-Goal:
+Outcome:
 
 ```text
-Build a reusable typed
-configuration framework.
+Built a reusable configuration
+framework that demonstrates
+modern Python typing techniques
+working together in a practical
+application design.
+```
+
+---
+
+# 🎯 Current Focus
+
+## ACTIVE
+
+Topic:
+
+```text
+dataclasses
+```
+
+Current Stage:
+
+```text
+1-foundations
+```
+
+Next Exercise:
+
+```text
+01. Creating Your First Dataclass
+```
+
+Reason:
+
+```text
+Typing is now complete.
+
+Dataclasses is the natural next topic
+because it builds directly upon
+many of the concepts introduced
+during Typing.
+
+Learners can continue practicing
+type annotations while learning
+structured data modelling,
+defaults, immutability, object
+design, and real-world application
+models.
+```
+
+---
+
+# 📋 Next Topic
+
+## Dataclasses
+
+Status:
+
+```text
+⬜ Foundations
+⬜ Exploration
+⬜ Manipulation
+⬜ Problem Solving
+⬜ Mini Project
+```
+
+Progress:
+
+```text
+0 / 41 Learning Units Complete
+```
+
+Planned Structure:
+
+```text
+10 Foundations Exercises
+10 Exploration Exercises
+10 Manipulation Exercises
+10 Problem Solving Exercises
+1 Mini Project
+```
+
+Dataclasses will become the new reference topic for:
+
+```text
+Structured Data Modelling
+Object Design
+Defaults
+Factories
+Immutability
+Comparison
+Ordering
+Application Models
 ```
 
 ---
@@ -592,11 +652,11 @@ configuration framework.
 Recommended order:
 
 ```text
-typing
+dataclasses
+
 pathlib
 exceptions
 logging
-dataclasses
 shutil
 
 generators
@@ -611,7 +671,15 @@ concurrency
 async
 ```
 
-Typing remains first because it acts as a force multiplier for every later topic.
+Reason:
+
+```text
+Dataclasses reinforces and extends
+many of the concepts introduced in
+Typing and provides an ideal bridge
+toward building realistic application
+models.
+```
 
 ---
 
@@ -642,25 +710,40 @@ Every exercise, solution, stage, and project should reinforce that objective.
 Current recommendation:
 
 ```text
-typing
+dataclasses
 ↓
-4-problem-solving
+1-foundations
 ↓
-Exercise 31
+Exercise 01
 ```
 
 Start with:
 
 ```text
-31. Refactoring Untyped Configuration
+01. Creating Your First Dataclass
 ```
 
 When continuing this project in a future chat:
 
-- Assume Typing Foundations are complete.
-- Assume Typing Exploration is complete.
-- Assume Typing Manipulation is complete.
-- Assume all exercises and solutions for 21-30 exist.
-- Continue with Typing Problem Solving.
+- Assume Decorators is complete.
+- Assume Typing is complete.
+- Assume all Typing exercises, solutions, READMEs, and the mini project exist.
+- Use Decorators and Typing as reference implementations.
+- Begin developing the Dataclasses topic.
 - Maintain existing exercise templates and solution templates.
 - Keep exercises progressive and practical.
+- Continue following the deliberate-practice philosophy of the repository.
+
+```text
+Learn
+↓
+Explore
+↓
+Build
+↓
+Apply
+↓
+Create
+```
+
+Every topic should reinforce that progression.
