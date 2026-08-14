@@ -8,18 +8,32 @@ python-exercise-gym is a repository for learning Python through deliberate pract
 
 The goal is not to teach Python through tutorials.
 
-The goal is to build mastery through repetition and progressive exercises.
+The goal is to build mastery through repetition, application, and progressively designed exercises.
 
-Learners should be able to choose a topic, start with Exercise 01, and progress through a carefully designed skill ladder.
-
-Example:
+Learners should be able to:
 
 ```text
-decorators/
-typing/
-pathlib/
-logging/
-sqlite/
+Choose a topic
+↓
+Start at Exercise 01
+↓
+Progress through a skill ladder
+↓
+Develop intuition
+↓
+Reach mastery
+```
+
+Example topics:
+
+```text
+typing
+decorators
+pathlib
+logging
+exceptions
+dataclasses
+sqlite
 ```
 
 The focus is:
@@ -38,7 +52,7 @@ Mastery
 
 ## 🎯 Core Philosophy
 
-The project is built around one idea:
+The project is built around one principle:
 
 ```text
 Reading creates familiarity.
@@ -69,7 +83,7 @@ This repository complements two related projects.
 Purpose:
 
 ```text
-Understand concepts.
+Understand concepts
 ```
 
 ### python-mastery-path
@@ -77,7 +91,7 @@ Understand concepts.
 Purpose:
 
 ```text
-Know what to learn next.
+Know what to learn next
 ```
 
 ### python-exercise-gym
@@ -85,10 +99,8 @@ Know what to learn next.
 Purpose:
 
 ```text
-Practice until mastery.
+Practice until mastery
 ```
-
-Each project serves a different learning need.
 
 ---
 
@@ -119,17 +131,17 @@ Goal:
 Learn
 ```
 
-Focus:
-
-- Core concepts
-- Basic syntax
-- Building blocks
-
 Question:
 
 ```text
 What is this?
 ```
+
+Focus:
+
+- Core concepts
+- Syntax
+- Building blocks
 
 ---
 
@@ -141,17 +153,17 @@ Goal:
 Investigate
 ```
 
-Focus:
-
-- Variations
-- Behaviors
-- Common patterns
-
 Question:
 
 ```text
 What else can it do?
 ```
+
+Focus:
+
+- Variations
+- Behaviors
+- Common patterns
 
 ---
 
@@ -163,17 +175,17 @@ Goal:
 Build
 ```
 
-Focus:
-
-- Small utilities
-- Practical usage
-- Reusable tools
-
 Question:
 
 ```text
 How can I use it?
 ```
+
+Focus:
+
+- Utilities
+- Reusable tools
+- Practical usage
 
 ---
 
@@ -185,17 +197,18 @@ Goal:
 Apply
 ```
 
-Focus:
-
-- Realistic scenarios
-- Design decisions
-- Edge cases
-
 Question:
 
 ```text
 How do I solve problems with it?
 ```
+
+Focus:
+
+- Realistic scenarios
+- Design decisions
+- Refactoring
+- Trade-offs
 
 ---
 
@@ -207,42 +220,32 @@ Goal:
 Create
 ```
 
-Focus:
-
-- Combining concepts
-- End-to-end usage
-- Proof of understanding
-
 Question:
 
 ```text
-Can I build something with it?
+Can I build something useful?
 ```
+
+Focus:
+
+- Integration
+- End-to-end usage
+- Proof of understanding
 
 ---
 
 ## 📝 Repository Templates
 
-### Topic Templates
+### Topic README
 
 ```text
 templates/topic-readme-template.md
 ```
 
-### Stage Templates
+### Stage READMEs
 
 ```text
 templates/stage-readme-template.md
-```
-
-Used for:
-
-```text
-1-foundations/README.md
-2-exploration/README.md
-3-manipulation/README.md
-4-problem-solving/README.md
-5-mini-project/README.md
 ```
 
 ### Exercise Templates
@@ -263,7 +266,7 @@ templates/mini-project-template.md
 ### Solution Template
 
 ```text
-templates/solution-template.py
+templates/exercise-solution-template.py
 ```
 
 Rule:
@@ -280,17 +283,17 @@ Minimal Correct Implementation
 
 Solutions should:
 
-- Solve only the exercise requirements
-- Exclude experiments
+- Solve only exercise requirements
 - Exclude stretch goals
-- Prefer simple solutions
-- Prioritize readability over cleverness
+- Exclude experiments
+- Prioritize clarity
+- Prefer readability over cleverness
 
 ---
 
 ## 🧩 Exercise Philosophy
 
-Every exercise should build upon previous exercises.
+Every exercise builds upon previous exercises.
 
 Pattern:
 
@@ -306,10 +309,6 @@ Pattern:
 ...
 ```
 
-Knowledge should accumulate.
-
-Nothing should feel disconnected.
-
 Exercises should feel like:
 
 ```text
@@ -322,11 +321,15 @@ not:
 A Checklist
 ```
 
+Knowledge must accumulate.
+
+Nothing should feel disconnected.
+
 ---
 
-## ✅ Current Progress
+# ✅ Current Progress
 
-### Decorators
+## Decorators ✅
 
 Status:
 
@@ -345,30 +348,33 @@ Progress:
 41 / 41 Learning Units Complete
 ```
 
+Decorators is the complete reference implementation.
+
 ---
 
-### Typing
+## Typing 🚧
 
 Status:
 
 ```text
 ✅ Foundations Complete
 ✅ Exploration Complete
-⬜ Manipulation Not Started
-⬜ Problem Solving Not Started
-⬜ Mini Project Not Started
-🚧 Topic In Progress
+✅ Manipulation Complete
+⬜ Problem Solving
+⬜ Mini Project
 ```
 
 Progress:
 
 ```text
-20 / 41 Learning Units Complete
+30 / 41 Learning Units Complete
 ```
+
+Typing is currently the active topic.
 
 ---
 
-## ✅ Typing Foundations Completed
+# ✅ Typing Foundations Complete
 
 Exercises:
 
@@ -376,69 +382,27 @@ Exercises:
 01-10
 ```
 
-Topics Covered:
+Concepts:
 
 ```text
-01. Basic Parameter Types
-02. Return Types
-03. Multiple Parameters
-04. Optional Values
-05. Union Types
-06. Lists and Collections
-07. Dictionaries and Nested Structures
-08. Type Aliases
-09. Annotating Real Functions
-10. Build a Typed Utility
-```
-
-Skills Practiced:
-
-```text
-Parameter Annotations
-Return Annotations
-Optional Values
-Union Types
-Collection Types
-Dictionary Types
-Nested Structures
-Type Aliases
-Typed Function Signatures
-Typed Utility Design
-```
-
-Core Concepts Introduced:
-
-```text
-str
-int
-float
-bool
-
+Basic Types
 Optional
-
 Union
-
-list
-set
-tuple
-
-dict
-
+Collections
+Dicts
 Type Aliases
+Function Signatures
 ```
 
 Outcome:
 
 ```text
-Built a practical foundation
-for understanding and using
-Python type annotations in
-real-world code.
+Understand modern type annotations.
 ```
 
 ---
 
-## ✅ Typing Exploration Completed
+# ✅ Typing Exploration Complete
 
 Exercises:
 
@@ -446,37 +410,7 @@ Exercises:
 11-20
 ```
 
-Topics Covered:
-
-```text
-11. TypedDict
-12. Literal
-13. Callable
-14. Any
-15. NewType
-16. NamedTuple
-17. Type Inference
-18. Type Narrowing
-19. Self
-20. Advanced Annotation Patterns
-```
-
-Skills Practiced:
-
-```text
-Structured Data Modelling
-Restricted Values
-Callable Signatures
-Flexible Typing
-Domain-Specific Types
-Immutable Data Models
-Type Inference
-Type Narrowing
-Class-Aware Annotations
-Annotation Composition
-```
-
-Core Concepts Introduced:
+Concepts:
 
 ```text
 TypedDict
@@ -485,98 +419,69 @@ Callable
 Any
 NewType
 NamedTuple
-
 Type Inference
 Type Narrowing
-
 Self
-
 Advanced Annotation Patterns
 ```
 
 Outcome:
 
 ```text
-Moved beyond basic type
-annotations and learned how
-typing can be used to model
-data, behaviour, constraints,
-and application design.
+Model real-world data and behavior.
 ```
 
 ---
 
-## 🏆 Reference Topics
+# ✅ Typing Manipulation Complete
 
-### Decorators
-
-Decorators remains the complete reference implementation.
-
-The topic demonstrates:
+Exercises:
 
 ```text
-Topic README
-
-Stage READMEs
-
-40 Progressive Exercises
-
-1 Mini Project
-
-Exercise Files
-
-Solution Files
-
-Reflection Questions
-
-Stretch Goals
-
-Problem Solving Scenarios
-
-Capstone Project
+21-30
 ```
 
-Future topics should continue following this standard.
+Completed Topics:
+
+```text
+21. Typed Configuration Data
+22. Typed Environment Settings
+23. Typed API Responses
+24. Generic Container
+25. Typed Validation Helpers
+26. Type Utility Functions
+27. Typed Data Processor
+28. Service Interface Design
+29. Data Transformation Pipeline
+30. Typing Utility Toolbox
+```
+
+Skills Practiced:
+
+```text
+Typed Configuration Design
+API Modelling
+Generics
+Callable Utilities
+Validation Systems
+Protocols
+Service Interfaces
+Transformation Pipelines
+Utility Design
+```
+
+Outcome:
+
+```text
+Use typing to build reusable
+application utilities.
+```
 
 ---
 
-### Typing
+# 🎯 Current Focus
 
-Typing now serves as the reference implementation for:
-
-```text
-Foundations
-
-Exploration
-```
-
-The topic demonstrates how a learner can progress from:
-
-```text
-Basic Type Annotations
-```
-
-to:
-
-```text
-Real-World Type Modelling
-```
-
-through deliberate practice.
-
-Typing Exploration is now considered complete.
-
----
-
-## 🎯 Current Focus
-
-### Active Topic
-
-Status:
-
-```text
-ACTIVE
-```
+## ACTIVE
 
 Topic:
 
@@ -587,126 +492,98 @@ typing
 Current Stage:
 
 ```text
-3-manipulation
+4-problem-solving
+```
+
+Next Exercise:
+
+```text
+31. Refactoring Untyped Configuration
 ```
 
 Reason:
 
 ```text
-The Foundations stage introduced
-the core typing building blocks.
+The learner now understands:
 
-The Exploration stage introduced
-the major typing constructs used
-in professional Python projects.
+TypedDict
+Literal
+Callable
+TypeVar
+Protocol
+Generics
 
-The next step is applying those
-concepts to build practical and
-reusable type-safe utilities.
+and has built practical utilities.
+
+The next step is solving
+real-world software engineering
+problems using typing.
 ```
 
 ---
 
-## 📋 Planned Typing Manipulation Topics
+# 📋 Planned Typing Problem Solving Exercises
 
 Exercises:
 
 ```text
-21-30
+31-40
 ```
 
-Planned Concepts:
+Planned Progression:
 
 ```text
-Typed Configuration Data
-
-Typed Environment Settings
-
-Typed API Responses
-
-Generic Containers
-
-Validation Helpers
-
-Reusable Type Utilities
-
-Typed Data Processing
-
-Typed Service Interfaces
-
-Data Transformation Pipelines
-
-Typing Utility Toolbox
+31. Refactoring Untyped Configuration
+32. Replacing Any with Explicit Types
+33. Type-Safe API Integration
+34. Typed Validation System
+35. Generic Repository Pattern
+36. Plugin Interface Design
+37. Typed Event Processing Pipeline
+38. Service Layer Refactoring
+39. Designing a Type-Safe Architecture
+40. Typing Design Challenge
 ```
 
 Goal:
 
 ```text
-Move from understanding typing
-concepts to building practical
-reusable tools with them.
+Move from utility creation
+to solving realistic design
+and refactoring challenges.
 ```
 
 ---
 
-## 🎯 Long-Term Goal
+# 📋 Planned Typing Mini Project
 
-Every topic should eventually contain:
-
-```text
-10 Foundations Exercises
-10 Exploration Exercises
-10 Manipulation Exercises
-10 Problem Solving Exercises
-1 Mini Project
-```
-
-Total:
+Project:
 
 ```text
-41 Learning Units Per Topic
+Type-Safe Configuration Framework
 ```
 
----
-
-## 🚫 Non-Goals
-
-This repository is not:
-
-- LeetCode
-- Advent of Code
-- Interview preparation
-- Documentation
-- A Python encyclopedia
-
-The focus remains:
+Possible Concepts:
 
 ```text
-Deep Understanding
-through
-Deliberate Practice
+TypedDict
+Literal
+Optional
+NewType
+Validation
+Protocols
+TypeVar
+Generics
+Pipelines
+Service Interfaces
 ```
 
----
+Goal:
 
-## 💡 Important Design Rules
-
-Prefer:
-
-- One new idea at a time
-- Progressive difficulty
-- Small exercises
-- Practical examples
-- Reflection questions
-- Stretch goals
-
-Avoid:
-
-- Massive difficulty jumps
-- Teaching multiple concepts simultaneously
-- Premature abstraction
-- Overengineering
-- Huge projects too early
+```text
+Build a reusable typed
+configuration framework.
+```
 
 ---
 
@@ -734,59 +611,11 @@ concurrency
 async
 ```
 
-Reason:
-
-```text
-Typing acts as a force multiplier.
-
-The concepts learned in the
-typing topic can be reused and
-reinforced throughout almost
-every future topic in the
-curriculum.
-```
+Typing remains first because it acts as a force multiplier for every later topic.
 
 ---
 
-## 🚀 What To Work On Next
-
-Current focus:
-
-```text
-typing
-↓
-3-manipulation
-↓
-Exercise 21
-```
-
-Recommended starting exercise:
-
-```text
-21. Typed Configuration Data
-```
-
-Reason:
-
-```text
-Typed Configuration Data
-naturally combines:
-
-- TypedDict
-- Literal
-- Optional
-- Type Aliases
-- Advanced Annotation Patterns
-
-introduced throughout
-Foundations and Exploration.
-```
-
-When returning to this project, start there.
-
----
-
-## 🔑 Most Important Rule
+## 💡 Important Rule
 
 Always optimize for learning.
 
@@ -804,6 +633,34 @@ The goal is not exercise completion.
 
 The goal is intuition.
 
-A learner should eventually reach the point where the concept feels natural and no longer requires looking things up.
+Every exercise, solution, stage, and project should reinforce that objective.
 
-Every exercise, solution, stage, and project should support that outcome.
+---
+
+## 🚀 What To Work On Next
+
+Current recommendation:
+
+```text
+typing
+↓
+4-problem-solving
+↓
+Exercise 31
+```
+
+Start with:
+
+```text
+31. Refactoring Untyped Configuration
+```
+
+When continuing this project in a future chat:
+
+- Assume Typing Foundations are complete.
+- Assume Typing Exploration is complete.
+- Assume Typing Manipulation is complete.
+- Assume all exercises and solutions for 21-30 exist.
+- Continue with Typing Problem Solving.
+- Maintain existing exercise templates and solution templates.
+- Keep exercises progressive and practical.
