@@ -353,7 +353,7 @@ Status:
 
 ```text
 ✅ Foundations Complete
-⬜ Exploration Not Started
+✅ Exploration Complete
 ⬜ Manipulation Not Started
 ⬜ Problem Solving Not Started
 ⬜ Mini Project Not Started
@@ -363,7 +363,7 @@ Status:
 Progress:
 
 ```text
-10 / 41 Learning Units Complete
+20 / 41 Learning Units Complete
 ```
 
 ---
@@ -438,11 +438,81 @@ real-world code.
 
 ---
 
-## 🏆 Reference Topic
+## ✅ Typing Exploration Completed
 
-Decorators currently serve as the reference implementation for future topics.
+Exercises:
 
-The decorators topic demonstrates:
+```text
+11-20
+```
+
+Topics Covered:
+
+```text
+11. TypedDict
+12. Literal
+13. Callable
+14. Any
+15. NewType
+16. NamedTuple
+17. Type Inference
+18. Type Narrowing
+19. Self
+20. Advanced Annotation Patterns
+```
+
+Skills Practiced:
+
+```text
+Structured Data Modelling
+Restricted Values
+Callable Signatures
+Flexible Typing
+Domain-Specific Types
+Immutable Data Models
+Type Inference
+Type Narrowing
+Class-Aware Annotations
+Annotation Composition
+```
+
+Core Concepts Introduced:
+
+```text
+TypedDict
+Literal
+Callable
+Any
+NewType
+NamedTuple
+
+Type Inference
+Type Narrowing
+
+Self
+
+Advanced Annotation Patterns
+```
+
+Outcome:
+
+```text
+Moved beyond basic type
+annotations and learned how
+typing can be used to model
+data, behaviour, constraints,
+and application design.
+```
+
+---
+
+## 🏆 Reference Topics
+
+### Decorators
+
+Decorators remains the complete reference implementation.
+
+The topic demonstrates:
 
 ```text
 Topic README
@@ -466,9 +536,35 @@ Problem Solving Scenarios
 Capstone Project
 ```
 
-Future topics should follow this structure and level of quality.
+Future topics should continue following this standard.
 
-Typing Foundations now serves as the reference implementation for introducing typing concepts through deliberate practice.
+---
+
+### Typing
+
+Typing now serves as the reference implementation for:
+
+```text
+Foundations
+
+Exploration
+```
+
+The topic demonstrates how a learner can progress from:
+
+```text
+Basic Type Annotations
+```
+
+to:
+
+```text
+Real-World Type Modelling
+```
+
+through deliberate practice.
+
+Typing Exploration is now considered complete.
 
 ---
 
@@ -491,52 +587,64 @@ typing
 Current Stage:
 
 ```text
-2-exploration
+3-manipulation
 ```
 
 Reason:
 
 ```text
-The Foundations stage is complete.
+The Foundations stage introduced
+the core typing building blocks.
 
-The next step is to explore
-more advanced typing constructs
-commonly used in professional
-Python projects while continuing
-the skill-ladder approach.
+The Exploration stage introduced
+the major typing constructs used
+in professional Python projects.
+
+The next step is applying those
+concepts to build practical and
+reusable type-safe utilities.
 ```
 
 ---
 
-## 📋 Planned Typing Exploration Topics
+## 📋 Planned Typing Manipulation Topics
 
 Exercises:
 
 ```text
-11-20
+21-30
 ```
 
 Planned Concepts:
 
 ```text
-TypedDict
-Literal
-Callable
-Any
-NewType
-Type Inference
-Type Narrowing
-NamedTuple
-Self
-Advanced Annotation Patterns
+Typed Configuration Data
+
+Typed Environment Settings
+
+Typed API Responses
+
+Generic Containers
+
+Validation Helpers
+
+Reusable Type Utilities
+
+Typed Data Processing
+
+Typed Service Interfaces
+
+Data Transformation Pipelines
+
+Typing Utility Toolbox
 ```
 
 Goal:
 
 ```text
-Move beyond basic annotations
-and begin modeling data and
-behavior more effectively.
+Move from understanding typing
+concepts to building practical
+reusable tools with them.
 ```
 
 ---
@@ -647,27 +755,31 @@ Current focus:
 ```text
 typing
 ↓
-2-exploration
+3-manipulation
 ↓
-Exercise 11
+Exercise 21
 ```
 
 Recommended starting exercise:
 
 ```text
-11. TypedDict
+21. Typed Configuration Data
 ```
 
 Reason:
 
 ```text
-TypedDict builds naturally on:
+Typed Configuration Data
+naturally combines:
 
-- Dictionary Types
-- Nested Structures
+- TypedDict
+- Literal
+- Optional
 - Type Aliases
+- Advanced Annotation Patterns
 
-introduced during Foundations.
+introduced throughout
+Foundations and Exploration.
 ```
 
 When returning to this project, start there.
