@@ -327,9 +327,9 @@ Nothing should feel disconnected.
 
 ---
 
-## ✅ Current Progress
+# ✅ Current Progress
 
-### Decorators ✅
+## Decorators ✅
 
 Status:
 
@@ -352,7 +352,7 @@ Decorators is the first complete reference implementation.
 
 ---
 
-### Typing ✅
+## Typing ✅
 
 Status:
 
@@ -375,13 +375,13 @@ Typing is the second complete reference implementation.
 
 ---
 
-### Dataclasses 🚧
+## Dataclasses 🚧
 
 Status:
 
 ```text
 ✅ Foundations Complete
-⬜ Exploration
+✅ Exploration Complete
 ⬜ Manipulation
 ⬜ Problem Solving
 ⬜ Mini Project
@@ -390,12 +390,14 @@ Status:
 Progress:
 
 ```text
-10 / 41 Learning Units Complete
+20 / 41 Learning Units Complete
 ```
+
+Dataclasses is becoming the third reference implementation.
 
 ---
 
-## ✅ Dataclasses Foundations Complete
+# ✅ Dataclasses Foundations Complete
 
 Exercises:
 
@@ -441,6 +443,67 @@ by the @dataclass decorator.
 
 ---
 
+# ✅ Dataclasses Exploration Complete
+
+Exercises:
+
+```text
+11. Default Values Revisited
+12. Default Factories
+13. Optional Fields
+14. Immutable Dataclasses
+15. Field Customization
+16. Ordering Objects
+17. Sorting Dataclass Instances
+18. Post Initialization
+19. Nested Dataclasses
+20. Dataclass Design Patterns
+```
+
+Skills Practiced:
+
+```text
+Advanced Defaults
+Default Factories
+Optional Data Modelling
+Immutable Models
+Field Customisation
+Object Ordering
+Object Sorting
+Post Initialization Processing
+Nested Data Models
+Dataclass Design
+```
+
+Concepts Introduced:
+
+```text
+field()
+default_factory
+Optional
+frozen=True
+order=True
+__post_init__()
+Nested Dataclasses
+```
+
+Outcome:
+
+```text
+Expanded understanding of
+dataclasses beyond basic
+object modelling.
+
+Learned how real-world
+dataclass models are designed
+using defaults, factories,
+immutability, ordering,
+nesting, and post-initialization
+processing.
+```
+
+---
+
 # 🎯 Current Focus
 
 ## ACTIVE
@@ -454,26 +517,23 @@ dataclasses
 Current Stage:
 
 ```text
-2-exploration
+3-manipulation
 ```
 
 Next Exercise:
 
 ```text
-11. Default Values Revisited
+21. Configuration Models
 ```
 
 Reason:
 
 ```text
-The Foundations stage is complete.
+The Exploration stage is complete.
 
-The next step is to explore more
-advanced dataclass features such as
-default factories, immutability,
-ordering, nested dataclasses,
-field customization, and
-post-initialization processing.
+The next step is learning how to use
+dataclasses to build practical and
+reusable application models.
 ```
 
 ---
@@ -486,7 +546,7 @@ Status:
 
 ```text
 ✅ Foundations
-⬜ Exploration
+✅ Exploration
 ⬜ Manipulation
 ⬜ Problem Solving
 ⬜ Mini Project
@@ -495,13 +555,12 @@ Status:
 Progress:
 
 ```text
-10 / 41 Learning Units Complete
+20 / 41 Learning Units Complete
 ```
 
-Planned Remaining Structure:
+Remaining Structure:
 
 ```text
-10 Exploration Exercises
 10 Manipulation Exercises
 10 Problem Solving Exercises
 1 Mini Project
@@ -511,14 +570,67 @@ Dataclasses is becoming the reference topic for:
 
 ```text
 Structured Data Modelling
+Application Models
+Configuration Models
 Object Design
 Defaults
 Factories
 Immutability
+Field Customisation
+Post Initialization
 Comparison
 Ordering
 Nested Models
-Application Models
+```
+
+---
+
+# 🔨 Upcoming Dataclasses Manipulation Stage
+
+The Manipulation stage focuses on:
+
+```text
+Understanding
+↓
+Building
+```
+
+The learner should move from:
+
+```text
+"I know how dataclasses work."
+```
+
+to:
+
+```text
+"I can build useful things with dataclasses."
+```
+
+Planned progression:
+
+```text
+21. Configuration Models
+22. User Profiles
+23. Product Catalog Entries
+24. Inventory Records
+25. Application Settings
+26. API Data Models
+27. Serialization Helpers
+28. Validation Helpers
+29. Data Transformation Models
+30. Dataclass Utility Toolbox
+```
+
+Focus:
+
+```text
+Reusable Models
+Practical Utilities
+Application Design
+Data Transformation
+Configuration Management
+API Modelling
 ```
 
 ---
@@ -584,6 +696,22 @@ Every exercise, solution, stage, and project should reinforce that objective.
 
 ---
 
+# 📊 Repository Status
+
+```text
+Decorators     41 / 41 ✅
+Typing         41 / 41 ✅
+Dataclasses    20 / 41 🚧
+```
+
+Total Progress:
+
+```text
+102 / 123 Learning Units Complete
+```
+
+---
+
 ## 🚀 What To Work On Next
 
 Current recommendation:
@@ -591,27 +719,35 @@ Current recommendation:
 ```text
 dataclasses
 ↓
-2-exploration
+3-manipulation
 ↓
-Exercise 11
+Exercise 21
 ```
 
 Start with:
 
 ```text
-11. Default Values Revisited
+21. Configuration Models
 ```
+
+because configuration data is one of the most common real-world uses of dataclasses and provides a natural bridge from Exploration into practical application modelling.
+
+---
+
+# Future Chat Continuation Rules
 
 When continuing this project in a future chat:
 
 - Assume Decorators is complete.
 - Assume Typing is complete.
 - Assume Dataclasses Foundations is complete.
+- Assume Dataclasses Exploration is complete.
 - Assume Dataclasses Topic README exists.
 - Assume Dataclasses Foundations README exists.
-- Assume Exercises 01-10 and solutions exist.
+- Assume Dataclasses Exploration README exists.
+- Assume Exercises 01-20 and solutions exist.
 - Use Decorators and Typing as reference implementations.
-- Continue developing Dataclasses Exploration.
+- Continue developing Dataclasses Manipulation.
 - Maintain existing exercise templates and solution templates.
 - Keep exercises progressive and practical.
 - Continue following the deliberate-practice philosophy of the repository.
