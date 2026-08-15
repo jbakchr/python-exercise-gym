@@ -29,10 +29,10 @@ Example topics:
 ```text
 typing
 decorators
+dataclasses
 pathlib
 logging
 exceptions
-dataclasses
 sqlite
 ```
 
@@ -348,7 +348,7 @@ Progress:
 41 / 41 Learning Units Complete
 ```
 
-Decorators is the complete reference implementation.
+Decorators is the first complete reference implementation.
 
 ---
 
@@ -371,191 +371,72 @@ Progress:
 41 / 41 Learning Units Complete
 ```
 
-Typing is now complete and serves as the second fully implemented topic.
+Typing is the second complete reference implementation.
 
 ---
 
-## ✅ Typing Foundations Complete
+### Dataclasses 🚧
 
-Exercises:
+Status:
 
 ```text
-01-10
+✅ Foundations Complete
+⬜ Exploration
+⬜ Manipulation
+⬜ Problem Solving
+⬜ Mini Project
 ```
 
-Concepts:
+Progress:
 
 ```text
-Basic Types
-Optional
-Union
-Collections
-Dicts
-Type Aliases
-Function Signatures
-```
-
-Outcome:
-
-```text
-Understand modern type annotations.
+10 / 41 Learning Units Complete
 ```
 
 ---
 
-## ✅ Typing Exploration Complete
+## ✅ Dataclasses Foundations Complete
 
 Exercises:
 
 ```text
-11-20
-```
-
-Concepts:
-
-```text
-TypedDict
-Literal
-Callable
-Any
-NewType
-NamedTuple
-Type Inference
-Type Narrowing
-Self
-Advanced Annotation Patterns
-```
-
-Outcome:
-
-```text
-Model real-world data and behavior.
-```
-
----
-
-## ✅ Typing Manipulation Complete
-
-Exercises:
-
-```text
-21-30
-```
-
-Completed Topics:
-
-```text
-21. Typed Configuration Data
-22. Typed Environment Settings
-23. Typed API Responses
-24. Generic Container
-25. Typed Validation Helpers
-26. Type Utility Functions
-27. Typed Data Processor
-28. Service Interface Design
-29. Data Transformation Pipeline
-30. Typing Utility Toolbox
+01. Creating Your First Dataclass
+02. Adding Multiple Fields
+03. Using Type Annotations
+04. Creating Dataclass Objects
+05. Accessing Attributes
+06. Understanding Generated __init__
+07. Understanding Generated __repr__
+08. Comparing Dataclass Objects
+09. Using Default Values
+10. Building a Simple Data Model
 ```
 
 Skills Practiced:
 
 ```text
-Typed Configuration Design
-API Modelling
-Generics
-Callable Utilities
-Validation Systems
-Protocols
-Service Interfaces
-Transformation Pipelines
-Utility Design
+Dataclass Creation
+Multiple Fields
+Type Annotations
+Object Creation
+Attribute Access
+Generated __init__
+Generated __repr__
+Generated Equality
+Default Values
+Basic Data Modelling
 ```
 
 Outcome:
 
 ```text
-Use typing to build reusable
-application utilities.
-```
+Learned how dataclasses reduce
+boilerplate code and help model
+structured application data.
 
----
-
-## ✅ Typing Problem Solving Complete
-
-Exercises:
-
-```text
-31. Refactoring Untyped Configuration
-32. Replacing Any with Explicit Types
-33. Type-Safe API Integration
-34. Typed Validation System
-35. Generic Repository Pattern
-36. Plugin Interface Design
-37. Typed Event Processing Pipeline
-38. Service Layer Refactoring
-39. Designing a Type-Safe Architecture
-40. Typing Design Challenge
-```
-
-Skills Practiced:
-
-```text
-Refactoring
-Explicit Type Design
-API Modelling
-Validation Design
-Generic Architecture
-Protocol Design
-Service Layer Design
-Event Processing
-Application Modelling
-Architectural Thinking
-```
-
-Outcome:
-
-```text
-Learned to use typing as a
-software design tool rather than
-simply a documentation tool.
-
-Applied typing concepts to realistic
-refactoring and architecture problems.
-```
-
----
-
-## ✅ Typing Mini Project Complete
-
-Project:
-
-```text
-Type-Safe Configuration Framework
-```
-
-Concepts Combined:
-
-```text
-TypedDict
-Literal
-Optional
-NewType
-Validation
-Protocols
-TypeVar
-Generics
-Service Interfaces
-Data Processing Pipelines
-```
-
-Outcome:
-
-```text
-Built a reusable configuration
-framework that demonstrates
-modern Python typing techniques
-working together in a practical
-application design.
+Built familiarity with the core
+features automatically generated
+by the @dataclass decorator.
 ```
 
 ---
@@ -573,43 +454,38 @@ dataclasses
 Current Stage:
 
 ```text
-1-foundations
+2-exploration
 ```
 
 Next Exercise:
 
 ```text
-01. Creating Your First Dataclass
+11. Default Values Revisited
 ```
 
 Reason:
 
 ```text
-Typing is now complete.
+The Foundations stage is complete.
 
-Dataclasses is the natural next topic
-because it builds directly upon
-many of the concepts introduced
-during Typing.
-
-Learners can continue practicing
-type annotations while learning
-structured data modelling,
-defaults, immutability, object
-design, and real-world application
-models.
+The next step is to explore more
+advanced dataclass features such as
+default factories, immutability,
+ordering, nested dataclasses,
+field customization, and
+post-initialization processing.
 ```
 
 ---
 
-# 📋 Next Topic
+# 📋 Current Topic
 
 ## Dataclasses
 
 Status:
 
 ```text
-⬜ Foundations
+✅ Foundations
 ⬜ Exploration
 ⬜ Manipulation
 ⬜ Problem Solving
@@ -619,20 +495,19 @@ Status:
 Progress:
 
 ```text
-0 / 41 Learning Units Complete
+10 / 41 Learning Units Complete
 ```
 
-Planned Structure:
+Planned Remaining Structure:
 
 ```text
-10 Foundations Exercises
 10 Exploration Exercises
 10 Manipulation Exercises
 10 Problem Solving Exercises
 1 Mini Project
 ```
 
-Dataclasses will become the new reference topic for:
+Dataclasses is becoming the reference topic for:
 
 ```text
 Structured Data Modelling
@@ -642,12 +517,13 @@ Factories
 Immutability
 Comparison
 Ordering
+Nested Models
 Application Models
 ```
 
 ---
 
-## 🔮 Future Topics
+# 🔮 Future Topics
 
 Recommended order:
 
@@ -674,11 +550,14 @@ async
 Reason:
 
 ```text
-Dataclasses reinforces and extends
-many of the concepts introduced in
-Typing and provides an ideal bridge
-toward building realistic application
-models.
+Dataclasses extends many of the
+concepts introduced in Typing and
+provides a bridge toward modelling
+real application data.
+
+Many future topics become easier
+and more realistic when learners
+can create proper application models.
 ```
 
 ---
@@ -712,24 +591,27 @@ Current recommendation:
 ```text
 dataclasses
 ↓
-1-foundations
+2-exploration
 ↓
-Exercise 01
+Exercise 11
 ```
 
 Start with:
 
 ```text
-01. Creating Your First Dataclass
+11. Default Values Revisited
 ```
 
 When continuing this project in a future chat:
 
 - Assume Decorators is complete.
 - Assume Typing is complete.
-- Assume all Typing exercises, solutions, READMEs, and the mini project exist.
+- Assume Dataclasses Foundations is complete.
+- Assume Dataclasses Topic README exists.
+- Assume Dataclasses Foundations README exists.
+- Assume Exercises 01-10 and solutions exist.
 - Use Decorators and Typing as reference implementations.
-- Begin developing the Dataclasses topic.
+- Continue developing Dataclasses Exploration.
 - Maintain existing exercise templates and solution templates.
 - Keep exercises progressive and practical.
 - Continue following the deliberate-practice philosophy of the repository.
