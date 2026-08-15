@@ -478,13 +478,17 @@ Not Started
 
 ## Current Progress
 
-### Decorators
+### Decorators ✅
 
+Status:
+
+```text
 ✅ Foundations
 ✅ Exploration
 ✅ Manipulation
 ✅ Problem Solving
 ✅ Mini Project
+```
 
 Progress:
 
@@ -492,19 +496,28 @@ Progress:
 41 / 41 Learning Units Complete
 ```
 
+Outcome:
+
+```text
+Decorators is fully complete and serves
+as the first reference implementation for
+the repository's exercise structure,
+progression model, and project philosophy.
+```
+
+---
+
+### Typing ✅
+
 Status:
 
 ```text
-✅ Topic Complete
-```
-
-### Typing
-
 ✅ Foundations
 ✅ Exploration
 ✅ Manipulation
 ✅ Problem Solving
 ✅ Mini Project
+```
 
 Progress:
 
@@ -512,121 +525,301 @@ Progress:
 41 / 41 Learning Units Complete
 ```
 
+Outcome:
+
+```text
+Typing is fully complete and serves as
+the second reference implementation for
+the repository.
+
+Learners progress from basic annotations
+to building realistic type-safe designs
+and architectures.
+```
+
+---
+
+### Dataclasses 🚧
+
 Status:
 
 ```text
-✅ Topic Complete
+✅ Foundations
+⬜ Exploration
+⬜ Manipulation
+⬜ Problem Solving
+⬜ Mini Project
 ```
 
-#### Completed Problem Solving Exercises
+Progress:
+
+```text
+10 / 41 Learning Units Complete
+```
+
+---
+
+#### Foundations ✅
 
 Exercises:
 
-- Refactoring Untyped Configuration
-- Replacing Any with Explicit Types
-- Type-Safe API Integration
-- Typed Validation System
-- Generic Repository Pattern
-- Plugin Interface Design
-- Typed Event Processing Pipeline
-- Service Layer Refactoring
-- Designing a Type-Safe Architecture
-- Typing Design Challenge
+```text
+01. Creating Your First Dataclass
+02. Adding Multiple Fields
+03. Using Type Annotations
+04. Creating Dataclass Objects
+05. Accessing Attributes
+06. Understanding Generated __init__
+07. Understanding Generated __repr__
+08. Comparing Dataclass Objects
+09. Using Default Values
+10. Building a Simple Data Model
+```
+
+Completed:
+
+- Topic README
+- Foundations README
+- Exercise files
+- Solution files
 
 Skills Practiced:
 
-- Refactoring Legacy Code
-- Explicit Type Modelling
-- API Data Modelling
-- Validation Design
-- Generic Components
-- Protocol-Based Interfaces
-- Event Processing
-- Service Layer Design
-- Architectural Thinking
-- Type-Safe Application Design
-
-#### Completed Mini Project
-
-Project:
-
 ```text
-Type-Safe Configuration Framework
+Dataclass Creation
+Field Definitions
+Type Annotations
+Object Creation
+Attribute Access
+Generated __init__
+Generated __repr__
+Generated Equality
+Default Values
+Basic Data Modelling
 ```
 
-Concepts Combined:
-
-- TypedDict
-- Literal
-- Optional
-- NewType
-- Validation
-- Protocols
-- TypeVar
-- Generics
-- Service Interfaces
-- Data Processing Pipelines
-
-Project Outcome:
+Outcome:
 
 ```text
-Built a reusable configuration framework
-that demonstrates practical use of modern
-Python typing features in a realistic
-application design.
+Established a solid understanding of
+how dataclasses model structured data.
+
+Learned how dataclasses automatically
+generate common methods and reduce
+boilerplate code.
 ```
 
-### Current Focus
+---
 
-#### Next Topic
+#### Exploration ⬜
+
+Exercises: 11-20
+
+Planned Topics:
+
+```text
+Default Values Revisited
+Default Factories
+Optional Fields
+Frozen Dataclasses
+Field Customization
+Ordering Objects
+Sorting Dataclass Instances
+Post Initialization
+Nested Dataclasses
+Dataclass Design Patterns
+```
+
+Goal:
+
+```text
+Move beyond basic dataclass creation and
+explore the most commonly used dataclass
+features found in real-world Python code.
+```
+
+Status:
+
+```text
+Not Started
+```
+
+---
+
+#### Manipulation ⬜
+
+Exercises: 21-30
+
+Planned Focus:
+
+```text
+Building useful utilities and reusable
+application models using dataclasses.
+```
+
+Potential Exercises:
+
+```text
+Configuration Models
+User Profiles
+Product Catalog Entries
+Inventory Records
+Application Settings
+API Data Models
+Serialization Helpers
+Validation Helpers
+Data Transformation Models
+Dataclass Utility Toolbox
+```
+
+Status:
+
+```text
+Not Started
+```
+
+---
+
+#### Problem Solving ⬜
+
+Exercises: 31-40
+
+Planned Focus:
+
+```text
+Applying dataclasses to realistic software
+design and refactoring problems.
+```
+
+Potential Exercises:
+
+```text
+Refactoring Dictionary-Based Data
+Replacing Nested Dictionaries
+Application Configuration Design
+Immutable Domain Models
+API Response Refactoring
+Data Pipeline Models
+Building Composite Structures
+Application State Modelling
+Domain Object Design
+Dataclass Design Challenge
+```
+
+Status:
+
+```text
+Not Started
+```
+
+---
+
+#### Mini Project ⬜
+
+Planned Project:
+
+```text
+Configuration and Settings Framework
+```
+
+Possible Concepts:
+
+```text
+Nested Dataclasses
+Default Values
+Default Factories
+Frozen Dataclasses
+Validation
+Serialization
+Application Settings
+Domain Models
+```
+
+Project Goal:
+
+```text
+Build a reusable configuration system
+that demonstrates practical dataclass
+usage in a realistic application.
+```
+
+Status:
+
+```text
+Not Started
+```
+
+---
+
+## Current Focus
+
+### Active Topic
 
 ```text
 dataclasses
 ```
 
-Reason:
+### Current Stage
 
 ```text
-Typing is now complete.
-
-Dataclasses naturally build on many of the
-skills learned in the Typing topic and
-provide a practical next step toward
-modelling structured application data.
+2-exploration
 ```
 
-### Recommended Next Development Order
+### Next Exercise
 
-1. dataclasses
-2. pathlib
-3. exceptions
-4. logging
-5. shutil
-6. generators
-7. iterators
-8. context-managers
-9. testing
-10. sqlite
-11. packaging
-12. concurrency
-13. async
+```text
+11. Default Values Revisited
+```
 
 Reason:
 
 ```text
-Dataclasses is the strongest next topic
-because it reinforces many of the concepts
-introduced in Typing.
+The Foundations stage is now complete.
 
-Learners can continue practicing type
-annotations while learning structured
-data modelling, defaults, immutability,
-object design, and real application models.
-
-Typing and Dataclasses together form a
-powerful foundation for modern Python
-development.
+The next step is to explore additional
+dataclass capabilities such as factories,
+immutability, ordering, and
+post-initialization processing.
 ```
+
+---
+
+## Recommended Development Order
+
+```text
+dataclasses
+
+pathlib
+exceptions
+logging
+shutil
+
+generators
+iterators
+context-managers
+
+testing
+sqlite
+packaging
+
+concurrency
+async
+```
+
+Reason:
+
+```text
+Dataclasses continues to be the strongest
+next topic because it extends many of the
+modelling concepts introduced in Typing.
+
+After Dataclasses, learners will have a
+strong foundation for working with real
+application data throughout the remaining
+topics.
+```
+
+---
 
 ## What To Work On Next
 
@@ -635,17 +828,18 @@ Current recommendation:
 ```text
 dataclasses
 ↓
-1-foundations
+2-exploration
 ↓
-Exercise 01
+Exercise 11
 ```
 
 Suggested starting point:
 
 ```text
-01. Creating Your First Dataclass
+11. Default Values Revisited
 ```
 
-because it provides the simplest transition
-from typed dictionaries and structured data
-toward class-based data modelling.
+because it provides a natural bridge from
+basic field defaults in Foundations to the
+more advanced dataclass features explored
+throughout the Exploration stage.
